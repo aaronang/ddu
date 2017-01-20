@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Zoomable Sunburst</title>
+</head>
+
+<body>
+  <style>
+    path {
+      stroke: #f7f7f7;
+    }
+
+    body {
+      background-color: #f7f7f7;
+    }
+  </style>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="jpacman.js"></script>
+  <script src="flare.js"></script>
+  <script>
+    var width = 960,
+      height = 700,
+      radius = (Math.min(width, height) / 2) - 10;
+
+    var formatNumber = d3.format(",d");
+
+    var x = d3.scaleLinear()
+      .range([0, 2 * Math.PI]);
+
+    var y = d3.scaleSqrt()
+      .range([0, radius]);
+
+    var color = d3.scaleLinear()
+      .domain([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .range(['#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
+
+    var selected = '#4d4d4d';
+    var unselected = '#bababa';
+    var exclusive = 'a6d96a';
+    var inclusive = 'fee08b';
+    var untested = 'f46d43';
+
+    var selectedNodes = [];
+
+    var partition = d3.partition();
+
+    var arc = d3.arc()
+      .startAngle(function(d) {
+        return Math.max(0, Math.min(2 * Math.PI, x(d.x0)));
+      })
+      .endAngle(function(d) {
+        return Math.max(0, Math.min(2 * Math.PI, x(d.x1)));
+      })
+      .innerRadius(function(d) {
+        return Math.max(0, y(d.y0));
+      })
+      .outerRadius(function(d) {
+        return Math.max(0, y(d.y1));
+      });
+
+
+    var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .append("g")
+      .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
+
+
+    root = d3.hierarchy(mydata.tree);
+    root.sum(function(d) {
+      return d.children ? 0 : 1;
+    });
+    svg.selectAll("path")
+      .data(partition(root).descendants())
+      .enter().append("path")
+      .attr("d", arc)
+      .style("fill", function(d) {
+        return d.children ? color(d.data.ddu) : unselected;
+      })
+      .on("click", click)
+      .append("title")
+      .text(function(d) {
+        return d.data.name + (d.data.cid ? '\n' + d.data.cid : '') + (d.children ? "\n" + d.data.ddu : '');
+      });
+
+    function click(d) {
+      if (!d.children) {
+        handleLeafClick(d);
+      } else {
+        return zoom(d);
+      }
+    }
+
+    function handleLeafClick(d) {
+      if (d.data.cid >= 0) {
+        if (isSelectedNode(d.data.cid)) {
+          selectedNodes.splice(selectedNodes.indexOf(d.data.cid), 1);
+        } else {
+          selectedNodes.push(d.data.cid)
+        }
+        update();
+      }
+    }
+
+    function update() {
+      d3.select('svg').selectAll('path').style("fill", (d) => {
+        if (d.children) {
+          return color(d.data.ddu);
+        } else if (selectedNodes.includes(d.data.cid)) {
+          return selected;
+        } else {
+          return updateLeaf(d);
+        }
+      })
+    }
+
+    function updateLeaf(d) {
+      if (selectedNodes.length == 0) {
+        return unselected;
+      }
+      var nodes = selectedNodes.concat(d.data.cid);
+      var tests = mydata.tests.filter((t) => containsAll(t, nodes));
+      if (tests.some((t) => t.length == nodes.length)) {
+        return exclusive;
+      } else if (tests.length != 0) {
+        return inclusive;
+      } else {
+        return untested;
+      }
+    }
+
+    function containsAll(a, b) {
+      return b.every((x) => a.includes(x));
+    }
+
+    function isSelectedNode(cid) {
+      return selectedNodes.includes(cid);
+    }
+
+    function zoom(d) {
+      svg.transition()
+        .duration(100)
+        .tween("scale", () => {
+          var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+            yd = d3.interpolate(y.domain(), [d.y0, 1]),
+            yr = d3.interpolate(y.range(), [d.y0 ? 20 : 0, radius]);
+          return function(t) {
+            x.domain(xd(t));
+            y.domain(yd(t)).range(yr(t));
+          };
+        })
+        .selectAll("path")
+        .attrTween("d", (d) => {
+          return function() {
+            return arc(d);
+          };
+        });
+    }
+
+    d3.select(self.frameElement).style("height", height + "px");
+  </script>
+</body>
+
+</html>
