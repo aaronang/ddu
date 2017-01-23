@@ -21,6 +21,8 @@ Basically, the goal of my thesis: **creating (improving) a tool that guides the 
   * [Zoomable Treemap](https://bost.ocks.org/mike/treemap/)
   * [Collapsible Tree Layout](http://mbostock.github.io/d3/talk/20111018/tree.html)
 
+  What about using multiple visualizations?
+
   **2 WEEKS**
 
 3. Evaluate the visualizations. We first thought of a case study because it definitely has less confounding factors as opposed to a user study. However, we didn't immediately see how we could evaluate the tool in a case study. **Do you maybe have any suggestions on how to evaluate the tool?**

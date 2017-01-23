@@ -4,9 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Zoomable Sunburst</title>
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<body>
   <style>
     path {
       stroke: #f7f7f7;
@@ -14,8 +13,28 @@
 
     body {
       background-color: #f7f7f7;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+    }
+
+    #sequence {
+      width: 600px;
+      height: 70px;
+    }
+
+    #sequence text {
+      font-weight: 600;
+      fill: #f7f7f7;
     }
   </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="sequence"></div>
+    <div id="chart"></div>
+  </div>
+
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
   <script src="flare.js"></script>
@@ -23,6 +42,13 @@
     var width = 960,
       height = 700,
       radius = (Math.min(width, height) / 2) - 10;
+
+    var b = {
+      w: 120,
+      h: 30,
+      s: 3,
+      t: 10
+    };
 
     var formatNumber = d3.format(",d");
 
@@ -61,7 +87,7 @@
       });
 
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#chart").append("svg")
       .attr("width", width)
       .attr("height", height)
       .append("g")
@@ -79,11 +105,13 @@
       .style("fill", function(d) {
         return d.children ? color(d.data.ddu) : unselected;
       })
+      .on("mouseover", mouseover)
       .on("click", click)
       .append("title")
       .text(function(d) {
         return d.data.name + (d.data.cid ? '\n' + d.data.cid : '') + (d.children ? "\n" + d.data.ddu : '');
       });
+    initializeBreadcrumbTrail();
 
     function click(d) {
       if (!d.children) {
@@ -91,6 +119,11 @@
       } else {
         return zoom(d);
       }
+    }
+
+    function mouseover(d) {
+      var sequenceArray = d.ancestors().reverse();
+      updateBreadcrumbs(sequenceArray);
     }
 
     function handleLeafClick(d) {
@@ -105,7 +138,7 @@
     }
 
     function update() {
-      d3.select('svg').selectAll('path').style("fill", (d) => {
+      d3.select('#chart').selectAll('path').style("fill", (d) => {
         if (d.children) {
           return color(d.data.ddu);
         } else if (selectedNodes.includes(d.data.cid)) {
@@ -160,6 +193,70 @@
     }
 
     d3.select(self.frameElement).style("height", height + "px");
+
+    function initializeBreadcrumbTrail() {
+      // Add the svg area.
+      var trail = d3.select("#sequence").append("svg:svg")
+        .attr("width", width)
+        .attr("height", 50)
+        .attr("id", "trail");
+    }
+
+    // Generate a string that describes the points of a breadcrumb polygon.
+    function breadcrumbPoints(d, i) {
+      var points = [];
+      points.push("0,0");
+      points.push(b.w + ",0");
+      points.push(b.w + b.t + "," + (b.h / 2));
+      points.push(b.w + "," + b.h);
+      points.push("0," + b.h);
+      if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
+        points.push(b.t + "," + (b.h / 2));
+      }
+      return points.join(" ");
+    }
+
+    // Update the breadcrumb trail to show the current sequence and percentage.
+    function updateBreadcrumbs(nodeArray) {
+
+      // Data join; key function combines name and depth (= position in sequence).
+      var trail = d3.select("#trail")
+        .selectAll("g")
+        .data(nodeArray, function(d) {
+          return d.data.name + d.depth;
+        });
+
+      // Remove exiting nodes.
+      trail.exit().remove();
+
+      // Add breadcrumb and label for entering nodes.
+      var entering = trail.enter().append("svg:g");
+
+      entering.append("svg:polygon")
+        .attr("points", breadcrumbPoints)
+        .style("fill", (d) => {
+          return d.data.ddu ? color(d.data.ddu) : unselected;
+        });
+
+      entering.append("svg:text")
+        .attr("x", (b.w + b.t) / 2)
+        .attr("y", b.h / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "middle")
+        .text(function(d) {
+          return d.data.name;
+        });
+
+      // Merge enter and update selections; set position for all nodes.
+      entering.merge(trail).attr("transform", function(d, i) {
+        return "translate(" + i * (b.w + b.s) + ", 0)";
+      });
+
+      // Make the breadcrumb trail visible, if it's hidden.
+      d3.select("#trail")
+        .style("visibility", "");
+
+    }
   </script>
 </body>
 
