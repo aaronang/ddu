@@ -7,14 +7,31 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <style>
-    path {
-      stroke: #f7f7f7;
-    }
-
     body {
       background-color: #f7f7f7;
       font-family: 'Roboto', sans-serif;
       font-size: 12px;
+    }
+
+    #main {
+      float: left;
+    }
+
+    #sidebar {
+      display: inline;
+      width: 100px;
+    }
+
+    #legend {
+      padding: 10px 0 0 3px;
+    }
+
+    #legend text {
+      fill: #4d4d4d;
+    }
+
+    path {
+      stroke: #f7f7f7;
     }
 
     #sequence {
@@ -23,7 +40,6 @@
     }
 
     #sequence text {
-      font-weight: 600;
       fill: #f7f7f7;
     }
   </style>
@@ -34,12 +50,15 @@
     <div id="sequence"></div>
     <div id="chart"></div>
   </div>
+  <div id="sidebar">
+    <div id="legend"></div>
+  </div>
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
   <script src="flare.js"></script>
   <script>
-    var width = 960,
+    var width = 700,
       height = 700,
       radius = (Math.min(width, height) / 2) - 10;
 
@@ -58,15 +77,17 @@
     var y = d3.scaleSqrt()
       .range([0, radius]);
 
-    var color = d3.scaleLinear()
-      .domain([0, 0.2, 0.4, 0.6, 0.8, 1])
-      .range(['#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
+    var color = d3.scaleThreshold()
+      .domain([0, 0.2, 0.4, 0.6, 0.8, 1.1])
+      .range(['white', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c']);
 
-    var selected = '#4d4d4d';
-    var unselected = '#bababa';
-    var exclusive = 'a6d96a';
-    var inclusive = 'fee08b';
-    var untested = 'f46d43';
+    var colors = {
+      'selected': '#4d4d4d',
+      'unselected': '#bababa',
+      'exclusive': 'a6d96a',
+      'inclusive': 'fee08b',
+      'untested': 'f46d43'
+    }
 
     var selectedNodes = [];
 
@@ -103,7 +124,7 @@
       .enter().append("path")
       .attr("d", arc)
       .style("fill", function(d) {
-        return d.children ? color(d.data.ddu) : unselected;
+        return d.children ? color(d.data.ddu) : colors.unselected;
       })
       .on("mouseover", mouseover)
       .on("click", click)
@@ -111,7 +132,11 @@
       .text(function(d) {
         return d.data.name + (d.data.cid ? '\n' + d.data.cid : '') + (d.children ? "\n" + d.data.ddu : '');
       });
+
+    d3.select("#chart svg g").on("mouseleave", mouseleave);
+
     initializeBreadcrumbTrail();
+    drawLegend();
 
     function click(d) {
       if (!d.children) {
@@ -121,9 +146,38 @@
       }
     }
 
+    function mouseleave(d) {
+
+      // Hide the breadcrumb trail
+      d3.select("#trail")
+        .style("visibility", "hidden");
+
+      // Deactivate all segments during transition.
+      d3.selectAll("path").on("mouseover", null);
+
+      // Transition each segment to full opacity and then reactivate it.
+      d3.selectAll("path")
+        .transition()
+        .duration(100)
+        .style("opacity", 1)
+        .on("end", function() {
+          d3.select(this).on("mouseover", mouseover);
+        });
+    }
+
     function mouseover(d) {
       var sequenceArray = d.ancestors().reverse();
       updateBreadcrumbs(sequenceArray);
+
+
+      d3.select('#chart').selectAll("path")
+        .style("opacity", 0.5);
+      // Then highlight only those that are an ancestor of the current segment.
+      d3.select('#chart').selectAll("path")
+        .filter(function(node) {
+          return (sequenceArray.includes(node));
+        })
+        .style("opacity", 1);
     }
 
     function handleLeafClick(d) {
@@ -142,7 +196,7 @@
         if (d.children) {
           return color(d.data.ddu);
         } else if (selectedNodes.includes(d.data.cid)) {
-          return selected;
+          return colors.selected;
         } else {
           return updateLeaf(d);
         }
@@ -151,16 +205,16 @@
 
     function updateLeaf(d) {
       if (selectedNodes.length == 0) {
-        return unselected;
+        return colors.unselected;
       }
       var nodes = selectedNodes.concat(d.data.cid);
       var tests = mydata.tests.filter((t) => containsAll(t, nodes));
       if (tests.some((t) => t.length == nodes.length)) {
-        return exclusive;
+        return colors.exclusive;
       } else if (tests.length != 0) {
-        return inclusive;
+        return colors.inclusive;
       } else {
-        return untested;
+        return colors.untested;
       }
     }
 
@@ -218,7 +272,6 @@
 
     // Update the breadcrumb trail to show the current sequence and percentage.
     function updateBreadcrumbs(nodeArray) {
-
       // Data join; key function combines name and depth (= position in sequence).
       var trail = d3.select("#trail")
         .selectAll("g")
@@ -235,7 +288,7 @@
       entering.append("svg:polygon")
         .attr("points", breadcrumbPoints)
         .style("fill", (d) => {
-          return d.data.ddu ? color(d.data.ddu) : unselected;
+          return d.data.ddu ? color(d.data.ddu) : colors.unselected;
         });
 
       entering.append("svg:text")
@@ -255,7 +308,65 @@
       // Make the breadcrumb trail visible, if it's hidden.
       d3.select("#trail")
         .style("visibility", "");
+    }
 
+    function drawLegend() {
+      // Dimensions of legend item: width, height, spacing, radius of rounded rect.
+      var li = {
+        w: 120,
+        h: 30,
+        s: 5,
+        r: 2
+      };
+
+      var colors = {
+        'Legend': '',
+        'selected': '#4d4d4d',
+        'unselected': '#bababa',
+        'exclusively tested': 'a6d96a',
+        'inclusively tested': 'fee08b',
+        'untested': 'f46d43',
+        '': '',
+        'DDU': '',
+        '0 - 0.2': '#9ecae1',
+        '0.2 - 0.4': '#6baed6',
+        '0.4 - 0.6': '#4292c6',
+        '0.6 - 0.8': '#2171b5',
+        '0.8 - 1': '#08519c'
+      }
+
+      var legend = d3.select("#legend").append("svg:svg")
+        .attr("width", li.w + 100)
+        .attr("height", d3.keys(colors).length * (li.h + li.s));
+
+      var g = legend.selectAll("g")
+        .data(d3.entries(colors))
+        .enter().append("svg:g")
+        .attr("transform", function(d, i) {
+          return "translate(0," + i * (li.h + li.s) + ")";
+        });
+
+      g.append("svg:rect")
+        .attr("rx", li.r)
+        .attr("ry", li.r)
+        .attr("width", (d) => {
+          return d.value ? li.h : 0;
+        })
+        .attr("height", li.h)
+        .style("fill", function(d) {
+          return d.value ? d.value : '#f7f7f7';
+        });
+
+      g.append("svg:text")
+        .attr("x", (d) => {
+          return d.value ? li.h + 5 : 0;
+        })
+        .attr("y", li.h / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "left")
+        .text(function(d) {
+          return d.key;
+        });
     }
   </script>
 </body>
