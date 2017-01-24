@@ -8,6 +8,11 @@
     body {
       font-family: 'Roboto', sans-serif;
       font-size: 12px;
+      background-color: #f7f7f7;
+    }
+
+    #main {
+      float: left;
     }
 
     .node {
@@ -25,20 +30,27 @@
     }
 
     .label {
-      /*font-family: 'Roboto', sans-serif;*/
       text-anchor: middle;
       text-shadow: 3px 0 0 #f0f0f0, -3px 0 0 #f0f0f0, 0 3px 0 #f0f0f0, 0 -3px 0 #f0f0f0, 2px 2px #f0f0f0, -2px -2px 0 #f0f0f0, 2px -2px 0 #f0f0f0, -2px 2px 0 #f0f0f0;
       fill: #525252;
     }
 
-    .label,
-    .node--root {
+    .label {
       pointer-events: none;
     }
 
     #sequence {
       width: 600px;
-      height: 70px;
+      height: 50px;
+    }
+
+    #sidebar {
+      display: inline;
+      width: 100px;
+    }
+
+    #legend {
+      padding: 10px 0 0 3px;
     }
   </style>
 </head>
@@ -47,6 +59,9 @@
   <div id="main">
     <div id="sequence"></div>
     <div id="chart"></div>
+  </div>
+  <div id="sidebar">
+    <div id="legend"></div>
   </div>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
@@ -68,9 +83,9 @@
       diameter = +svg.attr("width"),
       g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
-    var color = d3.scaleLinear()
-      .domain([0, 1])
-      .range(['#9ecae1', '#08519c']);
+    var color = d3.scaleThreshold()
+      .domain([0, 0.2, 0.4, 0.6, 0.8, 1.1])
+      .range(['white', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c']);
 
     var colors = {
       'selected': '#4d4d4d',
@@ -125,7 +140,7 @@
     }
 
     function update() {
-      d3.select('svg').selectAll('circle').style("fill", (d) => {
+      d3.select('#chart').selectAll('circle').style("fill", (d) => {
         if (d.children) {
           return color(d.data.ddu);
         } else if (selectedNodes.includes(d.data.cid)) {
@@ -322,8 +337,68 @@
         });
     }
 
+    function drawLegend() {
+      // Dimensions of legend item: width, height, spacing, radius of rounded rect.
+      var li = {
+        w: 120,
+        h: 30,
+        s: 5,
+        r: 2
+      };
+
+      var colors = {
+        'Legend': '',
+        'selected': '#4d4d4d',
+        'unselected': '#f7f7f7',
+        'exclusively tested': 'a6d96a',
+        'inclusively tested': 'fee08b',
+        'untested': 'f46d43',
+        '': '',
+        'DDU': '',
+        '0 - 0.2': '#9ecae1',
+        '0.2 - 0.4': '#6baed6',
+        '0.4 - 0.6': '#4292c6',
+        '0.6 - 0.8': '#2171b5',
+        '0.8 - 1': '#08519c'
+      }
+
+      var legend = d3.select("#legend").append("svg:svg")
+        .attr("width", li.w + 100)
+        .attr("height", d3.keys(colors).length * (li.h + li.s));
+
+      var g = legend.selectAll("g")
+        .data(d3.entries(colors))
+        .enter().append("svg:g")
+        .attr("transform", function(d, i) {
+          return "translate(0," + i * (li.h + li.s) + ")";
+        });
+
+      g.append("svg:rect")
+        .attr("rx", li.r)
+        .attr("ry", li.r)
+        .attr("width", (d) => {
+          return d.value ? li.h : 0;
+        })
+        .attr("height", li.h)
+        .style("fill", function(d) {
+          return d.value ? d.value : '#f7f7f7';
+        })
+
+      g.append("svg:text")
+        .attr("x", (d) => {
+          return d.value ? li.h + 5 : 0;
+        })
+        .attr("y", li.h / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "left")
+        .text(function(d) {
+          return d.key;
+        });
+    }
+
 
     initializeBreadcrumbTrail();
+    drawLegend();
     d3.select("#chart svg g").on("mouseleave", mouseleave);
   </script>
 
