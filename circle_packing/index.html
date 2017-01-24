@@ -6,33 +6,36 @@
   <style>
     .node {
       cursor: pointer;
+      stroke: #4292c6;
     }
 
     .node:hover {
-      stroke: #000;
+      stroke: #08519c;
       stroke-width: 1.5px;
     }
 
     .node--leaf {
-      fill: white;
+      fill: #f0f0f0;
     }
 
     .label {
       font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-anchor: middle;
-      text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+      stroke: #f0f0f0;
+      stroke-width: 3px;
+      fill: #525252;
+      paint-order: stroke;
     }
 
     .label,
-    .node--root,
-    .node--leaf {
+    .node--root {
       pointer-events: none;
     }
   </style>
 </head>
 
 <body>
-  <svg width="960" height="960"></svg>
+  <svg width="700" height="700"></svg>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
   <script>
@@ -42,9 +45,16 @@
       g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
     var color = d3.scaleLinear()
-      .domain([-1, 5])
-      .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
-      .interpolate(d3.interpolateHcl);
+      .domain([0, 1])
+      .range(['#9ecae1', '#08519c']);
+
+    var colors = {
+      'selected': '#4d4d4d',
+      'unselected': '#f0f0f0',
+      'exclusive': 'a6d96a',
+      'inclusive': 'fee08b',
+      'untested': 'f46d43'
+    }
 
     var pack = d3.pack()
       .size([diameter - margin, diameter - margin])
@@ -69,11 +79,61 @@
         return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
       })
       .style("fill", function(d) {
-        return d.children ? color(d.depth) : null;
+        return d.children ? color(d.data.ddu) : null;
       })
       .on("click", function(d) {
-        if (focus !== d) zoom(d), d3.event.stopPropagation();
+        if (!d.children) handleLeafClick(d), d3.event.stopPropagation();
+        else if (focus !== d) zoom(d), d3.event.stopPropagation();
       });
+
+    var selectedNodes = [];
+
+    function handleLeafClick(d) {
+      console.log(d);
+      if (d.data.cid >= 0) {
+        if (isSelectedNode(d.data.cid)) {
+          selectedNodes.splice(selectedNodes.indexOf(d.data.cid), 1);
+        } else {
+          selectedNodes.push(d.data.cid)
+        }
+        update();
+      }
+    }
+
+    function update() {
+      d3.select('svg').selectAll('circle').style("fill", (d) => {
+        if (d.children) {
+          return color(d.data.ddu);
+        } else if (selectedNodes.includes(d.data.cid)) {
+          return colors.selected;
+        } else {
+          return updateLeaf(d);
+        }
+      })
+    }
+
+    function containsAll(a, b) {
+      return b.every((x) => a.includes(x));
+    }
+
+    function updateLeaf(d) {
+      if (selectedNodes.length == 0) {
+        return colors.unselected;
+      }
+      var nodes = selectedNodes.concat(d.data.cid);
+      var tests = mydata.tests.filter((t) => containsAll(t, nodes));
+      if (tests.some((t) => t.length == nodes.length)) {
+        return colors.exclusive;
+      } else if (tests.length != 0) {
+        return colors.inclusive;
+      } else {
+        return colors.untested;
+      }
+    }
+
+    function isSelectedNode(cid) {
+      return selectedNodes.includes(cid);
+    }
 
     var text = g.selectAll("text")
       .data(nodes)
@@ -92,7 +152,7 @@
     var node = g.selectAll("circle,text");
 
     svg
-      .style("background", color(-1))
+      .style("background", 'color(-1)')
       .on("click", function() {
         zoom(root);
       });
@@ -100,7 +160,6 @@
     zoomTo([root.x, root.y, root.r * 2 + margin]);
 
     function zoom(d) {
-      var focus0 = focus;
       focus = d;
 
       var transition = d3.transition()
