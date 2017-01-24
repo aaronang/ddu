@@ -56,7 +56,6 @@
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
-  <script src="flare.js"></script>
   <script>
     var width = 700,
       height = 700,
@@ -113,30 +112,6 @@
       .attr("height", height)
       .append("g")
       .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
-
-
-    root = d3.hierarchy(mydata.tree);
-    root.sum(function(d) {
-      return d.children ? 0 : 1;
-    });
-    svg.selectAll("path")
-      .data(partition(root).descendants())
-      .enter().append("path")
-      .attr("d", arc)
-      .style("fill", function(d) {
-        return d.children ? color(d.data.ddu) : colors.unselected;
-      })
-      .on("mouseover", mouseover)
-      .on("click", click)
-      .append("title")
-      .text(function(d) {
-        return d.data.name + (d.data.cid ? '\n' + d.data.cid : '') + (d.children ? "\n" + d.data.ddu : '');
-      });
-
-    d3.select("#chart svg g").on("mouseleave", mouseleave);
-
-    initializeBreadcrumbTrail();
-    drawLegend();
 
     function click(d) {
       if (!d.children) {
@@ -246,8 +221,6 @@
           };
         });
     }
-
-    d3.select(self.frameElement).style("height", height + "px");
 
     function initializeBreadcrumbTrail() {
       // Add the svg area.
@@ -369,6 +342,31 @@
           return d.key;
         });
     }
+
+    root = d3.hierarchy(mydata.tree);
+    root.sum(function(d) {
+      return d.children ? 0 : 1;
+    });
+    svg.selectAll("path")
+      .data(partition(root).descendants())
+      .enter().append("path")
+      .attr("d", arc)
+      .style("fill", function(d) {
+        return d.children ? color(d.data.ddu) : colors.unselected;
+      })
+      .on("mouseover", mouseover)
+      .on("click", click)
+      .append("title")
+      .text(function(d) {
+        return d.data.name + (d.data.cid ? '\n' + d.data.cid : '') + (d.children ? "\n" + d.data.ddu : '');
+      });
+
+    d3.select("#chart svg g").on("mouseleave", mouseleave);
+
+    initializeBreadcrumbTrail();
+    drawLegend();
+
+    d3.select(self.frameElement).style("height", height + "px");
   </script>
 </body>
 
