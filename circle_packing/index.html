@@ -45,8 +45,8 @@
 
 <body>
   <div id="main">
-    <div id="chart"></div>
     <div id="sequence"></div>
+    <div id="chart"></div>
   </div>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
@@ -295,7 +295,7 @@
         .style("stroke-width", null);
 
       // Then highlight only those that are an ancestor of the current segment.
-      d3.select('#chart').selectAll("path")
+      d3.select('#chart').selectAll("circle")
         .filter(function(node) {
           return (sequenceArray.includes(node));
         })
@@ -316,7 +316,7 @@
       d3.selectAll("circle")
         .transition()
         .duration(100)
-        .style("opacity", 1)
+        .style("stroke", null)
         .on("end", function() {
           d3.select(this).on("mouseover", mouseover);
         });
