@@ -3,7 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+    }
+
     .node {
       cursor: pointer;
       stroke: #4292c6;
@@ -19,27 +25,45 @@
     }
 
     .label {
-      font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      /*font-family: 'Roboto', sans-serif;*/
       text-anchor: middle;
-      stroke: #f0f0f0;
-      stroke-width: 3px;
+      text-shadow: 3px 0 0 #f0f0f0, -3px 0 0 #f0f0f0, 0 3px 0 #f0f0f0, 0 -3px 0 #f0f0f0, 2px 2px #f0f0f0, -2px -2px 0 #f0f0f0, 2px -2px 0 #f0f0f0, -2px 2px 0 #f0f0f0;
       fill: #525252;
-      paint-order: stroke;
     }
 
     .label,
     .node--root {
       pointer-events: none;
     }
+
+    #sequence {
+      width: 600px;
+      height: 70px;
+    }
   </style>
 </head>
 
 <body>
-  <svg width="700" height="700"></svg>
+  <div id="main">
+    <div id="chart"></div>
+    <div id="sequence"></div>
+  </div>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="jpacman.js"></script>
   <script>
-    var svg = d3.select("svg"),
+    var width = 700,
+      height = width;
+
+    var b = {
+      w: 120,
+      h: 30,
+      s: 3,
+      t: 10
+    };
+
+    var svg = d3.select('#chart').append("svg")
+      .attr("width", width)
+      .attr("height", height),
       margin = 20,
       diameter = +svg.attr("width"),
       g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
@@ -84,12 +108,12 @@
       .on("click", function(d) {
         if (!d.children) handleLeafClick(d), d3.event.stopPropagation();
         else if (focus !== d) zoom(d), d3.event.stopPropagation();
-      });
+      })
+      .on("mouseover", mouseover);
 
     var selectedNodes = [];
 
     function handleLeafClick(d) {
-      console.log(d);
       if (d.data.cid >= 0) {
         if (isSelectedNode(d.data.cid)) {
           selectedNodes.splice(selectedNodes.indexOf(d.data.cid), 1);
@@ -196,6 +220,111 @@
         return d.r * k;
       });
     }
+
+    function initializeBreadcrumbTrail() {
+      // Add the svg area.
+      var trail = d3.select("#sequence").append("svg:svg")
+        .attr("width", width)
+        .attr("height", 50)
+        .attr("id", "trail");
+    }
+
+    // Generate a string that describes the points of a breadcrumb polygon.
+    function breadcrumbPoints(d, i) {
+      var points = [];
+      points.push("0,0");
+      points.push(b.w + ",0");
+      points.push(b.w + b.t + "," + (b.h / 2));
+      points.push(b.w + "," + b.h);
+      points.push("0," + b.h);
+      if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
+        points.push(b.t + "," + (b.h / 2));
+      }
+      return points.join(" ");
+    }
+
+    // Update the breadcrumb trail to show the current sequence and percentage.
+    function updateBreadcrumbs(nodeArray) {
+      // Data join; key function combines name and depth (= position in sequence).
+      var trail = d3.select("#trail")
+        .selectAll("g")
+        .data(nodeArray, function(d) {
+          return d.data.name + d.depth;
+        });
+
+      // Remove exiting nodes.
+      trail.exit().remove();
+
+      // Add breadcrumb and label for entering nodes.
+      var entering = trail.enter().append("svg:g");
+
+      entering.append("svg:polygon")
+        .attr("points", breadcrumbPoints)
+        .style("fill", (d) => {
+          return d.data.ddu ? color(d.data.ddu) : colors.unselected;
+        });
+
+      entering.append("svg:text")
+        .attr("x", (b.w + b.t) / 2)
+        .attr("y", b.h / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "middle")
+        .text(function(d) {
+          return d.data.name;
+        })
+        .style('fill', (d) => {
+          return d.children ? '#f7f7f7' : '#525252';
+        });
+
+      // Merge enter and update selections; set position for all nodes.
+      entering.merge(trail).attr("transform", function(d, i) {
+        return "translate(" + i * (b.w + b.s) + ", 0)";
+      });
+
+      // Make the breadcrumb trail visible, if it's hidden.
+      d3.select("#trail")
+        .style("visibility", "");
+    }
+
+    function mouseover(d) {
+      var sequenceArray = d.ancestors().reverse();
+      updateBreadcrumbs(sequenceArray);
+
+      d3.select('#chart').selectAll("circle")
+        .style("stroke", null)
+        .style("stroke-width", null);
+
+      // Then highlight only those that are an ancestor of the current segment.
+      d3.select('#chart').selectAll("path")
+        .filter(function(node) {
+          return (sequenceArray.includes(node));
+        })
+        .style("stroke", '#08519c')
+        .style("stroke-width", '1.5px');
+    }
+
+    function mouseleave(d) {
+
+      // Hide the breadcrumb trail
+      d3.select("#trail")
+        .style("visibility", "hidden");
+
+      // Deactivate all segments during transition.
+      d3.selectAll("circle").on("mouseover", null);
+
+      // Transition each segment to full opacity and then reactivate it.
+      d3.selectAll("circle")
+        .transition()
+        .duration(100)
+        .style("opacity", 1)
+        .on("end", function() {
+          d3.select(this).on("mouseover", mouseover);
+        });
+    }
+
+
+    initializeBreadcrumbTrail();
+    d3.select("#chart svg g").on("mouseleave", mouseleave);
   </script>
 
 </body>
