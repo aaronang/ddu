@@ -21,22 +21,17 @@
     }
 
     .node:hover {
-      stroke: #08519c;
-      stroke-width: 1.5px;
+      stroke: #2171b5;
     }
 
     .node--leaf {
-      fill: #f0f0f0;
+      fill: #f7f7f7;
     }
 
     .label {
       text-anchor: middle;
-      text-shadow: 3px 0 0 #f0f0f0, -3px 0 0 #f0f0f0, 0 3px 0 #f0f0f0, 0 -3px 0 #f0f0f0, 2px 2px #f0f0f0, -2px -2px 0 #f0f0f0, 2px -2px 0 #f0f0f0, -2px 2px 0 #f0f0f0;
-      fill: #525252;
-    }
-
-    .label {
-      pointer-events: none;
+      text-shadow: 3px 0 0 #f7f7f7, -3px 0 0 #f7f7f7, 0 3px 0 #f7f7f7, 0 -3px 0 #f7f7f7, 2px 2px #f7f7f7, -2px -2px 0 #f7f7f7, 2px -2px 0 #f7f7f7, -2px 2px 0 #f7f7f7;
+      fill: #4d4d4d;
     }
 
     #sequence {
@@ -46,11 +41,6 @@
 
     #sidebar {
       display: inline;
-      width: 100px;
-    }
-
-    #legend {
-      padding: 10px 0 0 3px;
     }
   </style>
 </head>
@@ -63,25 +53,22 @@
   <div id="sidebar">
     <div id="legend"></div>
   </div>
+
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="jpacman.js"></script>
+  <script src="data.js"></script>
   <script>
     var width = 700,
-      height = width;
+      height = width,
+      diameter = width,
+      radius = diameter / 2,
+      margin = 20;
 
-    var b = {
-      w: 120,
-      h: 30,
-      s: 3,
-      t: 10
+    var breadcrumb = {
+      width: 120,
+      height: 30,
+      space: 3,
+      tip: 10
     };
-
-    var svg = d3.select('#chart').append("svg")
-      .attr("width", width)
-      .attr("height", height),
-      margin = 20,
-      diameter = +svg.attr("width"),
-      g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
     var color = d3.scaleThreshold()
       .domain([0, 0.2, 0.4, 0.6, 0.8, 1.1])
@@ -95,36 +82,42 @@
       'untested': 'f46d43'
     }
 
+    var svg = d3.select('#chart').append('svg')
+      .attr('width', width)
+      .attr('height', height);
+
+    var g = svg.append('g')
+      .attr('transform', 'translate(' + radius + ',' + radius + ')');
+
     var pack = d3.pack()
       .size([diameter - margin, diameter - margin])
       .padding(2);
 
-    root = d3.hierarchy(mydata.tree)
-      .sum(function(d) {
+    var root = d3.hierarchy(mydata.tree)
+      .sum((d) => {
         return d.children ? 0 : 1;
       })
-      .sort(function(a, b) {
+      .sort((a, b) => {
         return b.value - a.value;
       });
 
     var focus = root,
-      nodes = pack(root).descendants(),
-      view;
+      nodes = pack(root).descendants();
 
-    var circle = g.selectAll("circle")
+    var circle = g.selectAll('circle')
       .data(nodes)
-      .enter().append("circle")
-      .attr("class", function(d) {
-        return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
+      .enter().append('circle')
+      .attr('class', function(d) {
+        return d.parent ? d.children ? 'node' : 'node node--leaf' : 'node node--root';
       })
-      .style("fill", function(d) {
+      .style('fill', function(d) {
         return d.children ? color(d.data.ddu) : null;
       })
-      .on("click", function(d) {
+      .on('click', function(d) {
         if (!d.children) handleLeafClick(d), d3.event.stopPropagation();
         else if (focus !== d) zoom(d), d3.event.stopPropagation();
       })
-      .on("mouseover", mouseover);
+      .on('mouseover', mouseover);
 
     var selectedNodes = [];
 
@@ -140,7 +133,7 @@
     }
 
     function update() {
-      d3.select('#chart').selectAll('circle').style("fill", (d) => {
+      d3.select('#chart').selectAll('circle').style('fill', (d) => {
         if (d.children) {
           return color(d.data.ddu);
         } else if (selectedNodes.includes(d.data.cid)) {
@@ -174,25 +167,25 @@
       return selectedNodes.includes(cid);
     }
 
-    var text = g.selectAll("text")
+    var text = g.selectAll('text')
       .data(nodes)
-      .enter().append("text")
-      .attr("class", "label")
-      .style("fill-opacity", function(d) {
+      .enter().append('text')
+      .attr('class', 'label')
+      .style('fill-opacity', function(d) {
         return d.parent === root ? 1 : 0;
       })
-      .style("display", function(d) {
-        return d.parent === root ? "inline" : "none";
+      .style('display', function(d) {
+        return d.parent === root ? 'inline' : 'none';
       })
       .text(function(d) {
         return d.data.name;
       });
 
-    var node = g.selectAll("circle,text");
+    var node = g.selectAll('circle,text');
 
     svg
-      .style("background", 'color(-1)')
-      .on("click", function() {
+      .style('background', 'color(-1)')
+      .on('click', function() {
         zoom(root);
       });
 
@@ -203,66 +196,66 @@
 
       var transition = d3.transition()
         .duration(d3.event.altKey ? 7500 : 750)
-        .tween("zoom", function(d) {
+        .tween('zoom', function(d) {
           var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
           return function(t) {
             zoomTo(i(t));
           };
         });
 
-      transition.selectAll("text")
+      transition.selectAll('text')
         .filter(function(d) {
-          return d.parent === focus || this.style.display === "inline";
+          return d.parent === focus || this.style.display === 'inline';
         })
-        .style("fill-opacity", function(d) {
+        .style('fill-opacity', function(d) {
           return d.parent === focus ? 1 : 0;
         })
-        .on("start", function(d) {
-          if (d.parent === focus) this.style.display = "inline";
+        .on('start', function(d) {
+          if (d.parent === focus) this.style.display = 'inline';
         })
-        .on("end", function(d) {
-          if (d.parent !== focus) this.style.display = "none";
+        .on('end', function(d) {
+          if (d.parent !== focus) this.style.display = 'none';
         });
     }
 
     function zoomTo(v) {
       var k = diameter / v[2];
       view = v;
-      node.attr("transform", function(d) {
-        return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")";
+      node.attr('transform', function(d) {
+        return 'translate(' + (d.x - v[0]) * k + ',' + (d.y - v[1]) * k + ')';
       });
-      circle.attr("r", function(d) {
+      circle.attr('r', function(d) {
         return d.r * k;
       });
     }
 
     function initializeBreadcrumbTrail() {
       // Add the svg area.
-      var trail = d3.select("#sequence").append("svg:svg")
-        .attr("width", width)
-        .attr("height", 50)
-        .attr("id", "trail");
+      var trail = d3.select('#sequence').append('svg:svg')
+        .attr('width', width)
+        .attr('height', 50)
+        .attr('id', 'trail');
     }
 
     // Generate a string that describes the points of a breadcrumb polygon.
     function breadcrumbPoints(d, i) {
       var points = [];
-      points.push("0,0");
-      points.push(b.w + ",0");
-      points.push(b.w + b.t + "," + (b.h / 2));
-      points.push(b.w + "," + b.h);
-      points.push("0," + b.h);
+      points.push('0,0');
+      points.push(breadcrumb.width + ',0');
+      points.push(breadcrumb.width + breadcrumb.tip + ',' + (breadcrumb.height / 2));
+      points.push(breadcrumb.width + ',' + breadcrumb.height);
+      points.push('0,' + breadcrumb.height);
       if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
-        points.push(b.t + "," + (b.h / 2));
+        points.push(breadcrumb.tip + ',' + (breadcrumb.height / 2));
       }
-      return points.join(" ");
+      return points.join(' ');
     }
 
     // Update the breadcrumb trail to show the current sequence and percentage.
     function updateBreadcrumbs(nodeArray) {
       // Data join; key function combines name and depth (= position in sequence).
-      var trail = d3.select("#trail")
-        .selectAll("g")
+      var trail = d3.select('#trail')
+        .selectAll('g')
         .data(nodeArray, function(d) {
           return d.data.name + d.depth;
         });
@@ -271,19 +264,19 @@
       trail.exit().remove();
 
       // Add breadcrumb and label for entering nodes.
-      var entering = trail.enter().append("svg:g");
+      var entering = trail.enter().append('svg:g');
 
-      entering.append("svg:polygon")
-        .attr("points", breadcrumbPoints)
-        .style("fill", (d) => {
+      entering.append('svg:polygon')
+        .attr('points', breadcrumbPoints)
+        .style('fill', (d) => {
           return d.data.ddu ? color(d.data.ddu) : colors.unselected;
         });
 
-      entering.append("svg:text")
-        .attr("x", (b.w + b.t) / 2)
-        .attr("y", b.h / 2)
-        .attr("dy", "0.35em")
-        .attr("text-anchor", "middle")
+      entering.append('svg:text')
+        .attr('x', (breadcrumb.width + breadcrumb.tip) / 2)
+        .attr('y', breadcrumb.height / 2)
+        .attr('dy', '0.35em')
+        .attr('text-anchor', 'middle')
         .text(function(d) {
           return d.data.name;
         })
@@ -292,48 +285,48 @@
         });
 
       // Merge enter and update selections; set position for all nodes.
-      entering.merge(trail).attr("transform", function(d, i) {
-        return "translate(" + i * (b.w + b.s) + ", 0)";
+      entering.merge(trail).attr('transform', function(d, i) {
+        return 'translate(' + i * (breadcrumb.width + breadcrumb.space) + ', 0)';
       });
 
       // Make the breadcrumb trail visible, if it's hidden.
-      d3.select("#trail")
-        .style("visibility", "");
+      d3.select('#trail')
+        .style('visibility', '');
     }
 
     function mouseover(d) {
       var sequenceArray = d.ancestors().reverse();
       updateBreadcrumbs(sequenceArray);
 
-      d3.select('#chart').selectAll("circle")
-        .style("stroke", null)
-        .style("stroke-width", null);
+      d3.select('#chart').selectAll('circle')
+        .style('stroke', null)
+        .style('stroke-width', null);
 
       // Then highlight only those that are an ancestor of the current segment.
-      d3.select('#chart').selectAll("circle")
+      d3.select('#chart').selectAll('circle')
         .filter(function(node) {
           return (sequenceArray.includes(node));
         })
-        .style("stroke", '#08519c')
-        .style("stroke-width", '1.5px');
+        .style('stroke', '#08519c')
+        .style('stroke-width', '1.5px');
     }
 
     function mouseleave(d) {
 
       // Hide the breadcrumb trail
-      d3.select("#trail")
-        .style("visibility", "hidden");
+      d3.select('#trail')
+        .style('visibility', 'hidden');
 
       // Deactivate all segments during transition.
-      d3.selectAll("circle").on("mouseover", null);
+      d3.selectAll('circle').on('mouseover', null);
 
       // Transition each segment to full opacity and then reactivate it.
-      d3.selectAll("circle")
+      d3.selectAll('circle')
         .transition()
         .duration(100)
-        .style("stroke", null)
-        .on("end", function() {
-          d3.select(this).on("mouseover", mouseover);
+        .style('stroke', null)
+        .on('end', function() {
+          d3.select(this).on('mouseover', mouseover);
         });
     }
 
@@ -362,35 +355,35 @@
         '0.8 - 1': '#08519c'
       }
 
-      var legend = d3.select("#legend").append("svg:svg")
-        .attr("width", li.w + 100)
-        .attr("height", d3.keys(colors).length * (li.h + li.s));
+      var legend = d3.select('#legend').append('svg:svg')
+        .attr('width', li.w + 100)
+        .attr('height', d3.keys(colors).length * (li.h + li.s));
 
-      var g = legend.selectAll("g")
+      var g = legend.selectAll('g')
         .data(d3.entries(colors))
-        .enter().append("svg:g")
-        .attr("transform", function(d, i) {
-          return "translate(0," + i * (li.h + li.s) + ")";
+        .enter().append('svg:g')
+        .attr('transform', function(d, i) {
+          return 'translate(0,' + i * (li.h + li.s) + ')';
         });
 
-      g.append("svg:rect")
-        .attr("rx", li.r)
-        .attr("ry", li.r)
-        .attr("width", (d) => {
+      g.append('svg:rect')
+        .attr('rx', li.r)
+        .attr('ry', li.r)
+        .attr('width', (d) => {
           return d.value ? li.h : 0;
         })
-        .attr("height", li.h)
-        .style("fill", function(d) {
+        .attr('height', li.h)
+        .style('fill', function(d) {
           return d.value ? d.value : '#f7f7f7';
         })
 
-      g.append("svg:text")
-        .attr("x", (d) => {
+      g.append('svg:text')
+        .attr('x', (d) => {
           return d.value ? li.h + 5 : 0;
         })
-        .attr("y", li.h / 2)
-        .attr("dy", "0.35em")
-        .attr("text-anchor", "left")
+        .attr('y', li.h / 2)
+        .attr('dy', '0.35em')
+        .attr('text-anchor', 'left')
         .text(function(d) {
           return d.key;
         });
@@ -399,7 +392,7 @@
 
     initializeBreadcrumbTrail();
     drawLegend();
-    d3.select("#chart svg g").on("mouseleave", mouseleave);
+    d3.select('#chart svg g').on('mouseleave', mouseleave);
   </script>
 
 </body>
