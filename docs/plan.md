@@ -9,7 +9,7 @@ Basically, the goal of my thesis: **creating (improving) a tool that guides the 
   * Easy to navigate.
   * Components linked to code, i.e. IDE integration. This is not yet important but would be useful for evaluation.
 
-  **2 - 3 WEEKS**
+  **2 - 3 WEEKS | February 14**
 
 2. Create a framework that allows us (or the developer) to easily switch visualizations.
 
@@ -23,10 +23,10 @@ Basically, the goal of my thesis: **creating (improving) a tool that guides the 
 
   What about using multiple visualizations?
 
-  **2 WEEKS**
+  **2 WEEKS | March 1**
 
 3. Evaluate the visualizations. We first thought of a case study because it definitely has less confounding factors as opposed to a user study. However, we didn't immediately see how we could evaluate the tool in a case study. **Do you maybe have any suggestions on how to evaluate the tool?**
 
-  **6 WEEKS**
+  **8 WEEKS | May 1**
 
 4. Remaining weeks will be spent on writing a paper/report.
