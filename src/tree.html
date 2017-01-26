@@ -10,8 +10,25 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      font-size: 9px;
+      font-size: 10px;
       background-color: #f7f7f7;
+    }
+
+    #main {
+      float: left;
+    }
+
+    #sidebar {
+      display: inline;
+      width: 100px;
+    }
+
+    #legend {
+      padding: 10px 0 0 3px;
+    }
+
+    #legend text {
+      fill: #4d4d4d;
     }
 
     .node circle {
@@ -32,6 +49,9 @@
   <div id="main">
     <div id="chart"></div>
   </div>
+  <div id="sidebar">
+    <div id="legend"></div>
+  </div>
   <!-- load the d3.js library -->
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="data.js"></script>
@@ -39,7 +59,7 @@
   <script>
     var treeData = mydata.tree;
 
-    var radius = 4.5;
+    var radius = 8;
 
     var color = d3.scaleThreshold()
       .domain([0, 0.2, 0.4, 0.6, 0.8, 1.1])
@@ -47,7 +67,7 @@
 
     var colors = {
       'selected': '#4d4d4d',
-      'unselected': '#f0f0f0',
+      'unselected': '#f7f7f7',
       'exclusive': 'a6d96a',
       'inclusive': 'fee08b',
       'untested': 'f46d43'
@@ -148,7 +168,7 @@
       nodeEnter.append('text')
         .attr("dy", ".35em")
         .attr("x", function(d) {
-          return d.children || d._children ? -10 : 10;
+          return d.children || d._children ? -12 : 12;
         })
         .attr("text-anchor", function(d) {
           return d.children || d._children ? "end" : "start";
@@ -273,34 +293,95 @@
           update(root);
         }
       }
+    }
 
-      function isSelectedNode(cid) {
-        return selectedNodes.includes(cid);
+    function isSelectedNode(cid) {
+      return selectedNodes.includes(cid);
+    }
+
+
+    function updateLeaf(d) {
+      if (selectedNodes.includes(d.data.cid)) {
+        return colors.selected;
       }
-
-
-      function updateLeaf(d) {
-        if (selectedNodes.includes(d.data.cid)) {
-          return colors.selected;
-        }
-        if (selectedNodes.length == 0) {
-          return colors.unselected;
-        }
-        var nodes = selectedNodes.concat(d.data.cid);
-        var tests = mydata.tests.filter((t) => containsAll(t, nodes));
-        if (tests.some((t) => t.length == nodes.length)) {
-          return colors.exclusive;
-        } else if (tests.length != 0) {
-          return colors.inclusive;
-        } else {
-          return colors.untested;
-        }
+      if (selectedNodes.length == 0) {
+        return colors.unselected;
       }
-
-      function containsAll(a, b) {
-        return b.every((x) => a.includes(x));
+      var nodes = selectedNodes.concat(d.data.cid);
+      var tests = mydata.tests.filter((t) => containsAll(t, nodes));
+      if (tests.some((t) => t.length == nodes.length)) {
+        return colors.exclusive;
+      } else if (tests.length != 0) {
+        return colors.inclusive;
+      } else {
+        return colors.untested;
       }
     }
+
+    function containsAll(a, b) {
+      return b.every((x) => a.includes(x));
+    }
+
+    function drawLegend() {
+      // Dimensions of legend item: width, height, spacing, radius of rounded rect.
+      var li = {
+        w: 120,
+        h: 30,
+        s: 5,
+        r: 2
+      };
+
+      var colors = {
+        'Legend': '',
+        'selected': '#4d4d4d',
+        'unselected': '#f7f7f7',
+        'exclusively tested': 'a6d96a',
+        'inclusively tested': 'fee08b',
+        'untested': 'f46d43',
+        '': '',
+        'DDU': '',
+        '0 - 0.2': '#9ecae1',
+        '0.2 - 0.4': '#6baed6',
+        '0.4 - 0.6': '#4292c6',
+        '0.6 - 0.8': '#2171b5',
+        '0.8 - 1': '#08519c'
+      }
+
+      var legend = d3.select("#legend").append("svg:svg")
+        .attr("width", li.w + 100)
+        .attr("height", d3.keys(colors).length * (li.h + li.s));
+
+      var g = legend.selectAll("g")
+        .data(d3.entries(colors))
+        .enter().append("svg:g")
+        .attr("transform", function(d, i) {
+          return "translate(0," + i * (li.h + li.s) + ")";
+        });
+
+      g.append("svg:rect")
+        .attr("rx", li.r)
+        .attr("ry", li.r)
+        .attr("width", (d) => {
+          return d.value ? li.h : 0;
+        })
+        .attr("height", li.h)
+        .style("fill", function(d) {
+          return d.value ? d.value : '#f7f7f7';
+        });
+
+      g.append("svg:text")
+        .attr("x", (d) => {
+          return d.value ? li.h + 5 : 0;
+        })
+        .attr("y", li.h / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "left")
+        .text(function(d) {
+          return d.key;
+        });
+    }
+
+    drawLegend();
   </script>
 </body>
 
