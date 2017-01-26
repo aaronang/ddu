@@ -136,8 +136,6 @@
       d3.select('#chart').selectAll('circle').style('fill', (d) => {
         if (d.children) {
           return color(d.data.ddu);
-        } else if (selectedNodes.includes(d.data.cid)) {
-          return colors.selected;
         } else {
           return updateLeaf(d);
         }
@@ -149,6 +147,9 @@
     }
 
     function updateLeaf(d) {
+      if (selectedNodes.includes(d.data.cid)) {
+        return colors.selected;
+      }
       if (selectedNodes.length == 0) {
         return colors.unselected;
       }
