@@ -1,14 +1,7 @@
 # DDU Guidance
 
-## Questions
+Note that I am just writing down thoughts, which might not be logically organized.
 
-1. Do we want to display the DDU value? Or do we want to hide the DDU concept?
-
-2. If we hide the notion of DDU, what are the possibilities to guide the developer in improving the DDU.
-
-3. DDU approximates entropy. However, entropy is not the necessarily the optimal solution because it does not take into account the inherent dependencies in code, which may be impossible to test in isolation. Could we improve DDU to take this into account?
-
-4. Even when we visualize the component combinations that should be tested in isolation, I think it is important that the developer knows why these recommendations are made. Thus, the developer should understand the underlying idea of DDU. Would good documentation be sufficient?
 
 ## DDU Value Visualization
 
@@ -81,3 +74,44 @@ Possibilities to show potential test cases:
   * Select granularity of DDU analysis: method, block, line
   * Given selection: show combinations to test in isolation
   * Given no selection: show DDU of package, class
+
+### Recommendation
+
+We experienced during the development of visualizations that the _right_ hierarchy-like visualization might not be the most important factor.
+In fact, we think that interactivity or recommendation will be playing a greater role in determining the usefulness of the tool.
+Additionally, it is _quite easy_ to switch between hierarchy-like D3.js visualizations.
+
+In this section, we will focus on how we can suggest test cases to the developer.
+
+* Enable the developer to select the class of interest and show which methods and combinations of methods are tested.
+We could show the combinations by using color codes, an external visualization, or a table.
+
+* Maybe we could use some other data sources, e.g. static analysis, dynamic analysis, to create a recommendation system for test cases.
+* Since we are running test cases, maybe we can make use of static or dynamic call graphs to prevent false positive recommendations.
+* Are there heuristics that can rank suggested test cases, such that the highest ranked suggested test cases will improve the diagnosability of the test suite more than lower ranked test cases?
+
+## Concepts
+
+I just decided to write down concepts because trying to document subsolutions to a problem is quite difficult.
+Note that for discussing concepts I will be assuming a circle packing visualization because I like it the most.
+However, the concepts that I will be discussing probably will be applicable to any hierarchy-like visualization.
+
+### Concept 1
+
+We might just want to show everything up until class-level, i.e. no methods are shown.
+This will probably reduce information greatly and, therefore, will be easier to consume by the developer.
+At these levels --- packages and classes --- the developer is able to see the higher-level code structure.
+At this point, we would like to indicate which classes should be tested, for example, by means of color coding the DDU.
+If we are hiding the methods, we do want to show the size of packages and classes.
+
+## Questions
+
+1. Do we want to display the DDU value? Or do we want to hide the DDU concept?
+
+1. If we hide the notion of DDU, what are the possibilities to guide the developer in improving the DDU.
+
+1. DDU approximates entropy. However, entropy is not the necessarily the optimal solution because it does not take into account the inherent dependencies in code, which may be impossible to test in isolation. Could we improve DDU to take this into account?
+
+1. Even when we visualize the component combinations that should be tested in isolation, I think it is important that the developer knows why these recommendations are made. Thus, the developer should understand the underlying idea of DDU. Would good documentation be sufficient?
+
+1. What do developers prefer? Suggestion for tests that involve multiple classes or a single class? **SURVEY!**
