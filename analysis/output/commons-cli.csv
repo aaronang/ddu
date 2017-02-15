@@ -1,0 +1,2 @@
+package,number_of_classes,number_of_tests,density,normalized_density,diversity,uniqueness,ddu,unit_vs_integration
+org.apache.commons.cli,24,317,0.29758149316508936,0.5951629863301787,0.9544782973285948,0.9583333333333334,0.5444005640827044,0.03594771241830065

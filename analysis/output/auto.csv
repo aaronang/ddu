@@ -1,0 +1,2 @@
+package,number_of_classes,number_of_tests,density,normalized_density,diversity,uniqueness,ddu,unit_vs_integration
+com.google.auto.common,15,84,0.18253968253968253,0.3650793650793651,0.8952954675846242,0.8666666666666667,0.2832733807489975,0.3125
