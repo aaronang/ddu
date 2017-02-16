@@ -17,32 +17,8 @@ def to_float(s):
     except ValueError:
         return s
 
-def get_package(name):
-    n = name.split('.')
-    n.pop()
-    return '.'.join(n)
-
-def get_packages(spectra):
-    components = unique_components(spectra)
-    packages = list(map(get_package, components))
-    packages = unique(packages)
-    return reduce(assign_package, components, package_dict(packages))
-
-def package_dict(packages):
-    return { package: [] for package in packages }
-
 def package_dicts(packages):
     return { package: {} for package in packages }
-
-def assign_package(packages, component):
-    key = get_package(component)
-    keys = [k for k in packages if k in key]
-    for k in keys:
-        packages[k].append(component)
-    return packages
-
-def unique_components(spectra):
-    return set(spectra[0][1:])
 
 def spectra_to_dict(spectra):
     return { c[0]: c[1:] for c in spectra }
@@ -114,9 +90,8 @@ def pp(data):
     print(json.dumps(data, indent=4))
 
 def metrics_to_csv(csvname):
-    spectra = csv_to_spectra('../data/spectra/' + csvname)
-    packages = get_packages(spectra)
-    metrics = compute_metrics(spectra, packages)
+    spectra, components = csv_to_spectra('../data/spectra/' + csvname)
+    metrics = compute_metrics(spectra, components)
     write_to_csv(csvname, metrics)
 
 def print_spectra(spectra):
@@ -227,7 +202,9 @@ def analyze():
 def main():
     # ddus_to_csv('../data/spectra')
     # metrics_to_csv('commons-text.csv')
-    analyze()
+    # analyze()
+    spectra, components = csv_to_spectra('../data/spectra/auto.csv')
+
 
 if __name__ == '__main__':
     main()
