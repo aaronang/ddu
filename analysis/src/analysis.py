@@ -5,25 +5,28 @@ import scipy.stats.stats as st
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 
-from matrix import get_column
+def _get_column(data, c):
+    return list(map(lambda r: _to_float(r[c]), data))
 
 def analyze():
+    dir = os.path.dirname(__file__)
+    directory = os.path.normpath(os.path.join(dir, '../output/'))
     data = []
-    for filename in os.listdir('./output'):
+    for filename in os.listdir(directory):
         if filename.endswith(".csv"):
-            print(os.path.join('./output', filename))
-            with open(os.path.join('./output', filename)) as csvfile:
+            print(os.path.join(directory, filename))
+            with open(os.path.join(directory, filename)) as csvfile:
                 reader = csv.DictReader(csvfile)
                 for row in reader:
                     data.append(row)
 
-    number_of_tests = get_column(data, 'number_of_tests')
-    number_of_classes = get_column(data, 'number_of_classes')
-    density = get_column(data, 'density')
-    diversity = get_column(data, 'diversity')
-    uniqueness = get_column(data, 'uniqueness')
-    ddu = get_column(data, 'ddu')
-    unit_vs_integration = get_column(data, 'unit_vs_integration')
+    number_of_tests = _get_column(data, 'number_of_tests')
+    number_of_classes = _get_column(data, 'number_of_classes')
+    density = _get_column(data, 'density')
+    diversity = _get_column(data, 'diversity')
+    uniqueness = _get_column(data, 'uniqueness')
+    ddu = _get_column(data, 'ddu')
+    unit_vs_integration = _get_column(data, 'unit_vs_integration')
 
     utddu = filter(lambda x: x[0] != -1, zip(unit_vs_integration, ddu))
     utddu = list(zip(*utddu))

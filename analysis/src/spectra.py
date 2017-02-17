@@ -1,9 +1,9 @@
 import csv
 import re
+import os
 
 from functools import reduce
 from matrix import transpose, unique
-
 
 def _get_class(name):
     return re.split(r'[#$]+', name)[0]
@@ -71,7 +71,9 @@ def _package_dict(packages):
     return { package: [] for package in packages }
 
 def csv_to_spectra(input):
-    with open(input) as csvfile:
+    dir = os.path.dirname(__file__)
+    filename = os.path.normpath(os.path.join(dir, '../data/spectra/' + input))
+    with open(filename) as csvfile:
         reader = csv.reader(csvfile, delimiter=';')
         full_name_components = next(reader)
         components = list(map(_get_class, full_name_components))

@@ -76,7 +76,9 @@ def _compute_metrics(spectra, packages):
     return ddus
 
 def _write_to_csv(csvname, ddus):
-    with open('./output/' + csvname, 'w', newline='') as csvfile:
+    dir = os.path.dirname(__file__)
+    filename = os.path.normpath(os.path.join(dir, '../output/' + csvname))
+    with open(filename, 'w', newline='') as csvfile:
         fieldnames = ['package', 'number_of_classes', 'number_of_tests', 'density', 'normalized_density', 'diversity', 'uniqueness', 'ddu', 'unit_vs_integration']
         writer = csv.DictWriter(csvfile, delimiter=',', fieldnames=fieldnames)
         writer.writeheader()
@@ -86,13 +88,16 @@ def _write_to_csv(csvname, ddus):
             writer.writerow(row)
 
 def metric_to_csv(csvname):
-    spectra, components = csv_to_spectra('./data/spectra/' + csvname)
+    spectra, components = csv_to_spectra(csvname)
     metrics = _compute_metrics(spectra, components)
     _write_to_csv(csvname, metrics)
 
-def metrics_to_csv(dir):
-    for filename in os.listdir(dir):
+def metrics_to_csv():
+    dir = os.path.dirname(__file__)
+    directory = os.path.normpath(os.path.join(dir, '../data/spectra/'))
+    output_dir = os.path.normpath(os.path.join(dir, '../output/'))
+    for filename in os.listdir(directory):
         if filename.endswith(".csv"):
-            print('Computing metrics for', dir + filename)
+            print('Computing metrics for', directory + '/' + filename)
             metric_to_csv(filename)
-            print('Successfully written metrics to', dir + filename)
+            print('Successfully written metrics to', output_dir + '/' + filename)
