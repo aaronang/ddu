@@ -89,11 +89,6 @@ def compute_metrics(spectra, packages):
 def pp(data):
     print(json.dumps(data, indent=4))
 
-def metrics_to_csv(csvname):
-    spectra, components = csv_to_spectra('../data/spectra/' + csvname)
-    metrics = compute_metrics(spectra, components)
-    write_to_csv(csvname, metrics)
-
 def print_spectra(spectra):
     components_activity = transpose(spectra)
 
@@ -114,12 +109,17 @@ def write_to_csv(csvname, ddus):
             row.update(data)
             writer.writerow(row)
 
-def ddus_to_csv(dir):
+def metric_to_csv(csvname):
+    spectra, components = csv_to_spectra('../data/spectra/' + csvname)
+    metrics = compute_metrics(spectra, components)
+    write_to_csv(csvname, metrics)
+
+def metrics_to_csv(dir):
     for filename in os.listdir(dir):
         if filename.endswith(".csv"):
-            print('Computing metrics for', '../data/spectra/' + filename)
-            metrics_to_csv(filename)
-            print('Successfully written metrics to', '../output/' + filename)
+            print('Computing metrics for', dir + filename)
+            metric_to_csv(filename)
+            print('Successfully written metrics to', dir + filename)
 
 def get_column(data, c):
     return list(map(lambda r: to_float(r[c]), data))
@@ -203,7 +203,7 @@ def main():
     # ddus_to_csv('../data/spectra')
     # metrics_to_csv('commons-text.csv')
     # analyze()
-    spectra, components = csv_to_spectra('../data/spectra/auto.csv')
+    metrics_to_csv('../data/spectra/')
 
 
 if __name__ == '__main__':
