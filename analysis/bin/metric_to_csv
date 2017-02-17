@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+
+import sys
+import click
+
+sys.path.append('/Users/aang/Code/ddu/analysis/src')
+import metrics
+
+@click.command()
+@click.option('--input', default='', help='Spectra CSV filename of project.')
+
+def main(input):
+    """Compute metrics for a given spectra CSV file."""
+    if input == '':
+        print('Input should contain a filename.')
+    else:
+        metrics.metric_to_csv(input)
+
+if __name__ == '__main__':
+    main()
