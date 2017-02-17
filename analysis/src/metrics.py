@@ -56,7 +56,7 @@ def _unit_vs_integration(components_activity):
     except ZeroDivisionError:
         return -1
 
-def _compute_metrics(spectra, packages):
+def compute_metrics(spectra, packages):
     spectra = transpose(spectra)[1:]
     spectra_dict = _spectra_to_dict(spectra)
     ddus = _package_dicts(packages)
@@ -89,7 +89,7 @@ def _write_to_csv(csvname, ddus):
 
 def metric_to_csv(csvname):
     spectra, components = csv_to_spectra(csvname)
-    metrics = _compute_metrics(spectra, components)
+    metrics = compute_metrics(spectra, components)
     _write_to_csv(csvname, metrics)
 
 def metrics_to_csv():
