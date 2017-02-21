@@ -9,8 +9,8 @@ from functools import reduce
 def _spectra_to_dict(spectra):
     return { c[0]: c[1:] for c in spectra }
 
-def _package_dicts(packages):
-    return { package: {} for package in packages }
+def _parent_dicts(parents):
+    return { parent: {} for parent in parents }
 
 def _density(activity):
     a = sum(activity, [])
@@ -56,16 +56,16 @@ def _unit_vs_integration(components_activity):
     except ZeroDivisionError:
         return -1
 
-def compute_metrics(spectra, packages):
+def compute_metrics(spectra, parents):
     spectra = transpose(spectra)[1:]
     spectra_dict = _spectra_to_dict(spectra)
-    ddus = _package_dicts(packages)
-    for p, cs in packages.items():
+    ddus = _parent_dicts(parents)
+    for p, cs in parents.items():
         components_activity = list(map(lambda c: spectra_dict[c], cs))
         transactions = transpose(components_activity)
         transactions = reduce(_remove_no_hit, transactions, [])
         components_activity = transpose(transactions)
-        ddus[p]['number_of_classes'] = len(cs)
+        ddus[p]['number_of_components'] = len(cs)
         ddus[p]['number_of_tests'] = len(transactions)
         ddus[p]['density'] = _density(components_activity)
         ddus[p]['normalized_density'] = _normalized_density(components_activity)
@@ -87,17 +87,17 @@ def _write_to_csv(csvname, ddus):
             row.update(data)
             writer.writerow(row)
 
-def metric_to_csv(csvname):
-    spectra, components = csv_to_spectra(csvname)
+def metric_to_csv(csvname, granularity='class'):
+    spectra, components = csv_to_spectra(csvname, granularity)
     metrics = compute_metrics(spectra, components)
-    _write_to_csv(csvname, metrics)
+    _write_to_csv(granularity + '/' + csvname, metrics)
 
-def metrics_to_csv():
+def metrics_to_csv(granularity='class'):
     dir = os.path.dirname(__file__)
     directory = os.path.normpath(os.path.join(dir, '../data/spectra/'))
     output_dir = os.path.normpath(os.path.join(dir, '../output/'))
     for filename in os.listdir(directory):
         if filename.endswith(".csv"):
             print('Computing metrics for', directory + '/' + filename)
-            metric_to_csv(filename)
+            metric_to_csv(filename, granularity)
             print('Successfully written metrics to', output_dir + '/' + filename)

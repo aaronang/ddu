@@ -11,13 +11,14 @@ from utils import pp
 
 @click.command()
 @click.option('--input', default='', help='Spectra CSV filename of project.')
+@click.option('--granularity', default='class', help='Granularity of analysis.')
 
-def main(input):
+def main(input, granularity):
     """Compute metrics for a given spectra CSV file."""
     if input == '':
         print('Input should contain a filename.')
     else:
-        spectra, components = csv_to_spectra(input)
+        spectra, components = csv_to_spectra(input, granularity)
         metrics = compute_metrics(spectra, components)
         pp(metrics)
 
