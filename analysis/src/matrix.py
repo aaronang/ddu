@@ -1,6 +1,6 @@
 from functools import reduce
 
-def _to_float(s):
+def to_float(s):
     try:
         return float(s)
     except ValueError:

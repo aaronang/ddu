@@ -5,8 +5,10 @@ import scipy.stats.stats as st
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 
+from matrix import to_float
+
 def _get_column(data, c):
-    return list(map(lambda r: _to_float(r[c]), data))
+    return list(map(lambda r: to_float(r[c]), data))
 
 def analyze():
     dir = os.path.dirname(__file__)
