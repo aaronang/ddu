@@ -1,2 +1,2 @@
-package,number_of_components,number_of_tests,density,normalized_density,diversity,uniqueness,ddu,unit_vs_integration
-com.google.auto.common,8,84,0.2767857142857143,0.5535714285714286,0.8760757314974182,1.0,0.4849704942217851,0.6470588235294118
+parent,number_of_components,number_of_tests,unit_vs_integration,density,normalized_density,diversity,uniqueness,ddu
+com.google.auto.common,8,84,0.6470588235294118,0.2767857142857143,0.5535714285714286,0.8760757314974182,1.0,0.4849704942217851

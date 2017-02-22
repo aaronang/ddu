@@ -51,9 +51,7 @@ def _unique_components(spectra):
     return set(spectra[0][1:])
 
 def _get_package(name):
-    n = name.split('.')
-    n.pop()
-    return '.'.join(n)
+    return re.sub(r'\.[A-Z].*', '', name)
 
 def _get_packages(spectra):
     components = _unique_components(spectra)
@@ -89,11 +87,13 @@ def _remove_inner_classes(name):
 def _get_method(name):
     return _remove_inner_classes(name)
 
-def _granularity(name):
-    if 'method' in name:
-        return _get_method, _get_classes
-    else: # Class granularity by default.
-        return _get_class, _get_packages
+def _granularity(name='class'):
+    granularities = {
+        'method': (_get_method, _get_classes),
+        'method-package': (_get_method, _get_packages),
+        'class': (_get_class, _get_packages)
+    }
+    return granularities[name]
 
 def csv_to_spectra(input, granularity='class'):
     get_component, get_parent = _granularity(granularity)

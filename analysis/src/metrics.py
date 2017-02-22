@@ -79,7 +79,7 @@ def _write_to_csv(csvname, ddus):
     dir = os.path.dirname(__file__)
     filename = os.path.normpath(os.path.join(dir, '../output/' + csvname))
     with open(filename, 'w', newline='') as csvfile:
-        fieldnames = ['parent', 'number_of_components', 'number_of_tests', 'density', 'normalized_density', 'diversity', 'uniqueness', 'ddu', 'unit_vs_integration']
+        fieldnames = ['parent', 'number_of_components', 'number_of_tests', 'unit_vs_integration', 'density', 'normalized_density', 'diversity', 'uniqueness', 'ddu']
         writer = csv.DictWriter(csvfile, delimiter=',', fieldnames=fieldnames)
         writer.writeheader()
         for parent, data in ddus.items():
