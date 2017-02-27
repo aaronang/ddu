@@ -6,14 +6,19 @@ import click
 sys.path.append('/Users/aang/Code/ddu/analysis/src')
 import metrics
 
+
 def main():
     metrics.metrics_to_csv()
+
 
 @click.command()
 @click.option('--granularity', default='class', help='Granularity of analysis.')
 
+
 def main(granularity):
-    """Compute metrics for a given directory."""
+    """Compute metrics for a given directory.
+    :param granularity:
+    """
     metrics.metrics_to_csv(granularity)
 
 if __name__ == '__main__':

@@ -6,9 +6,11 @@ import click
 sys.path.append('/Users/aang/Code/ddu/analysis/src')
 import metrics
 
+
 @click.command()
 @click.option('--input', default='', help='Spectra CSV filename of project.')
 @click.option('--granularity', default='class', help='Granularity of analysis.')
+
 
 def main(input, granularity):
     """Compute metrics for a given spectra CSV file."""

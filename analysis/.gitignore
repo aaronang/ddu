@@ -2,3 +2,4 @@ venv
 __pycache__
 data/spectra/commons-collections.csv
 data/spectra/commons-math.csv
+.idea

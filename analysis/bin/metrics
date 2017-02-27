@@ -9,9 +9,11 @@ from metrics import compute_metrics
 from spectra import csv_to_spectra
 from utils import pp
 
+
 @click.command()
 @click.option('--input', default='', help='Spectra CSV filename of project.')
 @click.option('--granularity', default='class', help='Granularity of analysis.')
+
 
 def main(input, granularity):
     """Compute metrics for a given spectra CSV file."""

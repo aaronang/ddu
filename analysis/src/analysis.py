@@ -3,12 +3,14 @@ import csv
 
 import scipy.stats.stats as st
 import scipy.stats as stats
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 from matrix import to_float
 
+
 def _get_column(data, c):
     return list(map(lambda r: to_float(r[c]), data))
+
 
 def analyze():
     dir = os.path.dirname(__file__)
@@ -75,8 +77,8 @@ def analyze():
     # axarr[2, 1].scatter(number_of_classes, diversity)
     # axarr[2, 1].grid(True)
 
-    print('[Spearman] Unit vs. integration vs. DDU',st.spearmanr(ut, dduu))
-    print('[Pearson] Unit vs. integration vs. DDU',st.pearsonr(ut, dduu))
+    print('[Spearman] Unit vs. integration vs. DDU', st.spearmanr(ut, dduu))
+    print('[Pearson] Unit vs. integration vs. DDU', st.pearsonr(ut, dduu))
 
     print(stats.normaltest(ut))
     print(stats.normaltest(dduu))
