@@ -6,7 +6,7 @@ The projects are chosen because they are popular, have a working test suite, are
 
 ## Commons Text
 
-Commons Text has been chosen mainly due to its _extremely_ high code coverage.
+Commons Text has been chosen mainly due to its _extremely_ high code coverage, namely `96%`.
 This, in particular, is interesting because the results clearly show that a high code coverage does not result in a high DDU value.
 
 
@@ -35,7 +35,8 @@ This results in no test diversity and components ambiguity groups, i.e. low dive
 The density of `org.apache.commons.text.beta.similarity` is low for two reasons; (1) the number of components is _high_, and (2) all test cases are unit tests.
 This results in a sparse matrix.
 The more components a package contains, the more difficult it is to get a balanced density of `0.5`.
-Because the test suite for this package consists of unit tests only, the diversity and uniqueness are higher.
+Diversity is a forgiving metric but is relative lower than the other packages.
+The reason for this is that each class is covered by multiple unit tests, and therefore the activity matrix has _many_ test executions with identical activity.
 Although the diversity and uniqueness are _okay_, the DDU is still low due to the low normalized density.
 
 `org.apache.text.beta.translate` is tested by approximately 39 unit tests and 17 integration tests.
@@ -61,6 +62,19 @@ This effect becomes more apparent when the number of components increases.
 |org.apache.commons.text.beta.translate|57|56|0.07692307692307693|0.10432330827067669|0.2086466165413534|0.974025974025974|0.7719298245614035|0.15687715529425067|
 |org.apache.commons.text.beta|537|464|0.08665105386416862|0.0230767995890323|0.04615359917806461|0.9916213599463767|0.6759776536312849|0.030937398149653968|
 
+Similar to the class-granularity explanation, `org.apache.commons.text.beta.diff` has a high density due to integration tests but slightly lower because there are more components to cover.
+This results in test executions to have more variety in activity and thus a higher diversity.
+I expected that the uniqueness at method-granularity would be higher.
+A possible reason for the low uniqueness could be that certain methods are likely to be executed together and therefore resulting in identical columns in the activity matrix.
+**This needs to be examined more thoroughly.**
+
+`org.apache.commons.text.beta.similarity` consisted mostly of unit tests and therefore suffers from sparseness of the activity matrix.
+The components have increased and thus the impact of unit tests on the sparseness of the activity matrix becomes more apparent.
+Compared to the class granularity, test diversity has improved as there are more components to cover.
+Though, we still observe that it is relatively lower than the other packages -- probably due to the same reason as mentioned before for class granularity.
+The uniqueness is low compared to class granularity for this package. This means that certain methods are always executed together.
+
+We observe similar consequences for `org.apache.commons.text.beta.translate`, mainly due to the increase in number of components.
 
 |class|number_of_components|number_of_tests|unit_vs_integration|density|normalized_density|diversity|uniqueness|ddu|
 |---|---|---|---|---|---|---|---|---|
@@ -113,3 +127,12 @@ This effect becomes more apparent when the number of components increases.
 |org.apache.commons.text.beta.translate.UnicodeEscaper|8|15|1.5|0.21666666666666667|0.43333333333333335|0.7619047619047619|0.875|0.28888888888888886|
 |org.apache.commons.text.beta.translate.UnicodeUnescaper|2|6|1.0|0.75|0.5|0.7333333333333334|1.0|0.3666666666666667|
 |org.apache.commons.text.beta.translate.UnicodeUnpairedSurrogateRemover|2|5|-1|0.5|1.0|0.4|1.0|0.4|
+
+`org.apache.commons.text.beta.translate.JavaUnicodeEscaper` has a DDU value of `0.7256` -- the highest DDU value of all classes.
+
+
+## Observations
+
+- Uniqueness can possibly find components that are always executed together.
+- A high density becomes more difficult to obtain, the higher the number of components.
+- Diversity is a forgiving metric.
