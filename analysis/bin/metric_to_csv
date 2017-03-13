@@ -17,7 +17,7 @@ def main(input, granularity):
     if input == '':
         print('Input should contain a filename.')
     else:
-        metrics.metric_to_csv(input, granularity)
+        metrics.metric_to_csv(input + '.csv', granularity)
 
 if __name__ == '__main__':
     main()

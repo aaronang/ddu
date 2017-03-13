@@ -1,2 +1,2 @@
-parent,number_of_components,number_of_tests,unit_vs_integration,density,normalized_density,diversity,uniqueness,ddu
-org.apache.commons.cli,21,317,0.03594771241830065,0.330779630464173,0.661559260928346,0.9525416283991535,0.9523809523809523,0.6001549863687878
+parent,number_of_components,number_of_tests,unit_tests,integration_tests,density,normalized_density,diversity,uniqueness,ddu
+org.apache.commons.cli,21,317,11,306,0.330779630464173,0.661559260928346,0.9525416283991535,0.9523809523809523,0.6001549863687878

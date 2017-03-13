@@ -20,6 +20,7 @@ def main(input, granularity):
     if input == '':
         print('Input should contain a filename.')
     else:
+        input = input + '.csv'
         spectra, components = csv_to_spectra(input, granularity)
         metrics = compute_metrics(spectra, components)
         pp(metrics)
