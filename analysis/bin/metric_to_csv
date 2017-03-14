@@ -9,7 +9,7 @@ import metrics
 
 @click.command()
 @click.option('--input', default='', help='Spectra CSV filename of project.')
-@click.option('--granularity', default='class', help='Granularity of analysis.')
+@click.option('--granularity', default='class', help='Granularity of analysis: [method|method-package|class].')
 
 
 def main(input, granularity):

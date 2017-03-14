@@ -12,7 +12,7 @@ def main():
 
 
 @click.command()
-@click.option('--granularity', default='class', help='Granularity of analysis.')
+@click.option('--granularity', default='class', help='Granularity of analysis: [method|method-package|class].')
 
 
 def main(granularity):

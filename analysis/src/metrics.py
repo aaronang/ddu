@@ -73,9 +73,12 @@ def compute_metrics(spectra, parents):
         transactions = transpose(components_activity)
         transactions = zip(transaction_names, transactions)
         transactions = reduce(_remove_no_hit, transactions, [])
-        print(p, cs)
+        print('\nParent:', p)
+        print('Components:', cs)
         for t, h in transactions:
             print(h, t)
+        if not transactions:
+            continue
         tests, transactions = zip(*transactions)
         components_activity = transpose(transactions)
         ddus[p]['number_of_components'] = len(cs)
