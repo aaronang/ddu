@@ -60,3 +60,6 @@ Based on the kind of test cases, we observe that there is no unit test, i.e. a t
 
 
 ## Observations
+
+- Density could guide the user in whether to write an integration test or unit test. What does a good density mean in practice? Does it imply anything?
+- Would visualizing the activity matrix be interesting? I would argue that the developer could identify certain patterns in the activity matrix that could indicate how to test or design software?

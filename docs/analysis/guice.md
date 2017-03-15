@@ -31,6 +31,13 @@ Given many tests and a low number of components to cover, it is likely that the 
 For example, given we have three components and we have 20 test cases.
 We know that at least `20 - 2^3 = 12` test cases have similar activity.
 **Does this mean that there is an optimal number of test cases?**
+I guess that in the case when a package has a low number of components, there is an ideal number of test cases.
+When having 8 components to test, the ideal number of test cases is:
+```
+2^8 = 256
+```
+This ideal number of test cases becomes difficult to achieve when having more than 8 components.
+We have observe for Guice that each package has approximately 600 test cases on average.
 
 
 
