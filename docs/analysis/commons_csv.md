@@ -23,7 +23,7 @@ This has the effect that it is unlikely to have component ambiguity and thus the
 Although it seems that there is "good" balance between unit and integration tests, the density is still on the low side and thus causing the normalized density to be "low".
 Note that an integration test is a test that hits two or more components.
 To improve the density, one could either reduce the number of unit tests, or write more integration tests that hit "a lot" of components.
-It is debatable though if the tests make any sense if one would write integration tests that randomly hits many components that might have nothing to do with each other.
+It is debatable though if the tests would make any sense if one would write integration tests that randomly hits many components that might have nothing to do with each other.
 As seen previously in Commons Text, the diversity is "quite high" because it doesn't penalize hard.
 By looking at the diversity, it seems that "many" test cases share identical activity.
 
