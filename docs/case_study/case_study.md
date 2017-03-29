@@ -35,7 +35,10 @@ Based on these requirements, we choose the following open source projects.
 
 ## Approach
 
-
+To get a better understanding of how DDU varies as a consequence to testing, we use [`ddu-maven-plugin`](https://github.com/aperez/ddu-maven-plugin), written by Alexandre Perez, to instrument Java code and collect the activity matrix.
+The DDU Maven plugin is capable of computing the DDU, however it requires deeper knowledge if we would like to modify the plugin to use different granularities, e.g. class granularity.
+Therefore, to compute the DDU, its individual terms, and the metrics for different granularities, we wrote multiple [Python scripts](https://github.com/aaronang/ddu/tree/master/analysis).
+Note that the class granularity is not supported by `ddu-maven-plugin`; it has support for instrumenting Java at method, block, and line granularity.
 
 
 ## Density
