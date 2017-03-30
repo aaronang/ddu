@@ -35,10 +35,17 @@ Based on these requirements, we choose the following open source projects.
 
 ## Approach
 
-To get a better understanding of how DDU varies as a consequence to testing, we use [`ddu-maven-plugin`](https://github.com/aperez/ddu-maven-plugin), written by Alexandre Perez, to instrument Java code and collect the activity matrix.
+To get a better understanding of how DDU varies as a consequence to testing, we use [`ddu-maven-plugin`](https://github.com/aperez/ddu-maven-plugin), written by Perez, to instrument Java code and collect the activity matrix.
 The DDU Maven plugin is capable of computing the DDU, however it requires deeper knowledge if we would like to modify the plugin to use different granularities, e.g. class granularity.
 Therefore, to compute the DDU, its individual terms, and the metrics for different granularities, we wrote multiple [Python scripts](https://github.com/aaronang/ddu/tree/master/analysis).
-Note that the class granularity is not supported by `ddu-maven-plugin`; it has support for instrumenting Java at method, block, and line granularity.
+Note that class granularity is not supported by `ddu-maven-plugin`; it has support for instrumenting Java at method, block, and line granularity.
+
+With these two tools we collect data such as number of tests, number of unit tests, number of integration test, density, diversity, uniqueness, DDU, and the activity matrix.
+Since the definition of unit and integration tests varies from person to person, we use the following simple definition.
+At class granularity, a test is considered a unit test when it only covers one class.
+Accordingly, a test is considered an integration test when it covers two or more classes.
+
+Then, we analyze the collected data and show examples that illustrate how DDU and its individual terms vary as a consequence to particular kinds of tests.
 
 
 ## Density
