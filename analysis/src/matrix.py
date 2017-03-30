@@ -5,7 +5,7 @@ def to_float(s):
     try:
         return float(s)
     except ValueError:
-        return s
+        return -1
 
 
 def transpose(data):

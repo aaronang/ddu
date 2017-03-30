@@ -7,7 +7,7 @@ Ultimately, the goal is to guide the developer in writing tests such that the di
 
 In this section we first discuss the selection criteria that are used for selecting open source projects to analyze.
 Secondly, we explain the approach for analyzing the impact of different kinds of tests on DDU.
-Then, for each individual term of DDU, i.e. density, diversity, and uniqueness, we give examples to clarify how the term changes with regards to related tests.
+Then, for each individual term of DDU, i.e. normalized density, diversity, and uniqueness, we give examples to clarify how the term changes with regards to related tests.
 Subsequently, we discuss the DDU metric as a whole.
 Finally, we conclude this case study with observations and recommendations.
 
@@ -40,15 +40,22 @@ The DDU Maven plugin is capable of computing the DDU, however it requires deeper
 Therefore, to compute the DDU, its individual terms, and the metrics for different granularities, we wrote multiple [Python scripts](https://github.com/aaronang/ddu/tree/master/analysis).
 Note that class granularity is not supported by `ddu-maven-plugin`; it has support for instrumenting Java at method, block, and line granularity.
 
-With these two tools we collect data such as number of tests, number of unit tests, number of integration test, density, diversity, uniqueness, DDU, and the activity matrix.
+With these two tools we collect data for different granularities such as number of tests, number of unit tests, number of integration test, density, normalized density, diversity, uniqueness, DDU, and the activity matrix.
 Since the definition of unit and integration tests varies from person to person, we use the following simple definition.
-At class granularity, a test is considered a unit test when it only covers one class.
-Accordingly, a test is considered an integration test when it covers two or more classes.
+At method granularity, a test is considered a unit test when it only covers one method.
+Accordingly, a test is considered an integration test when it covers two or more method.
 
 Then, we analyze the collected data and show examples that illustrate how DDU and its individual terms vary as a consequence to particular kinds of tests.
+We are interested in what kinds of tests result in a high or low DDU value.
 
 
-## Density
+## Normalized Density
+
+In the figure below, we observe that distribution of normalized densities for all classes of the open source projects mentioned before.
+The average is equal to `0.6249`.
+
+![Normalized density of classes.](img/normalized_density_class.png)
+
 
 
 
@@ -61,3 +68,5 @@ Then, we analyze the collected data and show examples that illustrate how DDU an
 
 
 ## DDU
+
+<!-- The individual terms should be multiplied together. -->
