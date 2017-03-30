@@ -27,9 +27,12 @@ def analyze(granularity):
                     data.append(row)
 
     normalized_density = list(filter(lambda x: x not in [-1, 0], _get_column(data, 'normalized_density', to_float)))
+    print(normalized_density)
     print(reduce(lambda x, y: x + y, normalized_density) / len(normalized_density))
 
-    plt.hist(normalized_density, bins=[float(x) / 10 for x in range(0, 10)])
+    bins = [float(x) / 10 for x in range(0, 10)]
+    bins.append(1.0)
+    plt.hist(normalized_density, bins=bins)
     plt.xlabel('Normalized density')
     plt.ylabel('Frequency')
     plt.title('Normalized density of classes')

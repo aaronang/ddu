@@ -1,10 +1,11 @@
-import os
-import math
 import csv
-
-from spectra import csv_to_spectra
-from matrix import transpose, unique
+import math
+import os
+import re
 from functools import reduce
+
+from matrix import transpose, unique
+from spectra import csv_to_spectra
 
 
 def _spectra_to_dict(spectra):
@@ -56,10 +57,13 @@ def _uniqueness(activity):
         return 0
 
 
-def _unit_and_integration(components_activity):
-    transactions = transpose(components_activity)
-    integration_tests = len(list(filter(lambda t: sum(t) > 1, transactions)))
-    unit_tests = len(transactions) - integration_tests
+def _unit_and_integration(parent, transactions):
+    def _is_unit(transaction):
+        t, h = transaction
+        return parent in t
+
+    unit_tests = len(list(filter(_is_unit, transactions)))
+    integration_tests = len(transactions) - unit_tests
     return unit_tests, integration_tests
 
 
@@ -69,19 +73,23 @@ def compute_metrics(spectra, parents):
     spectra_dict = _spectra_to_dict(spectra)
     ddus = _parent_dicts(parents)
     for p, cs in parents.items():
-        components_activity = list(map(lambda c: spectra_dict[c], cs))
+        constructor = p + '#' + p.split('.')[-1]
+        pattern = re.compile("%s\(.*\)" % constructor)
+        components = list(filter(lambda c: pattern.match(c) is None, cs))
+        components_activity = list(map(lambda c: spectra_dict[c], components))
         transactions = transpose(components_activity)
         transactions = zip(transaction_names, transactions)
         transactions = reduce(_remove_no_hit, transactions, [])
         print('\nParent:', p)
-        print('Components:', cs)
-        for t, h in transactions:
-            print(h, t)
+        print('Components:', components)
         if not transactions:
             continue
+        for t, h in transactions:
+            print(h, t)
+        ddus[p]['unit_tests'], ddus[p]['integration_tests'] = _unit_and_integration(p, transactions)
         tests, transactions = zip(*transactions)
         components_activity = transpose(transactions)
-        ddus[p]['number_of_components'] = len(cs)
+        ddus[p]['number_of_components'] = len(components)
         ddus[p]['number_of_tests'] = len(transactions)
         ddus[p]['density'] = _density(components_activity)
         ddus[p]['normalized_density'] = _normalized_density(
@@ -89,9 +97,7 @@ def compute_metrics(spectra, parents):
         ddus[p]['diversity'] = _diversity(components_activity)
         ddus[p]['uniqueness'] = _uniqueness(components_activity)
         ddus[p]['ddu'] = ddus[p]['normalized_density'] * \
-            ddus[p]['diversity'] * ddus[p]['uniqueness']
-        ddus[p]['unit_tests'], ddus[p]['integration_tests'] = _unit_and_integration(
-            components_activity)
+                         ddus[p]['diversity'] * ddus[p]['uniqueness']
     return ddus
 
 
