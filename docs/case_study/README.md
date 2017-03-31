@@ -53,16 +53,60 @@ We are interested in what kinds of tests result in a high or low DDU value.
 
 ## Normalized Density
 
-In the figure below, we observe that distribution of normalized densities for all classes of the open source projects mentioned before.
+In the figure below, we observe the distribution of normalized densities for all classes of the four open source projects mentioned before.
 The average equals to `0.6071`.
 
 ![Normalized density of classes.](img/normalized_density_of_classes.png)
 
->**TODO: Show histogram without zeroes.**
+>**TODO: Show histogram without zeroes in a different (and overlapping) color.**
 
 The normalized density value is low when a class is tested by many tests that only cover a couple of methods. 
-For example, `org.apache.commons.csv.CSVRecord` has `17` methods and.
+For example, `org.apache.commons.csv.CSVRecord` has `17` methods (excluding its constructors) and its spectra looks as follows.
+Note that not all transactions that hit `CSVRecord` methods are shown, but in the case of `CSVRecord`, all its transactions look similar; each transaction only hits a couple of components.
 
+```
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] CSVRecordTest#testGetStringNoHeader
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0] CSVRecordTest#testGetUnmappedPositiveInt
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0] CSVRecordTest#testGetUnmappedNegativeInt
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] CSVRecordTest#testGetUnmappedEnum
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] CSVRecordTest#testGetUnmappedName
+```
+
+In the partial spectra of `CSVRecord` shown above, the columns are the methods of `CSVRecord`.
+So, for example, in the first row, we observe that the transaction `testGetStringNoHeader` only hits one method, indicated by a `1`.
+The normalized density of `CSVRecord` is low because its test cases only cover a couple components and this causes the activity matrix to become sparse.
+Thus, the more components a class has, the greater the impact of a test, that hits a relative small number of components, has on the sparseness of the activity matrix.
+
+In the partial spectra of `com.google.inject.internal.ConstructorInjectorStore`, a Guice class, shown below, we observe a high density; almost all methods of `ConstructorInjectorStore` are hit in every single test.
+Since the density is high: `0.8351`, the normalized density is low: `0.3298`.
+
+```
+[1, 0, 1, 1, 1, 1] ImplicitBindingTest#testDefaultImplementation
+[1, 0, 1, 1, 1, 1] ImplicitBindingTest#testProvidedByNonEmptyEnum
+[1, 0, 1, 1, 1, 1] ImplicitBindingTest#testDefaultProvider
+[1, 0, 1, 1, 1, 1] ImplicitBindingTest#testProvidedByEmptyEnum
+[1, 0, 1, 1, 1, 1] ImplicitBindingTest#testImplicitJdkBindings
+```
+
+So, ideally, to obtain a high value for the normalized density, we need a good balance between tests that cover many components and tests that cover a few.
+In Commons Text, the `org.apache.commons.text.beta.StrLookup` class has a normalized density of `0.9512`.
+In the partial spectra, shown below, we observe that each test case covers `50%` of the components and therefore this particular class obtains a density close to `0.5` and a normalized density close `1.0`.
+
+```
+[0, 1, 0, 1] org.apache.commons.text.beta.StrLookupTest#testNoneLookup
+[1, 1, 0, 0] org.apache.commons.text.beta.StrLookupTest#testSystemPropertiesLookupReplacedProperties
+[1, 1, 0, 0] org.apache.commons.text.beta.StrLookupTest#testSystemPropertiesLookupUpdatedProperty
+[0, 1, 1, 0] org.apache.commons.text.beta.StrLookupTest#testMapLookup_nullMap
+[0, 1, 1, 0] org.apache.commons.text.beta.StrLookupTest#testMapLookup
+```
+
+
+### TL;DR
+
+To obtain a good value for normalized density, we could suggest the developer to write tests that either cover many components, a few, or something in between based on the density.
+If the density is lower than `0.5`, we could suggest the developer to write tests that cover many components.
+If the density is higher than `0.5`, we could suggest the developer to write tests that cover a few components.
+Either way, suggesting the developer to write tests that cover a certain number of components might not be practical.
 
 
 ## Diversity
