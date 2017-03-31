@@ -31,6 +31,7 @@ def analyze(granularity):
     plot_uniqueness(data)
     plot_ddu(data)
 
+
 def plot_ddu(data):
     ddu = list(filter(lambda x: not (x < 0), _get_column(data, 'ddu', to_float)))
     print(ddu)

@@ -58,6 +58,8 @@ The average equals to `0.6071`.
 
 ![Normalized density of classes.](img/normalized_density_of_classes.png)
 
+>**TODO: Show histogram without zeroes.**
+
 The normalized density value is low when a class is tested by many tests that only cover a couple of methods. 
 For example, `org.apache.commons.csv.CSVRecord` has `17` methods and.
 
@@ -65,12 +67,16 @@ For example, `org.apache.commons.csv.CSVRecord` has `17` methods and.
 
 ## Diversity
 
+![Diversity of classes.](img/diversity_of_classes.png)
 
 
 ## Uniqueness
 
+![Uniqueness of classes.](img/uniqueness_of_classes.png)
 
 
 ## DDU
+
+![DDU of classes.](img/ddu_of_classes.png)
 
 <!-- The individual terms should be multiplied together. -->
