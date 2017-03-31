@@ -124,13 +124,13 @@ def _write_to_csv(csvname, ddus):
             writer.writerow(row)
 
 
-def metric_to_csv(csvname, granularity='class'):
+def metric_to_csv(csvname, granularity='method'):
     spectra, components = csv_to_spectra(csvname, granularity)
     metrics = compute_metrics(spectra, components)
     _write_to_csv(granularity + '/' + csvname, metrics)
 
 
-def metrics_to_csv(granularity='class'):
+def metrics_to_csv(granularity='method'):
     dir = os.path.dirname(__file__)
     directory = os.path.normpath(os.path.join(dir, '../data/spectra/'))
     output_dir = os.path.normpath(os.path.join(dir, '../output/'))

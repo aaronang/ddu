@@ -112,7 +112,7 @@ def _granularity(name='class'):
     return granularities[name]
 
 
-def csv_to_spectra(input, granularity='class'):
+def csv_to_spectra(input, granularity='method'):
     get_component, get_parent = _granularity(granularity)
     dir = os.path.dirname(__file__)
     filename = os.path.normpath(os.path.join(dir, '../data/spectra/' + input))
