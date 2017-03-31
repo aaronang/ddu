@@ -41,9 +41,11 @@ Therefore, to compute the DDU, its individual terms, and the metrics for differe
 Note that class granularity is not supported by `ddu-maven-plugin`; it has support for instrumenting Java at method, block, and line granularity.
 
 With these two tools we collect data for different granularities such as number of tests, number of unit tests, number of integration test, density, normalized density, diversity, uniqueness, DDU, and the activity matrix.
-Since the definition of unit and integration tests varies from person to person, we use the following simple definition.
-At method granularity, a test is considered a unit test when it only covers one method.
-Accordingly, a test is considered an integration test when it covers two or more method.
+>**TODO: Revisit definition of unit and integration tests.**
+>
+>Since the definition of unit and integration tests varies from person to person, we use the following simple definition.
+>At method granularity, a test is considered a unit test when it only covers one method.
+>Accordingly, a test is considered an integration test when it covers two or more method.
 
 Then, we analyze the collected data and show examples that illustrate how DDU and its individual terms vary as a consequence to particular kinds of tests.
 We are interested in what kinds of tests result in a high or low DDU value.
@@ -52,10 +54,12 @@ We are interested in what kinds of tests result in a high or low DDU value.
 ## Normalized Density
 
 In the figure below, we observe that distribution of normalized densities for all classes of the open source projects mentioned before.
-The average is equal to `0.6249`.
+The average equals to `0.6071`.
 
-![Normalized density of classes.](img/normalized_density_class.png)
+![Normalized density of classes.](img/normalized_density_of_classes.png)
 
+The normalized density value is low when a class is tested by many tests that only cover a couple of methods. 
+For example, `org.apache.commons.csv.CSVRecord` has `17` methods and.
 
 
 
