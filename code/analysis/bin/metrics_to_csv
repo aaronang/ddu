@@ -2,8 +2,9 @@
 
 import sys
 import click
+import os
 
-sys.path.append('/Users/aang/Code/ddu/analysis/src')
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 import metrics
 
 
