@@ -1,0 +1,12 @@
+[0, 1, 1, 0, 0, 0, 1] com.google.inject.internal.MapBinderTest#testWeakKeySet_integration_mapbinder
+[0, 1, 1, 0, 0, 0, 1] com.google.inject.internal.OptionalBinderTest#testWeakKeySet_integration
+[0, 0, 0, 0, 0, 1, 0] com.google.inject.internal.WeakKeySetTest#testNoEviction_keyOverlap_2x
+[0, 1, 1, 0, 0, 0, 1] com.google.inject.internal.WeakKeySetTest#testWeakKeySet_integration_multipleChildren_overlappingKeys
+[0, 1, 1, 0, 0, 0, 1] com.google.inject.internal.WeakKeySetTest#testWeakKeySet_integration
+[0, 1, 1, 0, 0, 0, 1] com.google.inject.internal.WeakKeySetTest#testWeakKeySet_integration_multipleChildren
+[0, 0, 0, 1, 1, 1, 0] com.google.inject.internal.WeakKeySetTest#testEviction_keyOverlap_2x
+[0, 0, 0, 1, 1, 1, 0] com.google.inject.internal.WeakKeySetTest#testEviction_keyOverlap_3x
+[0, 0, 0, 1, 0, 1, 0] com.google.inject.internal.WeakKeySetTest#testEviction_keyAndSourceOverlap_null
+[0, 0, 0, 1, 0, 1, 0] com.google.inject.internal.WeakKeySetTest#testEviction_keyAndSourceOverlap_nonNull
+[0, 0, 0, 1, 0, 1, 0] com.google.inject.internal.WeakKeySetTest#testEviction
+[0, 0, 0, 1, 0, 1, 0] com.google.inject.internal.WeakKeySetTest#testEviction_nullSource

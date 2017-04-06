@@ -67,6 +67,18 @@ def _unit_and_integration(parent, transactions):
     return unit_tests, integration_tests
 
 
+def write_transactions(transactions, parent):
+    current_dir = os.path.dirname(__file__)
+    output_dir = os.path.join(current_dir, '../output/spectra/')
+    output_file = os.path.join(output_dir, parent)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    with open(output_file, 'w') as f:
+        for t, h in transactions:
+            print(h, t)
+            f.write(str(h) + ' ' + t + '\n')
+
+
 def compute_metrics(spectra, parents):
     transaction_names = transpose(spectra)[0][1:]
     spectra = transpose(spectra)[1:]
@@ -84,8 +96,7 @@ def compute_metrics(spectra, parents):
         print('Components:', components)
         if not transactions:
             continue
-        for t, h in transactions:
-            print(h, t)
+        write_transactions(transactions, p)
         ddus[p]['unit_tests'], ddus[p]['integration_tests'] = _unit_and_integration(p, transactions)
         tests, transactions = zip(*transactions)
         components_activity = transpose(transactions)

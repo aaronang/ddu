@@ -1,0 +1,7 @@
+[1, 0] org.apache.commons.text.beta.similarity.JaroWinklerDistanceTest#testGetJaroWinklerDistance_NullNull
+[1, 1] org.apache.commons.text.beta.similarity.JaroWinklerDistanceTest#testGetJaroWinklerDistance_StringString
+[1, 0] org.apache.commons.text.beta.similarity.JaroWinklerDistanceTest#testGetJaroWinklerDistance_NullString
+[1, 0] org.apache.commons.text.beta.similarity.JaroWinklerDistanceTest#testGetJaroWinklerDistance_StringNull
+[1, 1] org.apache.commons.text.beta.similarity.ParameterizedSimilarityScoreFromTest#test[0]
+[1, 1] org.apache.commons.text.beta.similarity.ParameterizedSimilarityScoreFromTest#test[1]
+[1, 1] org.apache.commons.text.beta.similarity.ParameterizedSimilarityScoreFromTest#test[2]

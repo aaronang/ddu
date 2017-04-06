@@ -1,0 +1,14 @@
+[1, 1, 1, 0, 0] com.google.inject.InjectorTest#testInjectStatics
+[1, 1, 1, 0, 0] com.google.inject.InjectorTest#testInjectStaticInterface
+[1, 1, 1, 0, 0] com.google.inject.OptionalBindingTest#testStaticInjection
+[1, 1, 1, 0, 0] com.google.inject.ProviderInjectionTest#testCreationTimeInjectionOrdering
+[1, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testInjectStatics
+[1, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testInjectMembersAndStatics
+[1, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testUserExceptionWhileInjectingStatically
+[1, 1, 0, 1, 1] com.google.inject.spi.ElementApplyToTest#testRequestStaticInjection
+[1, 1, 0, 0, 1] com.google.inject.spi.ElementsTest#testRequestStaticInjection
+[1, 1, 1, 0, 0] com.google.inject.spi.ToolStageInjectorTest#testToolStageWarnsOfMissingObjectGraph
+[1, 1, 1, 0, 0] com.google.inject.spi.ToolStageInjectorTest#testToolStageDoesntInjectProviders
+[1, 1, 1, 0, 0] com.google.inject.spi.ToolStageInjectorTest#testToolStageDoesntInjectInstances
+[1, 1, 1, 0, 0] com.google.inject.spi.ToolStageInjectorTest#testToolStageInjectsTooledMethods
+[1, 1, 0, 1, 1] com.google.inject.util.NoopOverrideTest#testRequestStaticInjection

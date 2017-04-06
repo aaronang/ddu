@@ -1,0 +1,12 @@
+[0, 0, 1, 0, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceDistanceTest#testGettingLongestCommonSubsequenceDistanceNullString
+[0, 0, 1, 0, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceDistanceTest#testGettingLongestCommonSubsequenceDistanceNullNull
+[0, 0, 1, 0, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceDistanceTest#testGettingLongestCommonSubsequenceDistanceStringNull
+[1, 0, 1, 1, 1] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceDistanceTest#testGettingLogestCommonSubsequenceDistacne
+[1, 0, 0, 1, 1] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testLongestCommonSubsequenceApply
+[0, 0, 0, 1, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testGettingLongestCommonSubsequenceNullString
+[1, 0, 0, 0, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testGettingLongestCommonSubsequenceApplyNullNull
+[0, 0, 0, 1, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testGettingLongestCommonSubsequenceStringNull
+[1, 0, 0, 0, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testGettingLongestCommonSubsequenceApplyNullString
+[0, 0, 0, 1, 1] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testLongestCommonSubsequence
+[1, 0, 0, 0, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testGettingLongestCommonSubsequenceApplyStringNull
+[0, 0, 0, 1, 0] org.apache.commons.text.beta.similarity.LongestCommonSubsequenceTest#testGettingLongestCommonSubsequenceNullNull

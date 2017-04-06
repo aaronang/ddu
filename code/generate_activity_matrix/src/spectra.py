@@ -2,12 +2,13 @@ import re
 
 
 class Spectra:
-    def __init__(self):
+    def __init__(self, filename):
         self.matrix = []
         self.num_of_components = 0
         self.num_of_transactions = 0
+        self._read(filename)
 
-    def read(self, filename):
+    def _read(self, filename):
         with open(filename, 'r') as f:
             for line in f:
                 line = line.strip()

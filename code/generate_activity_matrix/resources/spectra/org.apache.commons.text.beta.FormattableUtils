@@ -1,0 +1,6 @@
+[1, 0, 0, 1, 0] org.apache.commons.text.beta.FormattableUtilsTest#testDefaultAppend
+[1, 0, 1, 0, 0] org.apache.commons.text.beta.FormattableUtilsTest#testAlternatePadCharacter
+[1, 0, 0, 0, 0] org.apache.commons.text.beta.FormattableUtilsTest#testAlternatePadCharAndEllipsis
+[1, 1, 0, 0, 0] org.apache.commons.text.beta.FormattableUtilsTest#testIllegalEllipsis
+[0, 0, 0, 0, 1] org.apache.commons.text.beta.FormattableUtilsTest#testSimplestFormat
+[1, 1, 0, 0, 0] org.apache.commons.text.beta.FormattableUtilsTest#testEllipsis

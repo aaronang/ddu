@@ -1,0 +1,4 @@
+[1] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeXml10
+[1] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeXml11
+[1] org.apache.commons.text.beta.translate.UnicodeUnpairedSurrogateRemoverTest#testValidCharacters
+[1] org.apache.commons.text.beta.translate.UnicodeUnpairedSurrogateRemoverTest#testInvalidCharacters

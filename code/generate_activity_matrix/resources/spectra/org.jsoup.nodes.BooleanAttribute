@@ -1,0 +1,4 @@
+[1] org.jsoup.nodes.DocumentTest#testHtmlAndXmlSyntax
+[1] org.jsoup.nodes.ElementTest#testAddBooleanAttribute
+[1] org.jsoup.parser.AttributeParseTest#parsesBooleanAttributes
+[1] org.jsoup.parser.HtmlParserTest#parsesQuiteRoughAttributes

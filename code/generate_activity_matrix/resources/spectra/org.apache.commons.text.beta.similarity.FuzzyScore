@@ -1,0 +1,4 @@
+[0, 1] org.apache.commons.text.beta.similarity.FuzzyScoreTest#testGetFuzzyScore_StringNullLocale
+[0, 1] org.apache.commons.text.beta.similarity.FuzzyScoreTest#testGetFuzzyScore_NullNullLocale
+[0, 1] org.apache.commons.text.beta.similarity.FuzzyScoreTest#testGetFuzzyScore_NullStringLocale
+[0, 1] org.apache.commons.text.beta.similarity.FuzzyScoreTest#testGetFuzzyScore

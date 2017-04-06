@@ -1,0 +1,13 @@
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testUnescapeJava
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeJava
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeJson
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeJavaWithSlash
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testLang708
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testLang911
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeEcmaScript
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.translate.JavaUnicodeEscaperTest#testAbove
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.translate.JavaUnicodeEscaperTest#testBelow
+[0, 1, 0, 0, 0, 0] org.apache.commons.text.beta.translate.JavaUnicodeEscaperTest#testBetween
+[0, 1, 1, 0, 1, 0] org.apache.commons.text.beta.translate.UnicodeEscaperTest#testAbove
+[1, 1, 1, 0, 0, 0] org.apache.commons.text.beta.translate.UnicodeEscaperTest#testBelow
+[0, 1, 0, 0, 0, 1] org.apache.commons.text.beta.translate.UnicodeEscaperTest#testBetween

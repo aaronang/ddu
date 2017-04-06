@@ -1,0 +1,6 @@
+[1] org.apache.commons.text.beta.similarity.HammingDistanceTest#testHammingDistance
+[1] org.apache.commons.text.beta.similarity.HammingDistanceTest#testHammingDistance_nullLeftValue
+[1] org.apache.commons.text.beta.similarity.HammingDistanceTest#testHammingDistance_nullRightValue
+[1] org.apache.commons.text.beta.similarity.ParameterizedEditDistanceFromTest#test[0]
+[1] org.apache.commons.text.beta.similarity.ParameterizedEditDistanceFromTest#test[1]
+[1] org.apache.commons.text.beta.similarity.ParameterizedEditDistanceFromTest#test[2]

@@ -1,0 +1,5 @@
+[1, 1] org.apache.commons.text.beta.similarity.JaccardDistanceTest#testGettingJaccardDistance
+[0, 1] org.apache.commons.text.beta.similarity.JaccardSimilarityTest#testGettingJaccardSimilarityNullString
+[0, 1] org.apache.commons.text.beta.similarity.JaccardSimilarityTest#testGettingJaccardSimilarityNullNull
+[0, 1] org.apache.commons.text.beta.similarity.JaccardSimilarityTest#testGettingJaccardSimilarityStringNull
+[1, 1] org.apache.commons.text.beta.similarity.JaccardSimilarityTest#testGettingJaccardSimilarity

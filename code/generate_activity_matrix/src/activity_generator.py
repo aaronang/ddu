@@ -16,10 +16,10 @@ class ActivityGenerator:
         def is_error(transaction):
             return all([transaction[i] == 1 for i in faulty_set])
 
-        return map(is_error, self.spectra.matrix)
+        return list(map(is_error, self.spectra.matrix))
 
     def _transform_error(self, error):
-        return 'x' if error else '.'
+        return '-' if error else '+'
 
     def generate(self, cardinality):
         has_error = False
@@ -27,7 +27,7 @@ class ActivityGenerator:
         while not has_error:
             faulty_set = self._generate_faulty_set(cardinality)
             error_vector = self._generate_error_vector(faulty_set)
-            has_error = any(error_vector)
+            has_error = any(error_vector) and not all(error_vector)
 
         activity_matrix = zip(self.spectra.matrix, error_vector)
         activity_matrix = [x + [self._transform_error(y)] for x, y in activity_matrix]
