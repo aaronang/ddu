@@ -64,7 +64,6 @@ for class_name in os.listdir(MATRICES_DIR):
                 candidate = candidate.split(' ')
                 candidate = list(map(lambda x: int(x) - 1, candidate))
                 candidates.append(candidate)
-        # eff.compute_effort(fault_set, candidates)
         average_efforts.append(eff.average_effort(fault_set, candidates))
 
     average_wasted_effort = sum(average_efforts) / len(average_efforts)

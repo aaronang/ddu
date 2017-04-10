@@ -1,0 +1,10 @@
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testBufferBreak
+[0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1] org.apache.commons.io.input.TailerTest#testStopWithNoFile
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testLongFile
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testIO335
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testMultiByteBreak
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testStopWithNoFileUsingExecutor
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testTailerEof
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testInterrupt
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testTailerEndOfFileReached
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1] org.apache.commons.io.input.TailerTest#testTailer
