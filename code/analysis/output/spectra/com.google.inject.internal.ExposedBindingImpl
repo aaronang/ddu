@@ -12,7 +12,7 @@
 [0, 0, 0, 1, 0] com.google.inject.PrivateModuleTest#testPrivateModulesAndProvidesMethods
 [0, 0, 0, 1, 0] com.google.inject.PrivateModuleTest#testNestedPrivateModulesWithSomeKeysUnexposed
 [0, 0, 0, 1, 0] com.google.inject.PrivateModuleTest#testDependenciesBetweenPrivateAndPublicWithPublicEagerSingleton
-[0, 0, 0, 1, 1] com.google.inject.PrivateModuleTest#testSpiAccess
+[1, 0, 0, 1, 0] com.google.inject.PrivateModuleTest#testSpiAccess
 [0, 0, 0, 1, 0] com.google.inject.PrivateModuleTest#testNestedPrivateInjectors
 [0, 0, 0, 1, 0] com.google.inject.spi.ModuleAnnotatedMethodScannerTest#testPrivateModuleInheritScanner_usingPrivateBinder
 [0, 0, 0, 1, 0] com.google.inject.spi.ModuleAnnotatedMethodScannerTest#testPrivateModule_skipSourcesWithinPrivateModule

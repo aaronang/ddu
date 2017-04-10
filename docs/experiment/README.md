@@ -65,6 +65,7 @@ The scenarios of interest:
         class|normalized_density|diversity|uniqueness|ddu
         ---|---|---|---|---
         com.google.inject.internal.ProviderMethodsModule|0.717149705818261|0.2654611938199425|0.38461538461538464|0.07322131425159081
+        com.google.inject.internal.CycleDetectingLock|0.8074888074888076|0.2549827623357035|0.4444444444444444|0.09150921186162632
 
     - Low: density, uniqueness, high: diversity
 

@@ -1,8 +1,8 @@
 [1, 1, 1, 1] org.jsoup.nodes.DocumentTest#testClonesDeclarations
 [1, 1, 1, 1] org.jsoup.nodes.DocumentTest#testHtmlAndXmlSyntax
 [1, 1, 1, 1] org.jsoup.nodes.DocumentTypeTest#outerHtmlGeneration
-[0, 0, 0, 1] org.jsoup.nodes.DocumentTypeTest#constructorValidationOkWithBlankName
-[0, 0, 0, 1] org.jsoup.nodes.DocumentTypeTest#constructorValidationOkWithBlankPublicAndSystemIds
+[0, 1, 0, 0] org.jsoup.nodes.DocumentTypeTest#constructorValidationOkWithBlankName
+[0, 1, 0, 0] org.jsoup.nodes.DocumentTypeTest#constructorValidationOkWithBlankPublicAndSystemIds
 [1, 1, 1, 1] org.jsoup.nodes.DocumentTypeTest#testRoundTrip
 [1, 1, 1, 1] org.jsoup.parser.HtmlParserTest#normalisesDocument
 [1, 1, 1, 1] org.jsoup.parser.HtmlParserTest#testHtmlLowerCase

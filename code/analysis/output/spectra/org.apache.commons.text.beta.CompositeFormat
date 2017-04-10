@@ -1,2 +1,2 @@
-[1, 0, 1, 1, 0] org.apache.commons.text.beta.CompositeFormatTest#testUsage
-[1, 1, 1, 0, 1] org.apache.commons.text.beta.CompositeFormatTest#testCompositeFormat
+[1, 1, 0, 0, 1] org.apache.commons.text.beta.CompositeFormatTest#testUsage
+[1, 1, 1, 1, 0] org.apache.commons.text.beta.CompositeFormatTest#testCompositeFormat

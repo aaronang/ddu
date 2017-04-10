@@ -219,7 +219,7 @@
 [0, 0, 0, 1] org.jsoup.select.ElementsTest#outerHtml
 [0, 0, 0, 1] org.jsoup.select.ElementsTest#tagNameSet
 [0, 0, 0, 1] org.jsoup.select.ElementsTest#setHtml
-[1, 0, 0, 0] org.jsoup.select.QueryParserTest#testParsesMultiCorrectly
+[0, 0, 1, 0] org.jsoup.select.QueryParserTest#testParsesMultiCorrectly
 [0, 0, 0, 1] org.jsoup.select.SelectorTest#containsData
 [0, 0, 0, 1] org.jsoup.select.SelectorTest#testByAttributeStarting
 [0, 0, 0, 1] org.jsoup.select.SelectorTest#deeperDescendant
