@@ -1,5 +1,0 @@
-[0, 0, 1, 0, 1, 1, 1] org.apache.commons.text.beta.similarity.LevenshteinDetailedDistanceTest#testGetLevenshteinDetailedDistance_StringString
-[1, 0, 0, 0, 0, 0, 0] org.apache.commons.text.beta.similarity.LevenshteinDetailedDistanceTest#testToString
-[0, 1, 0, 0, 0, 0, 0] org.apache.commons.text.beta.similarity.LevenshteinDetailedDistanceTest#testHashCode
-[0, 0, 0, 1, 0, 0, 0] org.apache.commons.text.beta.similarity.LevenshteinDetailedDistanceTest#testEquals
-[0, 0, 1, 0, 1, 1, 1] org.apache.commons.text.beta.similarity.LevenshteinDetailedDistanceTest#testGetLevenshteinDetailedDistance_StringStringInt

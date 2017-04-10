@@ -1,9 +1,0 @@
-[1, 0, 1, 0, 1, 0] org.jsoup.nodes.DocumentTest#testMetaCharsetUpdateXmlNoCharset
-[1, 1, 1, 0, 1, 0] org.jsoup.nodes.DocumentTest#testMetaCharsetUpdateXmlIso8859
-[1, 1, 1, 0, 1, 0] org.jsoup.nodes.DocumentTest#testMetaCharsetUpdateXmlUtf8
-[1, 0, 1, 0, 1, 0] org.jsoup.nodes.DocumentTest#testMetaCharsetUpdateXmlDisabledNoChanges
-[1, 0, 1, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#handlesXmlDeclarationAsDeclaration
-[1, 0, 1, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#caseSensitiveDeclaration
-[1, 1, 1, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#testDetectCharsetEncodingDeclaration
-[1, 0, 1, 1, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#testParseDeclarationAttributes
-[1, 0, 1, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#testCreatesValidProlog

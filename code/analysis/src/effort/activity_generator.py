@@ -22,15 +22,13 @@ class ActivityGenerator:
         return '-' if error else '+'
 
     def generate(self, cardinality):
-        has_error = False
 
-        while not has_error:
-            faulty_set = self._generate_faulty_set(cardinality)
-            error_vector = self._generate_error_vector(faulty_set)
-            has_error = any(error_vector) and not all(error_vector)
+        faulty_set = self._generate_faulty_set(cardinality)
+        error_vector = self._generate_error_vector(faulty_set)
+        error_vector = list(map(self._transform_error, error_vector))
 
         activity_matrix = zip(self.spectra.matrix, error_vector)
-        activity_matrix = [x + [self._transform_error(y)] for x, y in activity_matrix]
+        activity_matrix = [x + [y] for x, y in activity_matrix]
 
         return activity_matrix, faulty_set
 

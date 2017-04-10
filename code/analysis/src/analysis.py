@@ -12,8 +12,8 @@ def _get_column(data, c, transform=(lambda x: x)):
 
 
 def analyze(granularity):
-    dir = os.path.dirname(__file__)
-    directory = os.path.normpath(os.path.join(dir, '../output/%s' % granularity))
+    current_dir = os.path.dirname(__file__)
+    directory = os.path.normpath(os.path.join(current_dir, '../output/%s' % granularity))
     data = []
     for filename in os.listdir(directory):
         if filename.endswith(".csv") and ("commons-text" in filename or
@@ -26,10 +26,76 @@ def analyze(granularity):
                 for row in reader:
                     data.append(row)
 
-    plot_normalized_density(data)
-    plot_diversity(data)
-    plot_uniqueness(data)
-    plot_ddu(data)
+    efforts = {}
+    with open(os.path.join(current_dir, '../output/effort.csv')) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            efforts.update({row['class']: float(row['average_wasted_effort'])})
+
+    plot_effort_ddu(data, efforts)
+    plot_effort_density(data, efforts)
+    plot_effort_diversity(data, efforts)
+    plot_effort_uniqueness(data, efforts)
+    # plot_normalized_density(data)
+    # plot_diversity(data)
+    # plot_uniqueness(data)
+    # plot_ddu(data)
+
+
+def plot_effort_ddu(data, efforts):
+    a = []
+    for class_name, effort in efforts.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['ddu']), effort))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('DDU')
+    plt.ylabel('Average wasted effort')
+    plt.title('DDU vs. average wasted effort')
+    plt.grid(True)
+    plt.show()
+
+
+def plot_effort_density(data, efforts):
+    a = []
+    for class_name, effort in efforts.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['normalized_density']), effort))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('density')
+    plt.ylabel('Average wasted effort')
+    plt.title('Density vs. average wasted effort')
+    plt.grid(True)
+    plt.show()
+
+
+def plot_effort_diversity(data, efforts):
+    a = []
+    for class_name, effort in efforts.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['diversity']), effort))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('Diversity')
+    plt.ylabel('Average wasted effort')
+    plt.title('Diversity vs. average wasted effort')
+    plt.grid(True)
+    plt.show()
+
+
+def plot_effort_uniqueness(data, efforts):
+    a = []
+    for class_name, effort in efforts.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['uniqueness']), effort))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('Uniqueness')
+    plt.ylabel('Average wasted effort')
+    plt.title('Uniqueness vs. average wasted effort')
+    plt.grid(True)
+    plt.show()
 
 
 def plot_ddu(data):

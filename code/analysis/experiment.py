@@ -1,41 +1,22 @@
 import os
 import re
 import subprocess
+import csv
 
-import src.effort as eff
-
-
-class_names = [
-    'com.google.inject.matcher.Matchers',
-    'com.google.inject.PrivateModule',
-    'com.google.inject.internal.ProviderMethodsModule',
-    'com.google.inject.internal.CycleDetectingLock',
-    'com.google.inject.internal.State',
-    # 'com.google.inject.internal.PrivateElementProcessor',
-    # 'org.jsoup.parser.ParseSettings',
-    # 'org.apache.commons.text.beta.translate.CharSequenceTranslator',
-    'com.google.inject.AbstractModule',
-    'com.google.inject.internal.BindingBuilder',
-    'org.apache.commons.text.beta.StrBuilder',
-    'org.apache.commons.text.beta.StringEscapeUtils',
-    'com.google.inject.internal.Scoping',
-    'com.google.inject.spi.TypeConverterBinding',
-    'com.google.inject.TypeLiteral',
-    'org.apache.commons.csv.ExtendedBufferedReader',
-    'org.jsoup.safety.Whitelist',
-    'com.google.inject.internal.ConstructorInjectorStore',
-    'com.google.inject.spi.InterceptorBinding'
-]
+import src.effort.effort as eff
 
 CWD = os.path.dirname(__file__)
 STACCATO = os.path.join(CWD, 'lib/Staccato.macosx.x86_64')
 BARINEL = os.path.join(CWD, 'lib/Barinel.macosx.x86_64')
-OUT_DIR = os.path.join(CWD, 'out')
+OUT_DIR = os.path.join(CWD, 'output')
 MATRICES_DIR = os.path.join(OUT_DIR, 'matrices')
 STACCATO_OUT = 'out.staccato'
 BARINEL_DIR = os.path.join(OUT_DIR, 'barinel')
+EFFORT_OUT = os.path.join(OUT_DIR, 'effort.csv')
 
-for class_name in class_names:
+effort_dict = {}
+
+for class_name in os.listdir(MATRICES_DIR):
     CLASS_DIR = os.path.join(MATRICES_DIR, class_name)
     BARINEL_OUT = os.path.join(BARINEL_DIR, class_name)
 
@@ -86,4 +67,16 @@ for class_name in class_names:
         # eff.compute_effort(fault_set, candidates)
         average_efforts.append(eff.average_effort(fault_set, candidates))
 
-    print('Average wasted effort:', sum(average_efforts) / len(average_efforts), class_name)
+    average_wasted_effort = sum(average_efforts) / len(average_efforts)
+    effort_dict[class_name] = average_wasted_effort
+
+
+with open(EFFORT_OUT, 'w', newline='') as csvfile:
+    fieldnames = [
+        'class',
+        'average_wasted_effort'
+    ]
+    writer = csv.writer(csvfile, delimiter=',')
+    writer.writerow(fieldnames)
+    for k, v in effort_dict.items():
+        writer.writerow([k, v])
