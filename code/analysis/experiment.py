@@ -20,36 +20,36 @@ EFFORT_OUT = os.path.join(OUT_DIR, 'effort.csv')
 effort_dict = {}
 
 for class_name in os.listdir(MATRICES_DIR):
-    CLASS_DIR = os.path.join(MATRICES_DIR, class_name)
-    BARINEL_OUT = os.path.join(BARINEL_DIR, class_name)
+    class_dir = os.path.join(MATRICES_DIR, class_name)
+    barinel_out = os.path.join(BARINEL_DIR, class_name)
 
-    if not os.path.exists(BARINEL_OUT):
-        os.makedirs(BARINEL_OUT)
+    if not os.path.exists(barinel_out):
+        os.makedirs(barinel_out)
 
-    for filename in os.listdir(CLASS_DIR):
-        filepath = os.path.join(CLASS_DIR, filename)
-        print(filepath)
-
-        with open(filepath, 'r') as f:
-            columns = len(f.readline().split(' ')[:-1])
-            columns = str(columns)
-
-        print('Running Staccato')
-        spectra = Spectra()
-        spectra.read(filepath)
-
-        mhs = MHS()
-        candidates = mhs(spectra).get_candidates()
-        utils.write_candidates(STACCATO_OUT, candidates)
-
-        print('Running Barinel')
-        barinel_output = os.path.join(BARINEL_OUT, filename)
-        barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
-                                   stdout=open(os.devnull, 'w'),
-                                   stderr=subprocess.STDOUT)
-        barinel.wait()
-
-        os.remove(STACCATO_OUT)
+    # for filename in os.listdir(CLASS_DIR):
+    #     filepath = os.path.join(CLASS_DIR, filename)
+    #     print(filepath)
+    #
+    #     with open(filepath, 'r') as f:
+    #         columns = len(f.readline().split(' ')[:-1])
+    #         columns = str(columns)
+    #
+    #     print('Running Staccato')
+    #     spectra = Spectra()
+    #     spectra.read(filepath)
+    #
+    #     mhs = MHS()
+    #     candidates = mhs(spectra).get_candidates()
+    #     utils.write_candidates(STACCATO_OUT, candidates)
+    #
+    #     print('Running Barinel')
+    #     barinel_output = os.path.join(BARINEL_OUT, filename)
+    #     barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
+    #                                stdout=open(os.devnull, 'w'),
+    #                                stderr=subprocess.STDOUT)
+    #     barinel.wait()
+    #
+    #     os.remove(STACCATO_OUT)
 
 
     def _get_fault_set(filename):
@@ -58,9 +58,16 @@ for class_name in os.listdir(MATRICES_DIR):
         return list(map(int, fault_set))
 
 
+    def _get_num_of_components(cdir):
+        filepath = os.path.join(cdir, os.listdir(cdir)[0])
+        with open(filepath, 'r') as f:
+            row = f.readline().strip().split(' ')
+            return len(row) - 1
+
+    num_of_components = _get_num_of_components(class_dir)
     average_efforts = []
-    for filename in os.listdir(BARINEL_OUT):
-        filepath = os.path.join(BARINEL_OUT, filename)
+    for filename in os.listdir(barinel_out):
+        filepath = os.path.join(barinel_out, filename)
         fault_set = _get_fault_set(filename)
         candidates = []
         with open(filepath, 'r') as f:
@@ -71,7 +78,7 @@ for class_name in os.listdir(MATRICES_DIR):
                 candidate = candidate.split(' ')
                 candidate = list(map(lambda x: int(x) - 1, candidate))
                 candidates.append(candidate)
-        average_efforts.append(eff.average_effort(fault_set, candidates))
+        average_efforts.append(eff.average_effort(fault_set, candidates, num_of_components))
 
     average_wasted_effort = sum(average_efforts) / len(average_efforts)
     effort_dict[class_name] = average_wasted_effort

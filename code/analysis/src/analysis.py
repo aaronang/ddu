@@ -19,7 +19,8 @@ def analyze(granularity):
         if filename.endswith(".csv") and ("commons-text" in filename or
                                                   "commons-csv" in filename or
                                                   "guice" in filename or
-                                                  "jsoup" in filename):
+                                                  "jsoup" in filename or
+                                                  "commons-io" in filename):
             print(os.path.join(directory, filename))
             with open(os.path.join(directory, filename)) as csvfile:
                 reader = csv.DictReader(csvfile)
@@ -32,14 +33,35 @@ def analyze(granularity):
         for row in reader:
             efforts.update({row['class']: float(row['average_wasted_effort'])})
 
-    plot_effort_ddu(data, efforts)
-    plot_effort_density(data, efforts)
-    plot_effort_diversity(data, efforts)
-    plot_effort_uniqueness(data, efforts)
+    percentages = {}
+    with open(os.path.join(current_dir, '../output/percentages.csv')) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            percentages.update({row['class']: float(row['percentage'])})
+
+    # plot_effort_ddu(data, efforts)
+    # plot_effort_density(data, efforts)
+    # plot_effort_diversity(data, efforts)
+    # plot_effort_uniqueness(data, efforts)
+    plot_percentage_ddu(data, percentages)
     # plot_normalized_density(data)
     # plot_diversity(data)
     # plot_uniqueness(data)
     # plot_ddu(data)
+
+
+def plot_percentage_ddu(data, percentages):
+    a = []
+    for class_name, percentage in percentages.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['ddu']), percentage))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('DDU')
+    plt.ylabel('Faulty spectra')
+    plt.title('DDU vs. faulty spectra')
+    plt.grid(True)
+    plt.show()
 
 
 def plot_effort_ddu(data, efforts):
