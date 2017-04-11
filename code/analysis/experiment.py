@@ -1,9 +1,12 @@
+import csv
 import os
 import re
 import subprocess
-import csv
 
+import src.utils as utils
 import src.effort.effort as eff
+from src.mhs.spectra import Spectra
+from src.mhs.mhs import MHS
 
 CWD = os.path.dirname(__file__)
 STACCATO = os.path.join(CWD, 'lib/Staccato.macosx.x86_64')
@@ -25,21 +28,25 @@ for class_name in os.listdir(MATRICES_DIR):
 
     for filename in os.listdir(CLASS_DIR):
         filepath = os.path.join(CLASS_DIR, filename)
+        print(filepath)
 
         with open(filepath, 'r') as f:
             columns = len(f.readline().split(' ')[:-1])
             columns = str(columns)
 
-        staccato = subprocess.Popen([STACCATO, columns, filepath, STACCATO_OUT],
-                                    stdout=open(os.devnull, 'w'),
-                                    stderr=subprocess.STDOUT)
-        staccato.wait()
+        print('Running Staccato')
+        spectra = Spectra()
+        spectra.read(filepath)
 
+        mhs = MHS()
+        candidates = mhs(spectra).get_candidates()
+        utils.write_candidates(STACCATO_OUT, candidates)
+
+        print('Running Barinel')
         barinel_output = os.path.join(BARINEL_OUT, filename)
         barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
                                    stdout=open(os.devnull, 'w'),
-                                   stderr=subprocess.STDOUT
-                                   )
+                                   stderr=subprocess.STDOUT)
         barinel.wait()
 
         os.remove(STACCATO_OUT)
@@ -68,7 +75,6 @@ for class_name in os.listdir(MATRICES_DIR):
 
     average_wasted_effort = sum(average_efforts) / len(average_efforts)
     effort_dict[class_name] = average_wasted_effort
-
 
 with open(EFFORT_OUT, 'w', newline='') as csvfile:
     fieldnames = [
