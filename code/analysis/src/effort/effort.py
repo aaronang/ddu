@@ -15,8 +15,6 @@ def best_effort(fault_set, candidates):
 
 
 def average_effort(fault_set, candidates, num_of_components):
-    print(fault_set)
-    print(candidates)
     indexes = []
     for i in range(len(candidates)):
         for x in fault_set:

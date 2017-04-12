@@ -39,11 +39,11 @@ def analyze(granularity):
         for row in reader:
             percentages.update({row['class']: float(row['percentage'])})
 
-    # plot_effort_ddu(data, efforts)
+    plot_effort_ddu(data, efforts)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
-    plot_percentage_ddu(data, percentages)
+    # plot_percentage_ddu(data, percentages)
     # plot_normalized_density(data)
     # plot_diversity(data)
     # plot_uniqueness(data)
