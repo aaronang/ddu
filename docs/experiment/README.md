@@ -15,17 +15,19 @@ Specifically, in this experiment, we would like to answer the two following ques
     Given these three fault candidates, the test suite is able to catch a failure in `33%` of the possible candidate sets.
 
     ||c1|c2|c3|e1|e2|
-    |---|---|---|---|---|---|
-    |t1|1|0|1|0|1|
-    |t2|0|1|0|0|0|
-    |t3|0|0|1|0|0|
+    ---|---|---|---|---|---|
+    t1|1|0|1|0|1|
+    t2|0|1|0|0|0|
+    t3|0|0|1|0|0|
 
-    The hypothesis is that when the DDU of a test suite is high, then the percentage of diagnosable fault candidates will be higher.
-    Accordingly, when the DDU of a test suite is low, then the percentage of diagnosable fault candidates will be lower.
+    The hypothesis is that when the DDU of a test suite is high, then the percentage of diagnosable fault candidates will be high.
+    Vice versa, when the DDU of a test suite is low, then the percentage of diagnosable fault candidates will be low.
 
-2. >How is wasted effort related to DDU in the case where the spectra includes failing transactions?
+2. >How is wasted effort related to DDU?
 
-
+    The DDU metric was proposed to quantify the diagnosability of the test suite.
+    Therefore, the hypothesis is that when the DDU is high, the average wasted effort will be low.
+    Accordingly, when the DDU is low, the average wasted effort will be high.
 
 
 ## Approach
