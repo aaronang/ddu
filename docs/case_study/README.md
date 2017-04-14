@@ -151,6 +151,21 @@ After `16` unique test cases every additional test case will have a negative eff
 In the activity matrix of `com.google.inject.spi.MembersInjectorLookup`, a Guice class, shown above, we observe that almost every transaction has a unique activity and therefore its diversity is high.
 Note that the diversity suffers when there are too many test cases, but does not suffer from a low number of test cases, i.e. a high diversity can be obtained with a couple unique system transactions.
 
+```
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[0]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[1]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[2]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[3]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[4]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[5]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[6]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[7]
+[0, 1, 1, 0, 0] ParameterizedLevenshteinDistanceTest#test[8]
+```
+
+An interesting case for diversity is parameterized testing, shown in the partial spectra above.
+The `LevenshteinDistance` spectra consists primarily of parameterized test and has a diversity of `0.3167`.
+Although parameterized is a common practice to test different inputs for a unit, it has a negative effect on the diversity due to identical activity patterns.
 
 
 ## Uniqueness
@@ -161,6 +176,8 @@ The average is `0.7709`.
 ![Uniqueness of classes.](img/uniqueness_of_classes.png)
 
 
+
+
 ## DDU
 
 In the figure below, the distribution of DDU of classes are shown.
@@ -169,4 +186,4 @@ The average is `0.2181`.
 ![DDU of classes.](img/ddu_of_classes.png)
 
 
-The individual terms should be multiplied together. 
+The individual terms should be multiplied together.     

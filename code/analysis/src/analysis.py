@@ -2,17 +2,13 @@ import csv
 import os
 from functools import reduce
 
+import matplotlib.pyplot as plt
+import scipy.stats.mstats as mst
 import scipy.stats.stats as st
 
-import scipy.stats.mstats as mst
 
-import matplotlib.pyplot as plt
-
-from matrix import to_float
-
-
-def _get_column(data, c, transform=(lambda x: x)):
-    return list(map(lambda r: transform(r[c]), data))
+def _get_column(data, c):
+    return list(map(lambda r: r[c], data))
 
 
 def analyze(granularity):
@@ -43,7 +39,7 @@ def analyze(granularity):
         for row in reader:
             percentages.update({row['class']: float(row['percentage'])})
 
-    plot_effort_ddu(data, efforts)
+    # plot_effort_ddu(data, efforts)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
@@ -52,6 +48,29 @@ def analyze(granularity):
     # plot_diversity(data)
     # plot_uniqueness(data)
     # plot_ddu(data)
+    # plot_uniqueness_vs_num_of_components(data)
+
+
+def plot_uniqueness_vs_num_of_components(data):
+    def transform(tuples):
+        return [(float(u), int(c)) for u, c in tuples if u and c]
+
+    uniqueness = list(_get_column(data, 'uniqueness'))
+    num_of_components = list(_get_column(data, 'number_of_components'))
+    t = zip(uniqueness, num_of_components)
+    u, c = zip(*transform(t))
+
+    print("Normal test uniqueness:", mst.normaltest(u))
+    print("Normal test components:", mst.normaltest(c))
+    print("[Pearson]", st.pearsonr(u, c))
+    print("[Spearman]", st.spearmanr(u, c))
+
+    plt.scatter(u, c)
+    plt.xlabel('Uniqueness')
+    plt.ylabel('Number of components')
+    plt.title('Uniqueness vs. number of components')
+    plt.grid(True)
+    plt.show()
 
 
 def plot_percentage_ddu(data, percentages):
@@ -60,7 +79,7 @@ def plot_percentage_ddu(data, percentages):
         class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
         a.append((float(class_data['ddu']), percentage))
     x, y = zip(*a)
-    plt.scatter(x, y)
+    plt.scatter(y, x)
     plt.xlabel('DDU')
     plt.ylabel('Faulty spectra')
     plt.title('DDU vs. faulty spectra')
@@ -131,7 +150,8 @@ def plot_effort_uniqueness(data, efforts):
 
 
 def plot_ddu(data):
-    ddu = list(filter(lambda x: not (x < 0), _get_column(data, 'ddu', to_float)))
+    ddu = _get_column(data, 'ddu')
+    ddu = [float(x) for x in ddu if x]
     print(ddu)
     print(reduce(lambda x, y: x + y, ddu) / len(ddu))
 
@@ -147,7 +167,8 @@ def plot_ddu(data):
 
 
 def plot_diversity(data):
-    diversity = list(filter(lambda x: not (x < 0), _get_column(data, 'diversity', to_float)))
+    diversity = _get_column(data, 'diversity')
+    diversity = [float(x) for x in diversity if x]
     print(diversity)
     print(reduce(lambda x, y: x + y, diversity) / len(diversity))
 
@@ -163,7 +184,8 @@ def plot_diversity(data):
 
 
 def plot_uniqueness(data):
-    uniqueness = list(filter(lambda x: not (x < 0), _get_column(data, 'uniqueness', to_float)))
+    uniqueness = _get_column(data, 'uniqueness')
+    uniqueness = [float(x) for x in uniqueness if x]
     print(uniqueness)
     print(reduce(lambda x, y: x + y, uniqueness) / len(uniqueness))
 
@@ -179,7 +201,8 @@ def plot_uniqueness(data):
 
 
 def plot_normalized_density(data):
-    normalized_density = list(filter(lambda x: not (x < 0), _get_column(data, 'normalized_density', to_float)))
+    normalized_density = _get_column(data, 'normalized_density')
+    normalized_density = [float(x) for x in normalized_density if x]
     print(normalized_density)
     print(reduce(lambda x, y: x + y, normalized_density) / len(normalized_density))
 
