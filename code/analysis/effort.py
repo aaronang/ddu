@@ -80,11 +80,11 @@ for class_name in os.listdir(MATRICES_DIR):
                 candidate = candidate.split(' ')
                 candidate = list(map(lambda x: int(x) - 1, candidate))
                 candidates.append(candidate)
-        if candidates:
-            print(candidates)
-            average_efforts.append(eff.average_effort(fault_set, candidates, num_of_components))
-            average_wasted_effort = sum(average_efforts) / len(average_efforts)
-            effort_dict[class_name] = average_wasted_effort
+        # if candidates:
+        print(candidates)
+        average_efforts.append(eff.average_effort(fault_set, candidates, num_of_components))
+        average_wasted_effort = sum(average_efforts) / len(average_efforts)
+        effort_dict[class_name] = average_wasted_effort
 
 with open(EFFORT_OUT, 'w', newline='') as csvfile:
     fieldnames = [

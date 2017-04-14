@@ -2,6 +2,10 @@ import csv
 import os
 from functools import reduce
 
+import scipy.stats.stats as st
+
+import scipy.stats.mstats as mst
+
 import matplotlib.pyplot as plt
 
 from matrix import to_float
@@ -70,11 +74,17 @@ def plot_effort_ddu(data, efforts):
         class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
         a.append((float(class_data['ddu']), effort))
     x, y = zip(*a)
+    print("Normal test DDU:", mst.normaltest(x))
+    print("Normal test effort:", mst.normaltest(y))
+    print("[Pearson]", st.pearsonr(x, y))
+    print("[Spearman]", st.spearmanr(x, y))
     plt.scatter(x, y)
     plt.xlabel('DDU')
     plt.ylabel('Average wasted effort')
     plt.title('DDU vs. average wasted effort')
     plt.grid(True)
+    plt.xlim(0.0, 1.0)
+    plt.ylim(0, 80)
     plt.show()
 
 
