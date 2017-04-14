@@ -41,6 +41,17 @@ Specifically, in this experiment, we would like to answer the two following ques
         1. Compute effort.
     1. Average effort.
 
+To answer the questions described above, we make use of five open source projects, namely: `commons-csv`, `commons-text`, `commons-io`, `guice`, `jsoup`.
+First, we collect spectra for all classes that have at least `8` components, i.e. methods.
+For each class spectra excluding its error vector we generate a random fault candidate of cardinality `2`.
+Then, we can compute for each transaction whether it fails or passes, i.e. compute the error vector.
+We do this process of generating a fault candidate and computing the error vector `20` times, resulting in `20` activity matrices with identical activity but different error vectors.
+For each spectra with the newly computed error vector we check if the spectra contains a failing transaction.
+Essentially, we check whether the test suite for a given class is able to catch any random fault candidate.
+Finally, we compute the percentage of generated fault candidates that were caught by the test suite.
+
+The second question can be answered by computing the average wasted effort for the twenty generated activity matrices, and average the average wasted efforts.
+In addition, we compute the average of average wasted efforts only for activity matrices that have at least one failing transaction.
 
 ## Results
 
