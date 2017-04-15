@@ -1,0 +1,4 @@
+[1, 0, 1] com.google.inject.ProvisionListenerTest#testModuleRequestInjection
+[1, 0, 1] com.google.inject.ProvisionListenerTest#testInjectorInjectMembers
+[1, 0, 1] com.google.inject.ProvisionListenerTest#testToProviderInstance
+[0, 0, 1] com.google.inject.ProvisionListenerTest#testDependencyChain

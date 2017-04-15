@@ -1,0 +1,10 @@
+[1] org.apache.commons.io.serialization.MoreComplexObjectTest#useBlacklist
+[1] org.apache.commons.io.serialization.MoreComplexObjectTest#trustJavaIncludingArrays
+[1] org.apache.commons.io.serialization.MoreComplexObjectTest#trustJavaLang
+[1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassAcceptedFirstWildcard
+[1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassAcceptedSecondWildcard
+[1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#rejectWildcard
+[1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#acceptWildcard
+[1] org.apache.commons.io.serialization.WildcardClassNameMatcherTest#starAndQuestionMark
+[1] org.apache.commons.io.serialization.WildcardClassNameMatcherTest#noPattern
+[1] org.apache.commons.io.serialization.WildcardClassNameMatcherTest#star

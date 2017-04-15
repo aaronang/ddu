@@ -29,6 +29,7 @@ Based on these requirements, we choose the following open source projects.
 
 - [Commons CSV](commons_csv.md): a library that provides a simple interface for reading and writing CSV files of various types.
 - [Commons Text](commons_text.md): a library focused on algorithms working on strings.
+- Commons IO: a library of utilities to assist with developing IO functionality.
 - [Guice](guice.md): a lightweight dependency injection framework for Java 6 and above.
 - [Jsoup](https://github.com/jhy/jsoup): an API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
 
@@ -54,11 +55,11 @@ We are interested in what kinds of tests result in a high or low DDU value.
 ## Normalized Density
 
 In the figure below, we show the distribution of normalized densities for all classes of the four open source projects mentioned before.
-The average equals to `0.5225`.
+The average equals to `0.5145`.
 The peak for the interval `0.0 - 0.1` is caused by classes that only consist of one method.
 A class with one method will always have a density of `1.0` and therefore a normalized density of `0.0`.
 
-![Normalized density of classes.](img/normalized_density_of_classes.png)
+![Normalized density of classes.](img/normalized_density.png)
 
 >**TODO: Show histogram without zeroes in a different (and overlapping) color.**
 
@@ -111,14 +112,14 @@ Either way, suggesting the developer to write tests that cover a certain number 
 ## Diversity
 
 In the figure below, the distribution of diversity of classes are shown.
-The average is `0.4697`.
+The average is `0.4813`.
 The peak for the interval `0` and `0.1` occurs for various reasons.
 The first reason is that there are classes with only one method and therefore every row is identical, resulting in a diversity of `0`.
 The second reason is that for some classes there exist only one test case, and in the current Python script the diversity defaults to `0` when there is only one test case.
 
 >**Note: Show overlapping histogram where classes with only one test case are filtered out.**
 
-![Diversity of classes.](img/diversity_of_classes.png)
+![Diversity of classes.](img/diversity.png)
 
 Intuitively, the diversity has a low value when the number of identical transactions, i.e. identical rows in the activity matrix, is high.
 Vice versa, the diversity is high when the number of identical transaction activity is low.
@@ -171,17 +172,38 @@ Although parameterized is a common practice to test different inputs for a unit,
 ## Uniqueness
 
 In the figure below, the distribution of uniqueness of classes are shown.
-The average is `0.7709`.
+The average is `0.7696`.
 
-![Uniqueness of classes.](img/uniqueness_of_classes.png)
+![Uniqueness of classes.](img/uniqueness.png)
 
+The peak for the interval `0.9 - 1.0` is caused by classes that only have one component; activity matrices that consist of one component always have a uniqueness of `1.0`.
+More specifically, there are `130` classes that have a uniqueness of `1.0` and `47` out of the `130` only have one component.
 
+```
+[0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0] CopyUtilsTest#testCopy_byteArrayToWriterWithEncoding
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] CopyUtilsTest#copy_stringToOutputStream
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0] CopyUtilsTest#testCopy_readerToOutputStream
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] CopyUtilsTest#copy_readerToWriter
+[0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0] CopyUtilsTest#copy_byteArrayToWriter
+[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] CopyUtilsTest#copy_byteArrayToOutputStream
+[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0] CopyUtilsTest#copy_inputStreamToWriterWithEncoding
+[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] CopyUtilsTest#copy_inputStreamToWriter
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0] CopyUtilsTest#testCopy_inputStreamToOutputStream
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] CopyUtilsTest#copy_stringToWriter
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] IOUtilsTestCase#testCopy_String_Writer
+[0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0] IOUtilsTestCase#testCopy_ByteArray_Writer
+[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] IOUtilsTestCase#testCopy_ByteArray_OutputStream
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] IOUtilsTestCase#testStringToOutputStream
+```
 
+There are a couple ways to get a high uniqueness.
+One of them is to write tests that only cover a couple components at a time.
+An example of this approach is shown above; `org.apache.commons.io.CopyUtils` has a uniqueness of `0.9167`.
 
 ## DDU
 
 In the figure below, the distribution of DDU of classes are shown.
-The average is `0.2181`.
+The average is `0.2264`.
 
 ![DDU of classes.](img/ddu_of_classes.png)
 

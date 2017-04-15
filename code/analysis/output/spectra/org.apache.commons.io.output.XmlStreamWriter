@@ -1,0 +1,12 @@
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testLatin15Encoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testUTF16BEEncoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testEUC_JPEncoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testLatin1Encoding
+[1, 0, 1, 1, 1, 0] org.apache.commons.io.output.XmlStreamWriterTest#testEmpty
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testEBCDICEncoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testNoXmlHeader
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testDefaultEncoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testUTF16Encoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testUTF16LEEncoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testLatin7Encoding
+[1, 0, 1, 0, 1, 1] org.apache.commons.io.output.XmlStreamWriterTest#testUTF8Encoding

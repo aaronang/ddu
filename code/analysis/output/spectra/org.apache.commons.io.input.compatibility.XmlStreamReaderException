@@ -1,0 +1,7 @@
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateHttpEncoding
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingStandardUtf32
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateHttpEncodingUtf32
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingStandard
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingAdditonalUTF16
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingAdditonalUTF32
+[1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingNoBOM

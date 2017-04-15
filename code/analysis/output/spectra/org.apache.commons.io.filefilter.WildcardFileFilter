@@ -1,0 +1,5 @@
+[1, 1, 1] org.apache.commons.io.filefilter.FileFilterTestCase#testWildcard
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testListFilesWithDirs
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testListFiles
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testIterateFiles
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testIterateFilesAndDirs

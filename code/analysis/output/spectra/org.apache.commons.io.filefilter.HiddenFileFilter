@@ -1,0 +1,5 @@
+[1] org.apache.commons.io.filefilter.FileFilterTestCase#testHidden
+[1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
+[1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
+[1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
+[1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate

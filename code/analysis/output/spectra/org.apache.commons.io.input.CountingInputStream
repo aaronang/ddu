@@ -1,0 +1,10 @@
+[1, 1, 1, 1, 1, 0] org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
+[1, 1, 1, 1, 1, 0] org.apache.commons.io.input.CountingInputStreamTest#testResetting
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testZeroLength1
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testZeroLength2
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testZeroLength3
+[1, 0, 1, 1, 0, 1] org.apache.commons.io.input.CountingInputStreamTest#testSkipping
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testEOF1
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testEOF2
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testEOF3
+[1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CountingInputStreamTest#testCounting

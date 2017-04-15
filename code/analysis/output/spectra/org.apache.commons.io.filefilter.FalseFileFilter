@@ -1,0 +1,12 @@
+[1, 1] org.apache.commons.io.filefilter.AndFileFilterTestCase#testFilterBuiltUsingAdd
+[1, 1] org.apache.commons.io.filefilter.AndFileFilterTestCase#testFilterBuiltUsingConstructor
+[1, 0] org.apache.commons.io.filefilter.FileFilterTestCase#testFileFilterUtils_or
+[1, 0] org.apache.commons.io.filefilter.FileFilterTestCase#testAnd
+[1, 0] org.apache.commons.io.filefilter.FileFilterTestCase#testFalse
+[1, 0] org.apache.commons.io.filefilter.FileFilterTestCase#testFileFilterUtils_and
+[1, 1] org.apache.commons.io.filefilter.FileFilterTestCase#testOr
+[1, 1] org.apache.commons.io.filefilter.OrFileFilterTestCase#testFilterBuiltUsingAdd
+[1, 1] org.apache.commons.io.filefilter.OrFileFilterTestCase#testFilterBuiltUsingConstructor
+[1, 0] org.apache.commons.io.FileUtilsListFilesTestCase#testListFiles
+[1, 0] org.apache.commons.io.FileUtilsListFilesTestCase#testIterateFilesByExtension
+[1, 0] org.apache.commons.io.FileUtilsListFilesTestCase#testListFilesByExtension

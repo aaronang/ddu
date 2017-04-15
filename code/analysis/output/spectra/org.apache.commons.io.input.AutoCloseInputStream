@@ -1,0 +1,4 @@
+[1, 1, 0] org.apache.commons.io.input.AutoCloseInputStreamTest#testReadBuffer
+[1, 1, 0] org.apache.commons.io.input.AutoCloseInputStreamTest#testReadBufferOffsetLength
+[1, 1, 0] org.apache.commons.io.input.AutoCloseInputStreamTest#testClose
+[1, 1, 0] org.apache.commons.io.input.AutoCloseInputStreamTest#testRead

@@ -1,0 +1,16 @@
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateHttpEncoding
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingStandardUtf32
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateHttpEncodingUtf32
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingStandard
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingAdditonalUTF16
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingAdditonalUTF32
+[1, 1, 1, 1, 1] org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest#testCalculateRawEncodingNoBOM
+[1, 0, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderTest#testHttp
+[1, 0, 0, 0, 1] org.apache.commons.io.input.XmlStreamReaderTest#testEncodingAttributeXML
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateHttpEncoding
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingStandardUtf32
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateHttpEncodingUtf32
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingStandard
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingAdditonalUTF16
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingAdditonalUTF32
+[1, 1, 1, 1, 1] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingNoBOM

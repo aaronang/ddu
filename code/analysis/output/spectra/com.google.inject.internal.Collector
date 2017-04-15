@@ -1,0 +1,7 @@
+[1, 0, 1] com.google.inject.internal.MapBinderTest#testGetEntriesMissingBindingForValue
+[1, 0, 1] com.google.inject.internal.MapBinderTest#testGetEntries
+[1, 0, 1] com.google.inject.internal.MapBinderTest#testGetEntriesWithDuplicateKeys
+[1, 0, 1] com.google.inject.internal.MapBinderTest#testGetEntriesMissingProviderMapEntry
+[1, 0, 0] com.google.inject.internal.MapBinderTest#testTwoMapBindersAreDistinct
+[1, 0, 1] com.google.inject.internal.MapBinderTest#testGetEntriesWithDuplicateValues
+[1, 1, 1] com.google.inject.internal.MultibinderTest#testSetAndMapValueAreDistinctInSpi

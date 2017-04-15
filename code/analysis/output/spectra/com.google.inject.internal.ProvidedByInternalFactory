@@ -1,0 +1,12 @@
+[1, 1, 1, 1] com.google.inject.BinderTest#testUntargettedBinding
+[1, 1, 1, 1] com.google.inject.CircularDependencyTest#testUnresolvableCircularDependenciesWithProvidedBy
+[1, 1, 1, 1] com.google.inject.CircularDependencyTest#testDisabledCircularDependenciesWithProvidedBy
+[1, 1, 1, 1] com.google.inject.CircularDependencyTest#testCircularlyDependentConstructorsWithProvidedBy
+[1, 1, 1, 1] com.google.inject.ImplicitBindingTest#testProvidedByNonEmptyEnum
+[1, 1, 1, 1] com.google.inject.ImplicitBindingTest#testDefaultProvider
+[1, 1, 1, 1] com.google.inject.ImplicitBindingTest#testProvidedByEmptyEnum
+[1, 1, 0, 0] com.google.inject.ImplicitBindingTest#testCircularJitBindingsLeaveNoResidue
+[1, 1, 1, 1] com.google.inject.InjectorTest#testSubtypeNotProvided
+[1, 1, 1, 1] com.google.inject.JitBindingsTest#testProvidedBy
+[1, 1, 0, 0] com.google.inject.JitBindingsTest#testJitProvidedByBindingInParentFails
+[1, 1, 1, 1] com.google.inject.ProvisionListenerTest#testNotifiedKeysOfAllBindTypes

@@ -1,0 +1,7 @@
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testChecksum
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testChecksumCRC32
+[0, 0, 1] org.apache.commons.io.FileUtilsTestCase#testChecksumDouble
+[0, 0, 1] org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
+[0, 0, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_IO84
+[0, 0, 1] org.apache.commons.io.output.CountingOutputStreamTest#testLargeFiles_IO84
+[1, 1, 1] org.apache.commons.io.output.NullOutputStreamTest#testNull

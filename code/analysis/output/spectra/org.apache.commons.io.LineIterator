@@ -1,0 +1,15 @@
+[1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testThreeLines
+[1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testTwoLines
+[1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testOneLines
+[1, 0, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+[1, 0, 1, 1, 1, 1, 0] org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+[0, 0, 0, 0, 1, 0, 0] org.apache.commons.io.LineIteratorTestCase#testInvalidEncoding
+[0, 1, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[0, 1, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testZeroLines
+[1, 0, 1, 1, 1, 1, 0] org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+[0, 0, 0, 0, 1, 0, 0] org.apache.commons.io.LineIteratorTestCase#testMissingFile
+[0, 0, 1, 0, 0, 1, 0] org.apache.commons.io.LineIteratorTestCase#testNextWithException
+[1, 0, 1, 1, 1, 1, 0] org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+[1, 0, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+[0, 1, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+[1, 0, 1, 1, 1, 1, 1] org.apache.commons.io.LineIteratorTestCase#testNextOnly

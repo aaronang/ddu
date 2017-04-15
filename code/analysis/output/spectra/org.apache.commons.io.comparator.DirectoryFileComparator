@@ -1,0 +1,5 @@
+[0, 0, 0, 1, 0, 0] org.apache.commons.io.comparator.DirectoryFileComparatorTest#testSortListNull
+[1, 1, 0, 0, 1, 0] org.apache.commons.io.comparator.DirectoryFileComparatorTest#testReverseComparator
+[1, 1, 0, 0, 1, 0] org.apache.commons.io.comparator.DirectoryFileComparatorTest#testComparator
+[0, 0, 1, 0, 0, 0] org.apache.commons.io.comparator.DirectoryFileComparatorTest#testToString
+[0, 0, 0, 0, 0, 1] org.apache.commons.io.comparator.DirectoryFileComparatorTest#testSortArrayNull

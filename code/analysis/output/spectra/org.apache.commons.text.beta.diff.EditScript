@@ -1,0 +1,5 @@
+[1, 0, 1, 1, 0, 1] org.apache.commons.text.beta.diff.ReplacementsFinderTest#testReplacementsHandler[0]
+[1, 0, 1, 1, 0, 1] org.apache.commons.text.beta.diff.ReplacementsFinderTest#testReplacementsHandler[1]
+[1, 0, 1, 1, 0, 1] org.apache.commons.text.beta.diff.StringsComparatorTest#testExecution
+[0, 1, 1, 1, 0, 1] org.apache.commons.text.beta.diff.StringsComparatorTest#testLongestCommonSubsequence
+[0, 0, 1, 1, 1, 1] org.apache.commons.text.beta.diff.StringsComparatorTest#testLength

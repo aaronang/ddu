@@ -1,0 +1,8 @@
+[0, 1, 1, 0, 1] org.apache.commons.io.input.ReaderInputStreamTest#testLargeUTF8WithSingleByteRead
+[0, 0, 1, 1, 1] org.apache.commons.io.input.ReaderInputStreamTest#testUTF8WithBufferedRead
+[0, 1, 1, 0, 1] org.apache.commons.io.input.ReaderInputStreamTest#testUTF8WithSingleByteRead
+[0, 0, 1, 1, 1] org.apache.commons.io.input.ReaderInputStreamTest#testReadZero
+[0, 1, 1, 0, 1] org.apache.commons.io.input.ReaderInputStreamTest#testCharsetMismatchInfiniteLoop
+[0, 1, 1, 0, 1] org.apache.commons.io.input.ReaderInputStreamTest#testUTF16WithSingleByteRead
+[0, 0, 1, 1, 1] org.apache.commons.io.input.ReaderInputStreamTest#testReadZeroEmptyString
+[0, 0, 1, 1, 1] org.apache.commons.io.input.ReaderInputStreamTest#testLargeUTF8WithBufferedRead

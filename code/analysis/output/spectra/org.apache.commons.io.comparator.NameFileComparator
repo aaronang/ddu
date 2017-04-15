@@ -1,0 +1,14 @@
+[0, 0, 1, 1, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testCaseSensitivity
+[0, 1, 0, 0, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testSortListNull
+[0, 1, 1, 1, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testSortList
+[0, 0, 1, 1, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testReverseComparator
+[0, 0, 1, 1, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testComparator
+[0, 0, 0, 0, 1] org.apache.commons.io.comparator.NameFileComparatorTest#testToString
+[1, 0, 0, 0, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testSortArrayNull
+[1, 0, 1, 1, 0] org.apache.commons.io.comparator.NameFileComparatorTest#testSortArray
+[0, 0, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testMonitor
+[0, 0, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
+[0, 0, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
+[0, 0, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
+[0, 0, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate
+[0, 0, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testObserveSingleFile

@@ -1,0 +1,8 @@
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassAcceptedFirst
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassAcceptedFirstWildcard
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassAcceptedSecondWildcard
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassOnlyAccepted
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#ourTestClassAcceptedSecond
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#acceptWildcard
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#acceptCustomMatcher
+[0, 1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#acceptPattern

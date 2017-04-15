@@ -1,0 +1,9 @@
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerDirectory
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerDirectory_ForceStrategy
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerExitWhenFinished1
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerExitWhenFinished2
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerDirectory_NullStrategy
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerFile
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerNull
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerExitWhenFinished_NoTrackAfter
+[0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.FileCleanerTestCase#testFileCleanerExitWhenFinishedFirst

@@ -1,0 +1,15 @@
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#constructorIterable_order
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testSortList
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testReverseComparator
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testComparator
+[0, 0, 1, 0, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testToString
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testSortArray
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testCompareDirectorySizes
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testNonexistantFile
+[0, 0, 0, 0, 1] org.apache.commons.io.comparator.SizeFileComparatorTest#testSortListNull
+[1, 0, 0, 1, 1] org.apache.commons.io.comparator.SizeFileComparatorTest#testSortList
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testReverseComparator
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testComparator
+[0, 0, 1, 0, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testToString
+[0, 1, 0, 0, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testSortArrayNull
+[1, 1, 0, 1, 0] org.apache.commons.io.comparator.SizeFileComparatorTest#testSortArray

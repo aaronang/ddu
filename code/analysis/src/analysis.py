@@ -49,13 +49,48 @@ def analyze(granularity):
     # plot_uniqueness(data)
     # plot_ddu(data)
     # plot_uniqueness_vs_num_of_components(data)
+    # percentage_couple_components_uniqueness(data)
+    something(data)
+
+
+def something(data):
+    uniqueness = _get_column(data, 'uniqueness')
+    components = _get_column(data, 'number_of_components')
+    tests = _get_column(data, 'number_of_tests')
+    d = zip(uniqueness, components, tests)
+    d = [(float(u), int(c), int(t)) for u, c, t in d if u and c and t]
+    d = [(float(u), int(c), int(t)) for u, c, t in d if c > 1]
+    u, t, t = zip(*d)
+    print("Normal test uniqueness:", mst.normaltest(u))
+    print("Normal test components:", mst.normaltest(t))
+    print("[Pearson]", st.pearsonr(u, t))
+    print("[Spearman]", st.spearmanr(u, t))
+
+    plt.scatter(u, t)
+    plt.xlabel('Uniqueness')
+    plt.ylabel('Number of components')
+    plt.title('Uniqueness vs. number of components')
+    plt.grid(True)
+    plt.show()
+
+
+def percentage_couple_components_uniqueness(data):
+    uniqueness = _get_column(data, 'uniqueness')
+    components = _get_column(data, 'number_of_components')
+    ts = zip(uniqueness, components)
+    ts = [(float(u), int(c)) for u, c in ts if u and c]
+    optimal_uniquenesses = [(u, c) for u, c in ts if u == 1.0]
+    less = [(u, c) for u, c in optimal_uniquenesses if c == 2]
+    print(len(less))
+    print(len(optimal_uniquenesses))
+    print(len(less) / float(len(optimal_uniquenesses)))
 
 
 def plot_uniqueness_vs_num_of_components(data):
     def transform(tuples):
         return [(float(u), int(c)) for u, c in tuples if u and c]
 
-    uniqueness = list(_get_column(data, 'uniqueness'))
+    uniqueness = _get_column(data, 'uniqueness')
     num_of_components = list(_get_column(data, 'number_of_components'))
     t = zip(uniqueness, num_of_components)
     u, c = zip(*transform(t))

@@ -1,0 +1,14 @@
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#constructorIterable_order
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testSortList
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testReverseComparator
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testComparator
+[0, 0, 0, 0, 1] org.apache.commons.io.comparator.CompositeFileComparatorTest#testToString
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.CompositeFileComparatorTest#testSortArray
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testCaseSensitivity
+[0, 0, 1, 0, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testSortListNull
+[0, 1, 1, 1, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testSortList
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testReverseComparator
+[0, 1, 0, 1, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testComparator
+[0, 0, 0, 0, 1] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testToString
+[1, 0, 0, 0, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testSortArrayNull
+[1, 1, 0, 1, 0] org.apache.commons.io.comparator.ExtensionFileComparatorTest#testSortArray
