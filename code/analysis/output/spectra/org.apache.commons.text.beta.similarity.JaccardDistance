@@ -1,4 +1,0 @@
-[1] org.apache.commons.text.beta.similarity.JaccardDistanceTest#testGettingJaccardDistanceNullString
-[1] org.apache.commons.text.beta.similarity.JaccardDistanceTest#testGettingJaccardDistanceStringNull
-[1] org.apache.commons.text.beta.similarity.JaccardDistanceTest#testGettingJaccardDistanceNullNull
-[1] org.apache.commons.text.beta.similarity.JaccardDistanceTest#testGettingJaccardDistance

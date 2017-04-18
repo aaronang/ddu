@@ -1,9 +1,0 @@
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testArrayKeys_unwrapValuesFalse
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoOptionalWithMapKey
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testMapKeyMissingValueMethod
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testDoubleScannerIsIgnored
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testMoreThanOneMapKeyAnnotation
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoMapWithoutMapKey
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testArrayKeys_unwrapValuesTrue
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoSetWithMapKey
-[0, 0, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testAnnotation

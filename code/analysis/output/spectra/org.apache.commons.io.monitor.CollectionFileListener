@@ -1,7 +1,7 @@
-[1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testMonitor
-[1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testThreadFactory
-[1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
-[1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
-[1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
-[1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate
-[1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testObserveSingleFile
+[1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testMonitor
+[1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testThreadFactory
+[1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
+[0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
+[1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
+[0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate
+[1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testObserveSingleFile

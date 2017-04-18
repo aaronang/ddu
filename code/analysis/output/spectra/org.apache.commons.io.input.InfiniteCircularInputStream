@@ -1,2 +1,0 @@
-[1] org.apache.commons.io.input.InfiniteCircularInputStreamTest#should_cycle_bytes
-[1] org.apache.commons.io.input.InfiniteCircularInputStreamTest#should_handle_whole_range_of_bytes

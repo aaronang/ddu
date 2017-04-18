@@ -1,7 +1,0 @@
-[0, 0, 0, 0, 1] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeHtml3Once
-[1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeXml10
-[1, 0, 0, 0, 0] org.apache.commons.text.beta.StringEscapeUtilsTest#testEscapeXml11
-[1, 0, 1, 1, 0] org.apache.commons.text.beta.translate.NumericEntityEscaperTest#testAbove
-[1, 1, 0, 1, 0] org.apache.commons.text.beta.translate.NumericEntityEscaperTest#testBelow
-[1, 0, 0, 0, 1] org.apache.commons.text.beta.translate.NumericEntityEscaperTest#testBetween
-[1, 0, 0, 0, 0] org.apache.commons.text.beta.translate.NumericEntityEscaperTest#testSupplementary

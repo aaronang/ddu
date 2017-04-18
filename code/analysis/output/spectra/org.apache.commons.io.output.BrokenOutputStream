@@ -1,4 +1,0 @@
-[0, 0, 1] org.apache.commons.io.output.BrokenOutputStreamTest#testClose
-[0, 1, 0] org.apache.commons.io.output.BrokenOutputStreamTest#testFlush
-[1, 0, 0] org.apache.commons.io.output.BrokenOutputStreamTest#testWrite
-[1, 1, 1] org.apache.commons.io.output.TaggedOutputStreamTest#testBrokenStream

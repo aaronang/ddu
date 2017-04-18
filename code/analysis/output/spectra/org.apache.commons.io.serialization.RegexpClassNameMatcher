@@ -1,5 +1,0 @@
-[1] org.apache.commons.io.serialization.RegexpClassNameMatcherTest#testSimplePatternFromString
-[1] org.apache.commons.io.serialization.RegexpClassNameMatcherTest#testOrPattern
-[1] org.apache.commons.io.serialization.RegexpClassNameMatcherTest#testSimplePatternFromPattern
-[1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#rejectPattern
-[1] org.apache.commons.io.serialization.ValidatingObjectInputStreamTest#acceptPattern

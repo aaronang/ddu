@@ -1,2 +1,0 @@
-[1] org.apache.commons.io.output.ChunkedWriterTest#write_four_chunks
-[1] org.apache.commons.io.output.ChunkedWriterTest#write_two_chunks_default_constructor

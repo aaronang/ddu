@@ -1,2 +1,2 @@
-[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.input.BoundedInputStreamTest#testReadSingle
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] org.apache.commons.io.input.BoundedInputStreamTest#testReadSingle
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1] org.apache.commons.io.input.BoundedInputStreamTest#testReadArray

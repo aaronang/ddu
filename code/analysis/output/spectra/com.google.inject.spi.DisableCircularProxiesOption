@@ -1,6 +1,0 @@
-[1, 0, 1] com.google.inject.CircularDependencyTest#testDisablingCircularDependencies
-[1, 0, 1] com.google.inject.CircularDependencyTest#testDisabledCircularDependency
-[1, 0, 1] com.google.inject.CircularDependencyTest#testDisabledCircularDependenciesWithProvidedBy
-[1, 0, 1] com.google.inject.CircularDependencyTest#testDisabledCircularDependenciesWithProviderInstances
-[1, 0, 1] com.google.inject.CircularDependencyTest#testDisabledNonConstructorCircularDependencies
-[1, 0, 1] com.google.inject.CircularDependencyTest#testDisabledCircularDependenciesWithProviderKeys

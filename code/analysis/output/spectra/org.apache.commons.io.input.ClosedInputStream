@@ -1,6 +1,0 @@
-[1] org.apache.commons.io.input.AutoCloseInputStreamTest#testReadBuffer
-[1] org.apache.commons.io.input.AutoCloseInputStreamTest#testReadBufferOffsetLength
-[1] org.apache.commons.io.input.AutoCloseInputStreamTest#testClose
-[1] org.apache.commons.io.input.ClosedInputStreamTest#testRead
-[1] org.apache.commons.io.input.CloseShieldInputStreamTest#testClose
-[1] org.apache.commons.io.input.TaggedInputStreamTest#testEmptyStream

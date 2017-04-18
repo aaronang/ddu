@@ -64,6 +64,25 @@ Normal test effort: NormaltestResult(statistic=138.00513868313772, pvalue=1.0778
 [Spearman] SpearmanrResult(correlation=-0.37370732836400777, pvalue=2.8906415422469398e-06)
 ```
 
+class|number_of_components|number_of_tests|unit_tests|integration_tests|density|normalized_density|diversity|uniqueness|ddu
+|---|---|---|---|---|---|---|---|---|---|
+org.apache.commons.text.beta.StrBuilder|162|230|142|88|0.045115405260332794|0.09023081052066562|0.9675716726789444|0.8024691358024691|0.07005938835892254
+org.apache.commons.io.IOUtils|129|394|182|212|0.031381576358556644|0.0627631527171133|0.9442011857248034|0.7984496124031008|0.047316956985879885
+org.jsoup.helper.HttpConnection|100|25|19|6|0.0796|0.1592|0.9966666666666667|0.32|0.05077418666666667
+org.apache.commons.io.FileUtils|115|567|168|399|0.04978145847711065|0.09956291695422126|0.8346389465352952|0.8173913043478261|0.06792447202905495
+com.google.inject.internal.Errors|102|692|0|692|0.13884166383316332|0.27768332766632664|0.965485222890508|0.7843137254901961|0.2102738427489422
+
+The class with the worst average wasted effort is `org.apache.commons.text.beta.StrBuilder`, namely `75.1`.
+The statistics of this class can be found in the table above.
+We observe that the diversity and uniqueness are not _bad_, but the normalized density is.
+Since the normalized density is low, the percentage of detected generated faults is `10%`, i.e. only `2` out of the `20` generated faults are caught by the test suite.
+More specifically, the multiple component faults that result in a diagnosis are `f1 = {21, 37}` and `f2 = {24, 123}`.
+In case of `f1` Barinel fails to diagnose the faults and the components do not appear in the ranking.
+For `f2` only one of the components appear in the ranking, namely component `123`; it is ranked on `13` out of `15`.
+
+
+
+
 ![](img/wasted_effort_vs_ddu_filtered.png)
 
 ```

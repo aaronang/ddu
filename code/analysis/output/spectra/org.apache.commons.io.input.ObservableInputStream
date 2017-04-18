@@ -1,3 +1,3 @@
-[1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1] org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest#test
-[1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1] org.apache.commons.io.input.ObservableInputStreamTest#testDataByteCalled
-[1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1] org.apache.commons.io.input.ObservableInputStreamTest#testDataBytesCalled
+[0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1] org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest#test
+[1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1] org.apache.commons.io.input.ObservableInputStreamTest#testDataByteCalled
+[0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1] org.apache.commons.io.input.ObservableInputStreamTest#testDataBytesCalled

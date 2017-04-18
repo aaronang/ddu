@@ -1,6 +1,0 @@
-[0, 1, 0, 0] org.apache.commons.io.input.TeeInputStreamTest#testSkip
-[0, 0, 0, 1] org.apache.commons.io.input.TeeInputStreamTest#testReadToArrayWithOffset
-[0, 1, 0, 0] org.apache.commons.io.input.TeeInputStreamTest#testMarkReset
-[0, 1, 0, 0] org.apache.commons.io.input.TeeInputStreamTest#testReadEverything
-[0, 1, 0, 0] org.apache.commons.io.input.TeeInputStreamTest#testReadOneByte
-[0, 0, 1, 0] org.apache.commons.io.input.TeeInputStreamTest#testReadToArray

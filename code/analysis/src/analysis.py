@@ -49,18 +49,21 @@ def analyze(granularity):
     # plot_uniqueness(data)
     # plot_ddu(data)
     # plot_uniqueness_vs_num_of_components(data)
-    # percentage_couple_components_uniqueness(data)
-    something(data)
+    percentage_couple_components_uniqueness(data)
+    # plot_uniqueness_and_tests(data)
 
 
-def something(data):
+def plot_uniqueness_and_tests(data):
+    """
+    Test correlation between uniqueness and number of tests only for classes that have two or more components.
+    """
     uniqueness = _get_column(data, 'uniqueness')
     components = _get_column(data, 'number_of_components')
     tests = _get_column(data, 'number_of_tests')
     d = zip(uniqueness, components, tests)
     d = [(float(u), int(c), int(t)) for u, c, t in d if u and c and t]
-    d = [(float(u), int(c), int(t)) for u, c, t in d if c > 1]
-    u, t, t = zip(*d)
+    d = [(u, c, t) for u, c, t in d if c > 1]
+    u, c, t = zip(*d)
     print("Normal test uniqueness:", mst.normaltest(u))
     print("Normal test components:", mst.normaltest(t))
     print("[Pearson]", st.pearsonr(u, t))
@@ -80,7 +83,7 @@ def percentage_couple_components_uniqueness(data):
     ts = zip(uniqueness, components)
     ts = [(float(u), int(c)) for u, c in ts if u and c]
     optimal_uniquenesses = [(u, c) for u, c in ts if u == 1.0]
-    less = [(u, c) for u, c in optimal_uniquenesses if c == 2]
+    less = [(u, c) for u, c in optimal_uniquenesses if c < 2]
     print(len(less))
     print(len(optimal_uniquenesses))
     print(len(less) / float(len(optimal_uniquenesses)))

@@ -1,5 +1,0 @@
-[1, 0] org.apache.commons.io.input.ClassLoaderObjectInputStreamTest#testObject1
-[1, 0] org.apache.commons.io.input.ClassLoaderObjectInputStreamTest#testObject2
-[0, 1] org.apache.commons.io.input.ClassLoaderObjectInputStreamTest#testResolveProxyClass
-[1, 0] org.apache.commons.io.input.ClassLoaderObjectInputStreamTest#testExpected
-[1, 0] org.apache.commons.io.input.ClassLoaderObjectInputStreamTest#testLong

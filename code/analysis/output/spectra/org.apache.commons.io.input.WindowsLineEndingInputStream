@@ -1,7 +1,0 @@
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#malformed
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#simpleString
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#multipleBlankLines
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#retainLineFeed
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#twoLinesAtEnd
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#inTheMiddleOfTheLine
-[1, 1, 0, 1, 1] org.apache.commons.io.input.WindowsLineEndingInputStreamTest#linuxLinefeeds
