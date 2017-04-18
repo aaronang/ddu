@@ -1,8 +1,8 @@
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#simpleString
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#multipleBlankLines
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#retainLineFeed
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#twoLinesAtEnd
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#inTheMiddleOfTheLine
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#crOnlyEnsureAtEof
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#crAtEnd
-[1, 1, 1, 0, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#crOnlyNotAtEof
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#simpleString
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#multipleBlankLines
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#retainLineFeed
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#twoLinesAtEnd
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#inTheMiddleOfTheLine
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#crOnlyEnsureAtEof
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#crAtEnd
+[1, 1, 0, 1, 1] org.apache.commons.io.input.UnixLineEndingInputStreamTest#crOnlyNotAtEof

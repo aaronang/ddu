@@ -2,7 +2,7 @@
 [1, 1] com.google.inject.CircularDependencyTest#testCircularDependencyProxyDelegateNeverInitialized
 [1, 1] com.google.inject.CircularDependencyTest#testCircularlyDependentConstructorsWithProviderKeys
 [1, 1] com.google.inject.CircularDependencyTest#testCircularlyDependentConstructorsWithProvidedBy
-[1, 0] com.google.inject.CircularDependencyTest#testCircularlyDependentMultipleWays
+[0, 1] com.google.inject.CircularDependencyTest#testCircularlyDependentMultipleWays
 [1, 1] com.google.inject.CircularDependencyTest#testCircularlyDependentConstructorsWithProviderInstances
 [1, 1] com.google.inject.CircularDependencyTest#testCircularlyDependentConstructorsWithProviderMethods
 [1, 1] com.google.inject.spi.ProviderMethodsTest#testCircularDependency

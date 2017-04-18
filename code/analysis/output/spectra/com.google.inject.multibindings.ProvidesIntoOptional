@@ -1,1 +1,1 @@
-[1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoOptionalWithMapKey
+[0, 1] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoOptionalWithMapKey

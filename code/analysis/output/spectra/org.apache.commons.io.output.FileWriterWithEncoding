@@ -1,11 +1,11 @@
-[0, 0, 0, 0, 0, 1, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+[1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_constructor
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_Charset_constructor
-[0, 0, 0, 0, 0, 1, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_null_Charset_constructor
-[0, 0, 0, 0, 0, 1, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_nullFile
+[1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_null_Charset_constructor
+[1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_nullFile
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#testDifferentEncoding
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_CharsetEncoder_constructor
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_string_constructor
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_CharsetEncoder_constructor
 [1, 1, 1, 1, 1, 1, 1, 1] org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_Charset_constructor
-[0, 0, 0, 0, 0, 1, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_directory
+[1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_directory

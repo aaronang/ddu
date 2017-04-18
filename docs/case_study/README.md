@@ -176,7 +176,7 @@ The average is `0.7696`.
 
 ![Uniqueness of classes.](img/uniqueness.png)
 
-The peak for the interval `0.9 - 1.0` is caused by classes that only have one component; activity matrices that consist of one component always have a uniqueness of `1.0`.
+The peak for the interval `0.9 - 1.0` is partially caused by classes that only have one component; activity matrices that consist of one component always have a uniqueness of `1.0`.
 More specifically, there are `130` classes that have a uniqueness of `1.0` and `47` out of the `130` only have one component.
 
 ```
@@ -196,9 +196,22 @@ More specifically, there are `130` classes that have a uniqueness of `1.0` and `
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] IOUtilsTestCase#testStringToOutputStream
 ```
 
-There are a couple ways to get a high uniqueness.
-One of them is to write tests that only cover a couple components at a time.
-An example of this approach is shown above; `org.apache.commons.io.CopyUtils` has a uniqueness of `0.9167`.
+The uniqueness of an activity matrix is high when the number of unique columns is high.
+For example, `org.apache.commons.io.CopyUtils` has a uniqueness of `0.9167`, see spectra above.
+This class has a high uniqueness because its test suite mostly consists of test cases that only cover a couple components each.
+
+```
+[1, 1, 1, 1, 1, 1, 1] ReplacementsFinderTest#testReplacementsHandler[0]
+[1, 1, 1, 1, 1, 1, 1] ReplacementsFinderTest#testReplacementsHandler[1]
+[1, 1, 1, 1, 1, 1, 1] StringsComparatorTest#testExecution
+[1, 1, 1, 1, 1, 1, 1] StringsComparatorTest#testLongestCommonSubsequence
+[1, 1, 1, 1, 1, 1, 1] StringsComparatorTest#testLength
+```
+
+In the spectra above of `org.apache.commons.text.beta.diff.StringsComparator`, we observe that every component is covered in every transaction and therefore the uniqueness is low: `0.1429`.
+Although the matrix has no unique columns, its uniqueness is not `0`.
+So, to improve the uniqueness of this matrix, we could write tests that cover a few components each, resulting in each column being unique.
+
 
 ## DDU
 
@@ -207,5 +220,16 @@ The average is `0.2264`.
 
 ![DDU of classes.](img/ddu_of_classes.png)
 
+Out of all the classes, there is only one class that has a DDU of `1.0`, namely `org.apache.commons.io.output.BrokenOutputStream`, see spectra below.
 
-The individual terms should be multiplied together.     
+```
+[0, 0, 1] BrokenOutputStreamTest#testClose
+[0, 1, 0] BrokenOutputStreamTest#testFlush
+[1, 0, 0] BrokenOutputStreamTest#testWrite
+[1, 1, 1] TaggedOutputStreamTest#testBrokenStream
+```
+
+
+Multiplying the individual terms might be the right approach.
+
+Based on the uniqueness observations, it seems that uniqueness at least requires the developer to write tests that cover a few components.

@@ -1,8 +1,8 @@
-[0, 1, 0, 0, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testCaseSensitivity
-[1, 0, 0, 0, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testSortListNull
-[1, 1, 0, 0, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testSortList
-[0, 1, 0, 0, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testReverseComparator
-[0, 1, 0, 0, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testComparator
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testCaseSensitivity
+[0, 0, 0, 0, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testSortListNull
+[1, 0, 0, 1, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testSortList
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testReverseComparator
+[1, 0, 0, 1, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testComparator
 [0, 0, 1, 0, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testToString
-[0, 0, 0, 1, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testSortArrayNull
-[0, 1, 0, 1, 1] org.apache.commons.io.comparator.PathFileComparatorTest#testSortArray
+[0, 1, 0, 0, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testSortArrayNull
+[1, 1, 0, 1, 0] org.apache.commons.io.comparator.PathFileComparatorTest#testSortArray

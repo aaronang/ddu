@@ -1,6 +1,6 @@
-[0, 0, 1, 0, 0] org.apache.commons.io.input.BrokenInputStreamTest#testClose
-[0, 0, 0, 0, 1] org.apache.commons.io.input.BrokenInputStreamTest#testReset
-[1, 0, 0, 0, 0] org.apache.commons.io.input.BrokenInputStreamTest#testRead
-[0, 0, 0, 1, 0] org.apache.commons.io.input.BrokenInputStreamTest#testSkip
-[0, 1, 0, 0, 0] org.apache.commons.io.input.BrokenInputStreamTest#testAvailable
-[1, 1, 1, 0, 0] org.apache.commons.io.input.TaggedInputStreamTest#testBrokenStream
+[1, 0, 0, 0, 0] org.apache.commons.io.input.BrokenInputStreamTest#testClose
+[0, 0, 1, 0, 0] org.apache.commons.io.input.BrokenInputStreamTest#testReset
+[0, 0, 0, 0, 1] org.apache.commons.io.input.BrokenInputStreamTest#testRead
+[0, 1, 0, 0, 0] org.apache.commons.io.input.BrokenInputStreamTest#testSkip
+[0, 0, 0, 1, 0] org.apache.commons.io.input.BrokenInputStreamTest#testAvailable
+[1, 0, 0, 1, 1] org.apache.commons.io.input.TaggedInputStreamTest#testBrokenStream

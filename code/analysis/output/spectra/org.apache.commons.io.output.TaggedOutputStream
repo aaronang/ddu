@@ -1,2 +1,2 @@
 [1, 1, 1] org.apache.commons.io.output.TaggedOutputStreamTest#testBrokenStream
-[0, 1, 1] org.apache.commons.io.output.TaggedOutputStreamTest#testOtherException
+[1, 1, 0] org.apache.commons.io.output.TaggedOutputStreamTest#testOtherException

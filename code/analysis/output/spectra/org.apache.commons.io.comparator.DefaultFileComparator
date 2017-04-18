@@ -1,7 +1,7 @@
-[1, 0, 0, 0, 0] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortListNull
-[1, 0, 1, 0, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortList
-[0, 0, 1, 0, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testReverseComparator
-[0, 0, 1, 0, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testComparator
-[0, 1, 0, 0, 0] org.apache.commons.io.comparator.DefaultFileComparatorTest#testToString
-[0, 0, 0, 1, 0] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortArrayNull
-[0, 0, 1, 1, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortArray
+[0, 0, 0, 1, 0] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortListNull
+[0, 1, 0, 1, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortList
+[0, 1, 0, 0, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testReverseComparator
+[0, 1, 0, 0, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testComparator
+[1, 0, 0, 0, 0] org.apache.commons.io.comparator.DefaultFileComparatorTest#testToString
+[0, 0, 1, 0, 0] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortArrayNull
+[0, 1, 1, 0, 1] org.apache.commons.io.comparator.DefaultFileComparatorTest#testSortArray

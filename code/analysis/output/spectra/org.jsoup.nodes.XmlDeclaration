@@ -5,5 +5,5 @@
 [1, 1, 0, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#handlesXmlDeclarationAsDeclaration
 [1, 1, 0, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#caseSensitiveDeclaration
 [1, 1, 0, 1, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#testDetectCharsetEncodingDeclaration
-[1, 1, 1, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#testParseDeclarationAttributes
+[1, 1, 0, 0, 1, 1] org.jsoup.parser.XmlTreeBuilderTest#testParseDeclarationAttributes
 [1, 1, 0, 0, 1, 0] org.jsoup.parser.XmlTreeBuilderTest#testCreatesValidProlog
