@@ -1,0 +1,4 @@
+[0, 1, 0, 0] nl.tudelft.IntegerTest#subtract
+[0, 0, 0, 1] nl.tudelft.IntegerTest#divide
+[0, 0, 1, 0] nl.tudelft.IntegerTest#add
+[1, 0, 0, 0] nl.tudelft.IntegerTest#multiply
