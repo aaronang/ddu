@@ -1,8 +1,10 @@
-;nl.tudelft.Integer#Integer(int);nl.tudelft.Integer#add(int);nl.tudelft.Integer#subtract(int);nl.tudelft.Integer#multiply(int);nl.tudelft.Integer#divide(int);nl.tudelft.Response#Response();nl.tudelft.Response#v1();nl.tudelft.Response#v2()
-nl.tudelft.IntegerTest#subtract;1;0;1;0;0;0;0;0
-nl.tudelft.IntegerTest#divide;1;0;0;0;1;0;0;0
+;nl.tudelft.Integer#Integer(int);nl.tudelft.Integer#add(int);nl.tudelft.Integer#sub(int);nl.tudelft.Integer#mul(int);nl.tudelft.Integer#div(int);nl.tudelft.Response#Response();nl.tudelft.Response#v1();nl.tudelft.Response#v2()
+nl.tudelft.IntegerTest#addMul;1;1;0;1;0;0;0;0
+nl.tudelft.IntegerTest#addSub;1;1;1;0;0;0;0;0
 nl.tudelft.IntegerTest#add;1;1;0;0;0;0;0;0
-nl.tudelft.IntegerTest#multiply;1;0;0;1;0;0;0;0
+nl.tudelft.IntegerTest#div;1;0;0;0;1;0;0;0
+nl.tudelft.IntegerTest#mul;1;0;0;1;0;0;0;0
+nl.tudelft.IntegerTest#sub;1;0;1;0;0;0;0;0
 nl.tudelft.ResponseTest#v1;0;0;0;0;0;1;1;0
 nl.tudelft.ResponseTest#v2;0;0;0;0;0;1;0;1
 nl.tudelft.ResponseTest#v1v2;0;0;0;0;0;1;1;1

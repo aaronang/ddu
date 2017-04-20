@@ -11,15 +11,15 @@ class Integer {
         return new Integer(this.value + value);
     }
 
-    Integer subtract(int value) {
+    Integer sub(int value) {
         return new Integer(this.value - value);
     }
 
-    Integer multiply(int value) {
+    Integer mul(int value) {
         return new Integer(this.value * value);
     }
 
-    Integer divide(int value) {
+    Integer div(int value) {
         return new Integer(this.value / value);
     }
 }

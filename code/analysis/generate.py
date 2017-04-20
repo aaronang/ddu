@@ -17,8 +17,8 @@ for filename in os.listdir(directory):
 
     fault_sets = []
 
-    while len(fault_sets) < 6:
-        activity_matrix, faulty_set = activity_generator.generate(2)
+    while len(fault_sets) < 4:
+        activity_matrix, faulty_set = activity_generator.generate(1)
         faulty_set.sort()
         h = hash(frozenset(faulty_set))
         if h not in fault_sets:

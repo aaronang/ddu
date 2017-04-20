@@ -7,21 +7,31 @@ import static org.junit.Assert.*;
 public class IntegerTest {
     @Test
     public void add() {
-        assertEquals(2, new Integer(1).add(2).value);
+        assertEquals(3, new Integer(1).add(2).value);
     }
 
     @Test
-    public void subtract() {
-        assertEquals(2, new Integer(4).subtract(2).value);
+    public void sub() {
+        assertEquals(2, new Integer(4).sub(2).value);
     }
 
     @Test
-    public void multiply() {
-        assertEquals(4, new Integer(2).multiply(2).value);
+    public void mul() {
+        assertEquals(4, new Integer(2).mul(2).value);
     }
 
     @Test
-    public void divide() {
-        assertEquals(4, new Integer(16).divide(4).value);
+    public void div() {
+        assertEquals(4, new Integer(16).div(4).value);
+    }
+
+    @Test
+    public void addSub() {
+        assertEquals(2, new Integer(1).add(4).sub(3).value);
+    }
+
+    @Test
+    public void addMul() {
+        assertEquals(2, new Integer(1).add(1).mul(1).value);
     }
 }
