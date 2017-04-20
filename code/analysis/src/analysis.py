@@ -49,8 +49,32 @@ def analyze(granularity):
     # plot_uniqueness(data)
     # plot_ddu(data)
     # plot_uniqueness_vs_num_of_components(data)
-    percentage_couple_components_uniqueness(data)
+    # percentage_couple_components_uniqueness(data)
     # plot_uniqueness_and_tests(data)
+    effort_correlation(data, efforts)
+
+
+def effort_correlation(data, efforts):
+    a = []
+    for class_name, percentage in efforts.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        normalized_density = class_data['normalized_density']
+        diversity = class_data['diversity']
+        uniqueness = class_data['uniqueness']
+        if normalized_density and diversity and uniqueness:
+            a.append((float(normalized_density), float(diversity), float(uniqueness), percentage))
+    nd, d, u, e = zip(*a)
+    print("Normal test density:", mst.normaltest(nd))
+    print("Normal test diversity:", mst.normaltest(d))
+    print("Normal test uniqueness:", mst.normaltest(u))
+    print("Normal test effort:", mst.normaltest(e))
+    print("[Spearman] density vs. effort", st.spearmanr(nd, e))
+    print("[Spearman] diversity vs. effort", st.spearmanr(d, e))
+    print("[Spearman] uniqueness vs. effort", st.spearmanr(u, e))
+    print("[Pearson] density vs. effort", st.pearsonr(nd, e))
+    print("[Pearson] diversity vs. effort", st.pearsonr(d, e))
+    print("[Pearson] uniqueness vs. effort", st.pearsonr(u, e))
+
 
 
 def plot_uniqueness_and_tests(data):
