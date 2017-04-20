@@ -96,8 +96,8 @@ def compute_metrics(spectra, parents):
         print('Components:', components)
         if not transactions:
             continue
-        if len(components) >= 8:
-            write_transactions(transactions, p)
+        # if len(components) >= 8:
+        write_transactions(transactions, p)
         ddus[p]['unit_tests'], ddus[p]['integration_tests'] = _unit_and_integration(p, transactions)
         tests, transactions = zip(*transactions)
         components_activity = transpose(transactions)

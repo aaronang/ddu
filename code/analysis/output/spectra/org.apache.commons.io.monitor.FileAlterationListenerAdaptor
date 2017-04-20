@@ -1,7 +1,0 @@
-[0, 0, 1, 1, 1, 0, 1, 1] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testMonitor
-[0, 0, 1, 0, 1, 0, 1, 1] org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testThreadFactory
-[1, 0, 1, 1, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
-[0, 1, 1, 0, 1, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
-[0, 1, 1, 0, 1, 1, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
-[0, 1, 1, 1, 1, 1, 1, 0] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate
-[0, 0, 1, 1, 1, 0, 1, 1] org.apache.commons.io.monitor.FileAlterationObserverTestCase#testObserveSingleFile

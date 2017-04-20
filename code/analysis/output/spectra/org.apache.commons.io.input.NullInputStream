@@ -1,9 +1,0 @@
-[0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1] org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
-[0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1] org.apache.commons.io.input.NullInputStreamTest#testReadByteArray
-[0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1] org.apache.commons.io.input.NullInputStreamTest#testRead
-[0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1] org.apache.commons.io.input.NullInputStreamTest#testSkip
-[0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1] org.apache.commons.io.input.NullInputStreamTest#testEOFException
-[0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1] org.apache.commons.io.input.NullInputStreamTest#testMarkNotSupported
-[0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1] org.apache.commons.io.input.NullInputStreamTest#testMarkAndReset
-[0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_IO84
-[0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1] org.apache.commons.io.output.CountingOutputStreamTest#testLargeFiles_IO84
