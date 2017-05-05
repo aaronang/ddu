@@ -8,6 +8,7 @@ current_dir = os.path.dirname(__file__)
 directory = os.path.normpath(os.path.join(current_dir, 'output/spectra'))
 
 for filename in os.listdir(directory):
+    print(filename)
     spectra = Spectra('output/spectra/%s' % filename)
     activity_generator = ActivityGenerator(spectra)
 
@@ -17,11 +18,12 @@ for filename in os.listdir(directory):
 
     fault_sets = []
 
-    while len(fault_sets) < 4:
-        activity_matrix, faulty_set = activity_generator.generate(1)
+    while len(fault_sets) < 20:
+        activity_matrix, faulty_set = activity_generator.generate(2, 0)
         faulty_set.sort()
         h = hash(frozenset(faulty_set))
         if h not in fault_sets:
+            print(faulty_set)
             fault_sets.append(h)
             name = '_'.join(to_str(faulty_set))
             with open('output/matrices/%s/%s.txt' % (filename, name), 'w') as f:

@@ -1,2 +1,0 @@
-parent,number_of_components,number_of_tests,unit_tests,integration_tests,density,normalized_density,diversity,uniqueness,ddu
-org.apache.commons.csv,12,259,74,185,0.32142857142857145,0.6428571428571429,0.8264942683547335,1.0,0.5313177439423287

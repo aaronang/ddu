@@ -39,10 +39,11 @@ def analyze(granularity):
         for row in reader:
             percentages.update({row['class']: float(row['percentage'])})
 
-    # plot_effort_ddu(data, efforts)
+    plot_effort_ddu(data, efforts)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
+    # plot_effort_num_of_components(data, efforts)
     # plot_percentage_ddu(data, percentages)
     # plot_normalized_density(data)
     # plot_diversity(data)
@@ -51,7 +52,8 @@ def analyze(granularity):
     # plot_uniqueness_vs_num_of_components(data)
     # percentage_couple_components_uniqueness(data)
     # plot_uniqueness_and_tests(data)
-    effort_correlation(data, efforts)
+    # effort_correlation(data, efforts)
+    # plot_effort_density(data, efforts)
 
 
 def effort_correlation(data, efforts):
@@ -74,7 +76,6 @@ def effort_correlation(data, efforts):
     print("[Pearson] density vs. effort", st.pearsonr(nd, e))
     print("[Pearson] diversity vs. effort", st.pearsonr(d, e))
     print("[Pearson] uniqueness vs. effort", st.pearsonr(u, e))
-
 
 
 def plot_uniqueness_and_tests(data):
@@ -146,6 +147,26 @@ def plot_percentage_ddu(data, percentages):
     plt.ylabel('Faulty spectra')
     plt.title('DDU vs. faulty spectra')
     plt.grid(True)
+    plt.xlim(0.0, 1.0)
+    plt.ylim(0.0, 1.0)
+    plt.show()
+
+
+def plot_effort_num_of_components(data, efforts):
+    a = []
+    for class_name, effort in efforts.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['number_of_components']), effort))
+    x, y = zip(*a)
+    print("Normal test number_of_components:", mst.normaltest(x))
+    print("Normal test effort:", mst.normaltest(y))
+    print("[Pearson]", st.pearsonr(x, y))
+    print("[Spearman]", st.spearmanr(x, y))
+    plt.scatter(x, y)
+    plt.xlabel('number_of_components')
+    plt.ylabel('Average wasted effort')
+    plt.title('number_of_components vs. average wasted effort')
+    plt.grid(True)
     plt.show()
 
 
@@ -164,21 +185,25 @@ def plot_effort_ddu(data, efforts):
     plt.ylabel('Average wasted effort')
     plt.title('DDU vs. average wasted effort')
     plt.grid(True)
-    plt.xlim(0.0, 1.0)
-    plt.ylim(0, 80)
+    plt.xlim(0, 1.0)
+    plt.ylim(0, 1.0)
     plt.show()
 
 
 def plot_effort_density(data, efforts):
     a = []
     for class_name, effort in efforts.items():
-        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        class_data = list(filter(lambda c: c['parent'] == class_name, data))[0]
         a.append((float(class_data['normalized_density']), effort))
     x, y = zip(*a)
+    print("Normal test normalized density:", mst.normaltest(x))
+    print("Normal test effort:", mst.normaltest(y))
+    print("[Pearson]", st.pearsonr(x, y))
+    print("[Spearman]", st.spearmanr(x, y))
     plt.scatter(x, y)
-    plt.xlabel('density')
+    plt.xlabel('Normalized density')
     plt.ylabel('Average wasted effort')
-    plt.title('Density vs. average wasted effort')
+    plt.title('Normalized density vs. average wasted effort')
     plt.grid(True)
     plt.show()
 

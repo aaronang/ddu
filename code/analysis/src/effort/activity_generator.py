@@ -12,19 +12,24 @@ class ActivityGenerator:
 
         return random.sample(range(self.spectra.num_of_components), cardinality)
 
-    def _generate_error_vector(self, faulty_set):
-        def is_error(transaction):
-            return all([transaction[i] == 1 for i in faulty_set])
+    def _generate_error_vector(self, faulty_set, goodness):
+        def is_error_with_goodness(transaction):
+            is_error = all([transaction[i] == 1 for i in faulty_set])
+            error_chance = random.random() >= goodness
+            print(error_chance)
+            if is_error and error_chance:
+                return True
+            else:
+                return False
 
-        return list(map(is_error, self.spectra.matrix))
+        return list(map(is_error_with_goodness, self.spectra.matrix))
 
     def _transform_error(self, error):
         return '-' if error else '+'
 
-    def generate(self, cardinality):
-
+    def generate(self, cardinality, goodness=0):
         faulty_set = self._generate_faulty_set(cardinality)
-        error_vector = self._generate_error_vector(faulty_set)
+        error_vector = self._generate_error_vector(faulty_set, goodness)
         error_vector = list(map(self._transform_error, error_vector))
 
         activity_matrix = zip(self.spectra.matrix, error_vector)

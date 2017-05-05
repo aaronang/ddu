@@ -75,7 +75,7 @@ com.google.inject.internal.Errors|102|692|0|692|0.13884166383316332|0.2776833276
 The class with the worst average wasted effort is `org.apache.commons.text.beta.StrBuilder`, namely `75.1`.
 The statistics of this class can be found in the table above.
 We observe that the diversity and uniqueness are not _bad_, but the normalized density is.
-Since the normalized density is low, the percentage of detected generated faults is `10%`, i.e. only `2` out of the `20` generated faults are caught by the test suite.
+The percentage of detected generated faults is `10%`, i.e. only `2` out of the `20` generated faults are caught by the test suite.
 More specifically, the multiple component faults that result in a diagnosis are `f1 = {21, 37}` and `f2 = {24, 123}`.
 In case of `f1` Barinel fails to diagnose the faults and the components do not appear in the ranking.
 For `f2` only one of the components appear in the ranking, namely component `123`; it is ranked on `13` out of `15`.

@@ -1,0 +1,2 @@
+[0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1] org.apache.commons.io.input.ProxyReaderTest#testNullCharArray
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1] org.apache.commons.io.input.ProxyReaderTest#testNullCharBuffer

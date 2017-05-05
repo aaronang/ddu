@@ -1,3 +1,7 @@
+from collections import OrderedDict
+from operator import itemgetter
+
+
 def worst_effort(fault_set, candidates):
     for i in reversed(range(len(candidates))):
         for x in fault_set:
@@ -23,6 +27,26 @@ def average_effort(fault_set, candidates, num_of_components):
     if len(indexes) == 0:
         return num_of_components / 2.0
     return float(sum(indexes)) / len(indexes)
+
+
+def normalized_average_effort(fault_set, candidates, num_of_components):
+    effort = average_effort(fault_set, candidates, num_of_components)
+    return effort / num_of_components
+
+
+def normalized_average_effort_flatten(fault_set, candidates, num_of_components, probabilities):
+    probs = {}
+    for index, candidate in enumerate(candidates):
+        for component in candidate:
+            if component not in probs:
+                probs[component] = 0
+            probs[component] += probabilities[index]
+
+    ordered = OrderedDict(sorted(probs.items(), key=itemgetter(1), reverse=True))
+
+    cands = [[k] for k, v in ordered.items()]
+    # print('Flattened diagnosis:', [[k, v] for k, v in ordered.items()])
+    return normalized_average_effort(fault_set, cands, num_of_components)
 
 
 def compute_effort(fault_set, candidates):
