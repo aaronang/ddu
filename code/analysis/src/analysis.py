@@ -11,7 +11,7 @@ def _get_column(data, c):
     return list(map(lambda r: r[c], data))
 
 
-def analyze(granularity):
+def analyze(granularity, output_name=''):
     current_dir = os.path.dirname(__file__)
     directory = os.path.normpath(os.path.join(current_dir, '../output/%s' % granularity))
     data = []
@@ -39,12 +39,13 @@ def analyze(granularity):
         for row in reader:
             percentages.update({row['class']: float(row['percentage'])})
 
-    plot_effort_ddu(data, efforts)
+    # plot_effort_ddu(data, efforts)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
     # plot_effort_num_of_components(data, efforts)
-    # plot_percentage_ddu(data, percentages)
+    # plot_error_detection_ddu(output_name, data, percentages)
+    # plot_error_detection_density(data, percentages)
     # plot_normalized_density(data)
     # plot_diversity(data)
     # plot_uniqueness(data)
@@ -136,17 +137,43 @@ def plot_uniqueness_vs_num_of_components(data):
     plt.show()
 
 
-def plot_percentage_ddu(data, percentages):
+def plot_error_detection_ddu(output_name, data, percentages):
     a = []
     for class_name, percentage in percentages.items():
         class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
-        a.append((float(class_data['ddu']), percentage))
-    x, y = zip(*a)
-    plt.scatter(y, x)
-    plt.xlabel('DDU')
-    plt.ylabel('Faulty spectra')
-    plt.title('DDU vs. faulty spectra')
+        a.append((class_data['parent'], float(class_data['ddu']), float(class_data['density']), percentage))
+    # for name, ddu, percentage in sorted(a, key=lambda tup: tup[1], reverse=True):
+    for name, ddu, density, percentage in a:
+        print('Name: %s, DDU: %f, density: %f, percentage: %f' % (name, ddu, density, percentage))
+    # ddu, percentage = zip(*a)
+    # plt.scatter(ddu, percentage)
+    # plt.xlabel('DDU')
+    # plt.ylabel('Failure detection')
+    # plt.title('DDU vs. failure detection')
+    # plt.grid(True)
+    #
+    # plt.xlim(0.0, 1.0)
+    # plt.ylim(0.0, 1.0)
+    # plt.show()
+    # z = numpy.polyfit(ddu, percentage, 1)
+    # p = numpy.poly1d(z)
+    # plt.plot(ddu, p(ddu), "--")
+
+    # plt.savefig(output_name)
+
+
+def plot_error_detection_density(data, percentages):
+    a = []
+    for class_name, percentage in percentages.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['normalized_density']), percentage))
+    density, percentage = zip(*a)
+    plt.scatter(density, percentage)
+    plt.xlabel('Normalized density')
+    plt.ylabel('Failure detection')
+    plt.title('Normalized density vs. failure detection')
     plt.grid(True)
+
     plt.xlim(0.0, 1.0)
     plt.ylim(0.0, 1.0)
     plt.show()
@@ -302,3 +329,6 @@ def plot_normalized_density(data):
     plt.grid(True)
 
     plt.show()
+
+if __name__ == "__main__":
+    analyze('method')

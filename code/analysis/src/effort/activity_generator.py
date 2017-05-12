@@ -16,7 +16,7 @@ class ActivityGenerator:
         def is_error_with_goodness(transaction):
             is_error = all([transaction[i] == 1 for i in faulty_set])
             error_chance = random.random() >= goodness
-            print(error_chance)
+            # print(error_chance)
             if is_error and error_chance:
                 return True
             else:

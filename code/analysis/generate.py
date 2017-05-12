@@ -7,26 +7,32 @@ from src.effort.util import to_str
 current_dir = os.path.dirname(__file__)
 directory = os.path.normpath(os.path.join(current_dir, 'output/spectra'))
 
-for filename in os.listdir(directory):
-    print(filename)
-    spectra = Spectra('output/spectra/%s' % filename)
-    activity_generator = ActivityGenerator(spectra)
 
-    output = 'output/matrices/%s' % filename
-    if not os.path.exists(output):
-        os.makedirs(output)
+def generate_matrices(rounds, cardinality, goodness):
+    for filename in os.listdir(directory):
+        # print(filename)
+        spectra = Spectra('output/spectra/%s' % filename)
+        activity_generator = ActivityGenerator(spectra)
 
-    fault_sets = []
+        output = 'output/matrices/%s' % filename
+        if not os.path.exists(output):
+            os.makedirs(output)
 
-    while len(fault_sets) < 20:
-        activity_matrix, faulty_set = activity_generator.generate(2, 0)
-        faulty_set.sort()
-        h = hash(frozenset(faulty_set))
-        if h not in fault_sets:
-            print(faulty_set)
-            fault_sets.append(h)
-            name = '_'.join(to_str(faulty_set))
-            with open('output/matrices/%s/%s.txt' % (filename, name), 'w') as f:
-                for column in activity_matrix:
-                    f.write(' '.join(to_str(column)))
-                    f.write('\n')
+        fault_sets = []
+
+        while len(fault_sets) < rounds:
+            activity_matrix, faulty_set = activity_generator.generate(cardinality, goodness)
+            faulty_set.sort()
+            h = hash(frozenset(faulty_set))
+            if h not in fault_sets:
+                # print(faulty_set)
+                fault_sets.append(h)
+                name = '_'.join(to_str(faulty_set))
+                with open('output/matrices/%s/%s.txt' % (filename, name), 'w') as f:
+                    for column in activity_matrix:
+                        f.write(' '.join(to_str(column)))
+                        f.write('\n')
+
+
+if __name__ == "__main__":
+    generate_matrices(20, 2, 0)
