@@ -1,5 +1,6 @@
 import csv
 import os
+import numpy
 from functools import reduce
 
 import matplotlib.pyplot as plt
@@ -33,13 +34,13 @@ def analyze(granularity, output_name=''):
         for row in reader:
             efforts.update({row['class']: float(row['average_wasted_effort'])})
 
-    percentages = {}
-    with open(os.path.join(current_dir, '../output/percentages.csv')) as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            percentages.update({row['class']: float(row['percentage'])})
+    # percentages = {}
+    # with open(os.path.join(current_dir, '../output/percentages.csv')) as csvfile:
+    #     reader = csv.DictReader(csvfile)
+    #     for row in reader:
+    #         percentages.update({row['class']: float(row['percentage'])})
 
-    # plot_effort_ddu(data, efforts)
+    plot_effort_ddu(data, efforts)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
@@ -214,6 +215,9 @@ def plot_effort_ddu(data, efforts):
     plt.grid(True)
     plt.xlim(0, 1.0)
     plt.ylim(0, 1.0)
+    z = numpy.polyfit(x, y, 1)
+    p = numpy.poly1d(z)
+    plt.plot(x, p(x), "r-")
     plt.show()
 
 

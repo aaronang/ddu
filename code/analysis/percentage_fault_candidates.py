@@ -41,6 +41,7 @@ for g in [0]:
     cardinality = 2
 
     for r in range(num_of_generations):
+        # Next three lines not necessary when matrices are generated.
         if os.path.exists(MATRICES_DIR):
             shutil.rmtree(MATRICES_DIR)
         generate.generate_matrices(20, cardinality, g)
@@ -80,4 +81,4 @@ for g in [0]:
             print(c, p)
             writer.writerow([c, p])
 
-    analyze('method', 'failure_detection_ddu_cardinality_%d_goodness_%f_rounds_20.png' % (cardinality, g))
+    # analyze('method', 'failure_detection_ddu_cardinality_%d_goodness_%f_rounds_20.png' % (cardinality, g))

@@ -27,31 +27,31 @@ for class_name in os.listdir(MATRICES_DIR):
     print(class_dir)
     if not os.path.exists(barinel_out):
         os.makedirs(barinel_out)
-    #
-    # for filename in os.listdir(class_dir):
-    #     filepath = os.path.join(class_dir, filename)
-    #     print(filepath)
-    #
-    #     with open(filepath, 'r') as f:
-    #         columns = len(f.readline().split(' ')[:-1])
-    #         columns = str(columns)
-    #
-    #     print('Running Staccato')
-    #     spectra = Spectra()
-    #     spectra.read(filepath)
-    #
-    #     mhs = MHS()
-    #     candidates = mhs(spectra).get_candidates()
-    #     utils.write_candidates(STACCATO_OUT, candidates)
-    #
-    #     print('Running Barinel')
-    #     barinel_output = os.path.join(barinel_out, filename)
-    #     barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
-    #                                stdout=open(os.devnull, 'w'),
-    #                                stderr=subprocess.STDOUT)
-    #     barinel.wait()
-    #
-    #     os.remove(STACCATO_OUT)
+
+    for filename in os.listdir(class_dir):
+        filepath = os.path.join(class_dir, filename)
+        print(filepath)
+
+        with open(filepath, 'r') as f:
+            columns = len(f.readline().split(' ')[:-1])
+            columns = str(columns)
+
+        print('Running Staccato')
+        spectra = Spectra()
+        spectra.read(filepath)
+
+        mhs = MHS()
+        candidates = mhs(spectra).get_candidates()
+        utils.write_candidates(STACCATO_OUT, candidates)
+
+        print('Running Barinel')
+        barinel_output = os.path.join(barinel_out, filename)
+        barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
+                                   stdout=open(os.devnull, 'w'),
+                                   stderr=subprocess.STDOUT)
+        barinel.wait()
+
+        os.remove(STACCATO_OUT)
 
 
     def _get_fault_set(filename):
@@ -84,13 +84,14 @@ for class_name in os.listdir(MATRICES_DIR):
                 candidate = candidate.split(' ')
                 candidate = list(map(lambda x: int(x) - 1, candidate))
                 candidates.append(candidate)
-        # if candidates:
-        # To compute the effort without activity matrices that do not have any errors, comment out the this if statement.
-        print(candidates)
-        # average_efforts.append(eff.average_effort(fault_set, candidates, num_of_components))
-        # average_efforts.append(eff.normalized_average_effort(fault_set, candidates, num_of_components))
-        average_efforts.append(eff.normalized_average_effort_flatten(fault_set, candidates, num_of_components, probabilities))
-        # Reindent until this part. "Best code ever."
+        if candidates:
+            # To compute the effort without activity matrices that do not have any errors, comment out the this if statement.
+            print(candidates)
+            print('Number of candidates:', len(candidates))
+            # average_efforts.append(eff.average_effort(fault_set, candidates, num_of_components))
+            # average_efforts.append(eff.normalized_average_effort(fault_set, candidates, num_of_components))
+            average_efforts.append(eff.normalized_average_effort_flatten(fault_set, candidates, num_of_components, probabilities))
+            # Reindent until this part. "Best code ever."
     if average_efforts:
         average_wasted_effort = sum(average_efforts) / len(average_efforts)
         effort_dict[class_name] = average_wasted_effort
