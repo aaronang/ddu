@@ -48,13 +48,13 @@ def analyze(granularity, output_name=''):
 
     # plot_effort_ddu(data, efforts)
     # plot_erroneous_matrices_ddu(data, erroneous_matrices)
-    # plot_effort_erroneous_matrices(efforts, erroneous_matrices)
+    plot_effort_erroneous_matrices(efforts, erroneous_matrices)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
     # plot_effort_num_of_components(data, efforts)
     # plot_error_detection_ddu(output_name, data, percentages)
-    plot_error_detection_density(data, percentages)
+    # plot_error_detection_density(data, percentages)
     # plot_normalized_density(data)
     # plot_diversity(data)
     # plot_uniqueness(data)
@@ -175,12 +175,12 @@ def plot_error_detection_density(data, percentages):
     a = []
     for class_name, percentage in percentages.items():
         class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
-        a.append((float(class_data['uniqueness']), percentage))
+        a.append((float(class_data['density']), percentage))
     density, percentage = zip(*a)
     plt.scatter(density, percentage)
-    plt.xlabel('Uniqueness')
+    plt.xlabel('Density')
     plt.ylabel('Error detection')
-    plt.title('Uniqueness vs. error detection')
+    plt.title('Density vs. error detection')
     plt.grid(True)
 
     plt.xlim(0.0, 1.0)
