@@ -1,236 +1,236 @@
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#copy_stringToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#testCopy_readerToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#copy_readerToWriter
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#copy_byteArrayToWriter
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#copy_byteArrayToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#copy_inputStreamToWriter
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#testCopy_inputStreamToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.CopyUtilsTest#copy_stringToWriter
-[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] org.apache.commons.io.DemuxTestCase#testOutputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1] org.apache.commons.io.FileUtilsTestCase#testCopyFileToOutputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.FileUtilsTestCase#testReadFileToByteArray
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.HexDumpTest#testDump
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding_nullEncoding
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_Encoding
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToWriter_nullIn
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_nullIn
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStreamWithBufferSize
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_nullIn
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding_nullIn
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_Encoding_nullEncoding
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_nullIn
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToWriter
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_Encoding_nullIn
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToInputStream_String
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToByteArray_URI
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToByteArray_URL
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToString_ByteArray
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_Writer
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToInputStream_CharSequence
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToByteArray_InputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage_WithClassLoader
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_OutputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage_WithClassLoader
-[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStream_InputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToByteArray_Reader
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToByteArray_URLConnection
-[0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStreamWithBufferSize_InputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer_nullSeparator
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToWriter_Encoding_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_Encoding_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToWriter
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_Encoding_nullData
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_Encoding
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToWriter
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_Encoding_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToOutputStream_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_nullEncoding
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullData
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_Encoding
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_nullData
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_Encoding
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_nullEncoding
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullSeparator
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_Encoding_nullEncoding
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_Encoding_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToWriter_Encoding_nullData
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullEncoding
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_nullEncoding
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_nullSeparator
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToWriter_Encoding_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_nullData
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToWriter
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_Encoding
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer_nullData
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream
-[0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter
-[0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1] org.apache.commons.io.output.ByteArrayOutputStreamTestCase#testToInputStreamWithReset
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1] org.apache.commons.io.output.ByteArrayOutputStreamTestCase#testToInputStream
-[1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1] org.apache.commons.io.output.ByteArrayOutputStreamTestCase#testStream
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ChunkedOutputStreamTest#write_four_chunks
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.ChunkedOutputStreamTest#negative_chunksize_not_permitted
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ChunkedOutputStreamTest#defaultConstructor
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ChunkedWriterTest#write_four_chunks
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.ChunkedWriterTest#negative_chunksize_not_permitted
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ChunkedWriterTest#write_two_chunks_default_constructor
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.CloseShieldOutputStreamTest#testClose
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 1]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 1]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 1]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 1]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 1]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 1]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 1]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 1]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 1]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 1]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 2]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 2]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 2]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 2]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 2]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 2]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 2]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 2]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 2]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 2]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 4]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 4]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 4]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 4]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 4]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 4]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 4]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 4]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 4]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 4]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 8]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 8]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 8]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 8]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 8]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 8]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 8]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 8]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 8]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 8]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 16]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 16]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 16]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 16]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 16]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 16]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 16]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 16]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 16]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 16]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 32]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 32]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 32]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 32]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 32]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 32]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 32]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 32]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 32]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 32]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 64]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 64]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 64]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 64]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 64]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 64]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 64]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 64]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 64]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 64]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 128]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 128]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 128]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 128]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 128]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 128]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 128]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 128]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 128]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 128]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 256]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 256]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 256]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 256]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 256]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 256]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 256]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 256]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 256]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 256]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 512]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 512]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 512]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 512]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 512]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 512]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 512]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 512]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 512]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 512]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 1,024]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 1,024]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 1,024]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 1,024]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 1,024]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 1,024]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 1,024]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 1,024]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 1,024]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 1,024]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 2,048]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 2,048]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 2,048]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 2,048]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 2,048]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 2,048]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 2,048]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 2,048]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 2,048]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 2,048]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 4,096]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 4,096]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 4,096]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 4,096]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 4,096]
-[0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 4,096]
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 4,096]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 4,096]
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 4,096]
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 4,096]
-[1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1] org.apache.commons.io.output.ProxyOutputStreamTest#testWrite
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyOutputStreamTest#testWriteNullBaSucceeds
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_append_charSequence_offset
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_int
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_string
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_offset_char_array
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_char_array
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_append_char
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_close
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_flush
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_string_offset
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_append_charSequence
-[1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1] org.apache.commons.io.output.TaggedOutputStreamTest#testNormalStream
-[1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ThresholdingOutputStreamTest#testSetByteCount
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#copy_stringToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#testCopy_readerToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#copy_readerToWriter
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#copy_byteArrayToWriter
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#copy_byteArrayToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#copy_inputStreamToWriter
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#testCopy_inputStreamToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.CopyUtilsTest#copy_stringToWriter
+[0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1] org.apache.commons.io.DemuxTestCase#testOutputStream
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.FileUtilsTestCase#testCopyFileToOutputStream
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.FileUtilsTestCase#testReadFileToByteArray
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.HexDumpTest#testDump
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding_nullEncoding
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_Encoding
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToWriter_nullIn
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_nullIn
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStreamWithBufferSize
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_nullIn
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding_nullIn
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_Encoding_nullEncoding
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_nullIn
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToWriter
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToWriter_Encoding_nullIn
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToInputStream_String
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToByteArray_URI
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToByteArray_URL
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToString_ByteArray
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_Writer
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToInputStream_CharSequence
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToByteArray_InputStream
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage_WithClassLoader
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_OutputStream
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage_WithClassLoader
+[0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0] org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStream_InputStream
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToByteArray_Reader
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testToByteArray_URLConnection
+[0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0] org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStreamWithBufferSize_InputStream
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer_nullSeparator
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToWriter_Encoding_nullData
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_nullData
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_Encoding_nullData
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToWriter
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_Encoding_nullData
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_Encoding
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToWriter
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_Encoding_nullData
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToOutputStream_nullData
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_nullEncoding
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullData
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_Encoding
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_nullData
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_Encoding
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_nullData
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToOutputStream_nullData
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_nullEncoding
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullSeparator
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter_Encoding_nullEncoding
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream
+[0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_Encoding_nullData
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToWriter_Encoding_nullData
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullEncoding
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charArrayToOutputStream_nullEncoding
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_nullSeparator
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToWriter_Encoding_nullData
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_nullData
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_charSequenceToWriter
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream_Encoding
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer
+[1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer_nullData
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_stringToOutputStream
+[1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] org.apache.commons.io.IOUtilsWriteTestCase#testWrite_byteArrayToWriter
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0] org.apache.commons.io.output.ByteArrayOutputStreamTestCase#testToInputStreamWithReset
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0] org.apache.commons.io.output.ByteArrayOutputStreamTestCase#testToInputStream
+[1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0] org.apache.commons.io.output.ByteArrayOutputStreamTestCase#testStream
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.ChunkedOutputStreamTest#write_four_chunks
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ChunkedOutputStreamTest#negative_chunksize_not_permitted
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.ChunkedOutputStreamTest#defaultConstructor
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.ChunkedWriterTest#write_four_chunks
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ChunkedWriterTest#negative_chunksize_not_permitted
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.ChunkedWriterTest#write_two_chunks_default_constructor
+[1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.CloseShieldOutputStreamTest#testClose
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 1]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 1]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 1]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 1]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 1]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 1]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 1]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 1]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 1]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 1]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 2]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 2]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 2]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 2]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 2]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 2]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 2]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 2]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 2]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 2]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 4]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 4]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 4]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 4]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 4]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 4]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 4]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 4]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 4]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 4]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 8]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 8]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 8]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 8]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 8]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 8]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 8]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 8]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 8]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 8]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 16]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 16]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 16]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 16]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 16]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 16]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 16]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 16]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 16]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 16]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 32]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 32]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 32]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 32]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 32]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 32]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 32]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 32]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 32]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 32]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 64]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 64]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 64]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 64]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 64]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 64]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 64]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 64]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 64]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 64]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 128]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 128]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 128]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 128]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 128]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 128]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 128]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 128]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 128]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 128]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 256]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 256]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 256]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 256]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 256]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 256]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 256]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 256]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 256]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 256]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 512]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 512]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 512]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 512]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 512]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 512]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 512]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 512]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 512]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 512]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 1,024]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 1,024]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 1,024]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 1,024]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 1,024]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 1,024]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 1,024]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 1,024]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 1,024]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 1,024]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 2,048]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 2,048]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 2,048]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 2,048]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 2,048]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 2,048]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 2,048]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 2,048]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 2,048]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 2,048]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThresholdPrefixOnly[initialBufferSize = 4,096]
+[0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge[initialBufferSize = 4,096]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall[initialBufferSize = 4,096]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testBelowThreshold[initialBufferSize = 4,096]
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileBelowThreshold[initialBufferSize = 4,096]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testThresholdReached[initialBufferSize = 4,096]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileError[initialBufferSize = 4,096]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAboveThreshold[initialBufferSize = 4,096]
+[0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testAtThreshold[initialBufferSize = 4,096]
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] org.apache.commons.io.output.DeferredFileOutputStreamTest#testTempFileAboveThreshold[initialBufferSize = 4,096]
+[1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyOutputStreamTest#testWrite
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyOutputStreamTest#testWriteNullBaSucceeds
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_append_charSequence_offset
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_int
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_string
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_offset_char_array
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_char_array
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_append_char
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_close
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_flush
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_write_string_offset
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ProxyWriterTest#exceptions_in_append_charSequence
+[1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0] org.apache.commons.io.output.TaggedOutputStreamTest#testNormalStream
+[0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0] org.apache.commons.io.output.ThresholdingOutputStreamTest#testSetByteCount

@@ -34,6 +34,12 @@ def analyze(granularity, output_name=''):
         for row in reader:
             efforts.update({row['class']: float(row['average_wasted_effort'])})
 
+    # erroneous_matrices = {}
+    # with open(os.path.join(current_dir, '../output/effort.csv')) as csvfile:
+    #     reader = csv.DictReader(csvfile)
+    #     for row in reader:
+    #         erroneous_matrices.update({row['class']: float(row['erroneous_matrices'])})
+    #
     # percentages = {}
     # with open(os.path.join(current_dir, '../output/percentages.csv')) as csvfile:
     #     reader = csv.DictReader(csvfile)
@@ -41,6 +47,8 @@ def analyze(granularity, output_name=''):
     #         percentages.update({row['class']: float(row['percentage'])})
 
     plot_effort_ddu(data, efforts)
+    # plot_erroneous_matrices_ddu(data, erroneous_matrices)
+    # plot_effort_erroneous_matrices(efforts, erroneous_matrices)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
@@ -121,7 +129,7 @@ def plot_uniqueness_vs_num_of_components(data):
         return [(float(u), int(c)) for u, c in tuples if u and c]
 
     uniqueness = _get_column(data, 'uniqueness')
-    num_of_components = list(_get_column(data, 'number_of_components'))
+    num_of_components = _get_column(data, 'number_of_tests')
     t = zip(uniqueness, num_of_components)
     u, c = zip(*transform(t))
 
@@ -146,28 +154,28 @@ def plot_error_detection_ddu(output_name, data, percentages):
     # for name, ddu, percentage in sorted(a, key=lambda tup: tup[1], reverse=True):
     for name, ddu, density, percentage in a:
         print('Name: %s, DDU: %f, density: %f, percentage: %f' % (name, ddu, density, percentage))
-    # ddu, percentage = zip(*a)
-    # plt.scatter(ddu, percentage)
-    # plt.xlabel('DDU')
-    # plt.ylabel('Failure detection')
-    # plt.title('DDU vs. failure detection')
-    # plt.grid(True)
-    #
-    # plt.xlim(0.0, 1.0)
-    # plt.ylim(0.0, 1.0)
-    # plt.show()
-    # z = numpy.polyfit(ddu, percentage, 1)
-    # p = numpy.poly1d(z)
-    # plt.plot(ddu, p(ddu), "--")
+        # ddu, percentage = zip(*a)
+        # plt.scatter(ddu, percentage)
+        # plt.xlabel('DDU')
+        # plt.ylabel('Failure detection')
+        # plt.title('DDU vs. failure detection')
+        # plt.grid(True)
+        #
+        # plt.xlim(0.0, 1.0)
+        # plt.ylim(0.0, 1.0)
+        # plt.show()
+        # z = numpy.polyfit(ddu, percentage, 1)
+        # p = numpy.poly1d(z)
+        # plt.plot(ddu, p(ddu), "--")
 
-    # plt.savefig(output_name)
+        # plt.savefig(output_name)
 
 
 def plot_error_detection_density(data, percentages):
     a = []
     for class_name, percentage in percentages.items():
         class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
-        a.append((float(class_data['normalized_density']), percentage))
+        a.append((float(class_data['density']), percentage))
     density, percentage = zip(*a)
     plt.scatter(density, percentage)
     plt.xlabel('Normalized density')
@@ -212,6 +220,43 @@ def plot_effort_ddu(data, efforts):
     plt.xlabel('DDU')
     plt.ylabel('Average wasted effort')
     plt.title('DDU vs. average wasted effort')
+    plt.grid(True)
+    plt.xlim(0, 1.0)
+    plt.ylim(0, 1.0)
+    z = numpy.polyfit(x, y, 1)
+    p = numpy.poly1d(z)
+    plt.plot(x, p(x), "r-")
+    plt.show()
+
+
+def plot_erroneous_matrices_ddu(data, erroneous_matrices):
+    a = []
+    for class_name, errors in erroneous_matrices.items():
+        class_data = list(filter(lambda x: x['parent'] == class_name, data))[0]
+        a.append((float(class_data['ddu']), errors))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('DDU')
+    plt.ylabel('Erroneous matrices')
+    plt.title('DDU vs. erroneous matrices')
+    plt.grid(True)
+    plt.xlim(0, 1.0)
+    plt.ylim(0, 1.0)
+    z = numpy.polyfit(x, y, 1)
+    p = numpy.poly1d(z)
+    plt.plot(x, p(x), "r-")
+    plt.show()
+
+
+def plot_effort_erroneous_matrices(efforts, erroneous_matrices):
+    a = []
+    for class_name, effort in efforts.items():
+        a.append((erroneous_matrices[class_name], effort))
+    x, y = zip(*a)
+    plt.scatter(x, y)
+    plt.xlabel('Erroneous matrices')
+    plt.ylabel('Effort')
+    plt.title('Erroneous matrices vs. effort')
     plt.grid(True)
     plt.xlim(0, 1.0)
     plt.ylim(0, 1.0)
@@ -269,9 +314,14 @@ def plot_effort_uniqueness(data, efforts):
 
 def plot_ddu(data):
     ddu = _get_column(data, 'ddu')
-    ddu = [float(x) for x in ddu if x]
-    print(ddu)
-    print(reduce(lambda x, y: x + y, ddu) / len(ddu))
+    diversity = _get_column(data, 'diversity')
+    uniqueness = _get_column(data, 'uniqueness')
+    normalized_density = _get_column(data, 'normalized_density')
+
+    res = [(float(w), float(x), float(y), float(z)) for w, x, y, z in zip(ddu, normalized_density, diversity, uniqueness) if w and x and y and z]
+    ddu, diversity, uniqueness, normalized_density = zip(*res)
+
+    zeroes = [0 for ddu, den, div, uni in res if den == 0 or div == 0 or uni == 0]
 
     bins = [float(x) / 10 for x in range(0, 10)]
     bins.append(1.0)
@@ -281,14 +331,25 @@ def plot_ddu(data):
     plt.title('DDU of classes')
     plt.grid(True)
 
+    plt.hist(zeroes, bins=bins, label='Zeroes')
+    plt.legend(loc='upper right')
+
     plt.show()
 
 
 def plot_diversity(data):
     diversity = _get_column(data, 'diversity')
-    diversity = [float(x) for x in diversity if x]
-    print(diversity)
+    number_of_tests = _get_column(data, 'number_of_tests')
+    number_of_components = _get_column(data, 'number_of_components')
+
+    res = [(float(x), int(y), int(z)) for x, y, z in zip(diversity, number_of_tests, number_of_components) if x and y and z]
+    diversity, number_of_tests, number_of_components = zip(*res)
     print(reduce(lambda x, y: x + y, diversity) / len(diversity))
+
+    test_1 = [(d, nt, nc) for d, nt, nc in res if not d]
+    print(len(test_1))
+    print(test_1)
+    test_1 = [0 for _ in test_1]
 
     bins = [float(x) / 10 for x in range(0, 10)]
     bins.append(1.0)
@@ -298,14 +359,22 @@ def plot_diversity(data):
     plt.title('Diversity of classes')
     plt.grid(True)
 
+    plt.hist(test_1, bins=bins, label='Zeroes')
+    plt.legend(loc='lower right')
+
+
     plt.show()
 
 
 def plot_uniqueness(data):
     uniqueness = _get_column(data, 'uniqueness')
-    uniqueness = [float(x) for x in uniqueness if x]
-    print(uniqueness)
-    print(reduce(lambda x, y: x + y, uniqueness) / len(uniqueness))
+    number_of_components = _get_column(data, 'number_of_components')
+    d = [(float(u), int(c)) for u, c in zip(uniqueness, number_of_components) if u and c]
+    uniqueness, number_of_components = zip(*d)
+
+    one_component = [1.0 for u, c in d if c == 1]
+
+    print(len(one_component))
 
     bins = [float(x) / 10 for x in range(0, 10)]
     bins.append(1.0)
@@ -315,14 +384,23 @@ def plot_uniqueness(data):
     plt.title('Uniqueness of classes')
     plt.grid(True)
 
+    plt.hist(one_component, bins=bins, label='Only one component')
+    plt.legend(loc='lower right')
+
     plt.show()
 
 
 def plot_normalized_density(data):
     normalized_density = _get_column(data, 'normalized_density')
-    normalized_density = [float(x) for x in normalized_density if x]
-    print(normalized_density)
+    number_of_components = _get_column(data, 'number_of_components')
+    names = _get_column(data, 'parent')
+    d = [(float(d), int(c), n) for d, c, n in zip(normalized_density, number_of_components, names) if d and c]
+    normalized_density, number_of_components, names = zip(*d)
+    zeroes, components, _ = zip(*[(x, c, n) for x, c, n in d if not x])
     print(reduce(lambda x, y: x + y, normalized_density) / len(normalized_density))
+    zc = [0.0 for x in components if x <= 1]
+    between_6_7 = [(nd, c, n) for nd, c, n in d if 0.6 <= nd <= 0.7]
+    print(between_6_7)
 
     bins = [float(x) / 10 for x in range(0, 10)]
     bins.append(1.0)
@@ -332,7 +410,13 @@ def plot_normalized_density(data):
     plt.title('Normalized density of classes')
     plt.grid(True)
 
+    plt.hist(zeroes, bins=bins, label='Zeroes')
+
+    plt.legend(loc='lower right')
+    print(len(zc))
+
     plt.show()
+
 
 if __name__ == "__main__":
     analyze('method')

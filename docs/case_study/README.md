@@ -56,12 +56,11 @@ We are interested in what kinds of tests result in a high or low DDU value.
 
 In the figure below, we show the distribution of normalized densities for all classes of the four open source projects mentioned before.
 The average equals to `0.5145`.
-The peak for the interval `0.0 - 0.1` is caused by classes that only consist of one method.
+The peak for the interval `0.0 - 0.1` is primarily caused by classes that are exercised by test cases that involve all components.
+In fact, `47` classes in the `0.0 - 0.1` interval consist of only one method.
 A class with one method will always have a density of `1.0` and therefore a normalized density of `0.0`.
 
-![Normalized density of classes.](img/normalized_density.png)
-
->**TODO: Show histogram without zeroes in a different (and overlapping) color.**
+![Normalized density of classes.](img/zeroes.png)
 
 The normalized density value is low when a class is tested by many tests that only cover a couple of methods. 
 For example, `org.apache.commons.csv.CSVRecord` has `17` methods (excluding its constructors) and its spectra looks as follows.

@@ -8,14 +8,13 @@ current_dir = os.path.dirname(__file__)
 directory = os.path.normpath(os.path.join(current_dir, 'output/spectra'))
 
 
-def generate_matrices(rounds, cardinality, goodness):
+def generate_matrices(rounds, cardinality, goodness, errors_only=False):
     for filename in os.listdir(directory):
         # print(filename)
         spectra = Spectra('output/spectra/%s' % filename)
         activity_generator = ActivityGenerator(spectra, cardinality)
 
-        # IF-statement only necessary to control for failures and passes.
-        if len(activity_generator.candidates_with_error) >= 20:
+        if len(activity_generator.candidates_with_error) >= 20 or not errors_only:
             output = 'output/matrices/%s' % filename
             if not os.path.exists(output):
                 os.makedirs(output)
@@ -23,7 +22,7 @@ def generate_matrices(rounds, cardinality, goodness):
             fault_sets = []
 
             while len(fault_sets) < rounds:
-                activity_matrix, faulty_set = activity_generator.generate(goodness, True)
+                activity_matrix, faulty_set = activity_generator.generate(goodness, errors_only)
                 faulty_set.sort()
                 h = hash(frozenset(faulty_set))
                 if h not in fault_sets:

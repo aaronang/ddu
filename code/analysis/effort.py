@@ -20,6 +20,7 @@ BARINEL_DIR = os.path.join(OUT_DIR, 'barinel')
 EFFORT_OUT = os.path.join(OUT_DIR, 'effort.csv')
 
 effort_dict = {}
+erroneous_matrices_dict = {}
 
 for class_name in os.listdir(MATRICES_DIR):
     class_dir = os.path.join(MATRICES_DIR, class_name)
@@ -69,6 +70,9 @@ for class_name in os.listdir(MATRICES_DIR):
 
     num_of_components = _get_num_of_components(class_dir)
     average_efforts = []
+    erroneous_matrices = []
+    include_non_erroneous_matrices = False
+
     for filename in os.listdir(barinel_out):
         filepath = os.path.join(barinel_out, filename)
         fault_set = _get_fault_set(filename)
@@ -84,27 +88,29 @@ for class_name in os.listdir(MATRICES_DIR):
                 candidate = candidate.split(' ')
                 candidate = list(map(lambda x: int(x) - 1, candidate))
                 candidates.append(candidate)
-        if candidates:
-            # To compute the effort without activity matrices that do not have any errors, comment out the this if statement.
+        if candidates or include_non_erroneous_matrices:
             print(candidates)
             print('Number of candidates:', len(candidates))
+            erroneous_matrices.append(1 if candidates else 0)
             # average_efforts.append(eff.average_effort(fault_set, candidates, num_of_components))
             # average_efforts.append(eff.normalized_average_effort(fault_set, candidates, num_of_components))
             average_efforts.append(eff.normalized_average_effort_flatten(fault_set, candidates, num_of_components, probabilities))
-            # Reindent until this part. "Best code ever."
     if average_efforts:
         average_wasted_effort = sum(average_efforts) / len(average_efforts)
+        average_erroneous_matrices = sum(erroneous_matrices) / len(erroneous_matrices)
         effort_dict[class_name] = average_wasted_effort
-        print(average_wasted_effort)
+        erroneous_matrices_dict[class_name] = average_erroneous_matrices
+        print('Effort: %f, erroneous matrices: %f' % (average_wasted_effort, average_erroneous_matrices))
 
 ordered = OrderedDict(sorted(effort_dict.items(), key=itemgetter(1), reverse=True))
 
 with open(EFFORT_OUT, 'w', newline='') as csvfile:
     fieldnames = [
         'class',
-        'average_wasted_effort'
+        'average_wasted_effort',
+        'erroneous_matrices'
     ]
     writer = csv.writer(csvfile, delimiter=',')
     writer.writerow(fieldnames)
     for k, v in ordered.items():
-        writer.writerow([k, v])
+        writer.writerow([k, v, erroneous_matrices_dict[k]])

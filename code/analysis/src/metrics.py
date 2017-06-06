@@ -108,8 +108,8 @@ def compute_metrics(spectra, parents):
             components_activity)
         ddus[p]['diversity'] = _diversity(components_activity)
         ddus[p]['uniqueness'] = _uniqueness(components_activity)
-        ddus[p]['ddu'] = ddus[p]['normalized_density'] * \
-                         ddus[p]['diversity'] * ddus[p]['uniqueness']
+        res = (ddus[p]['normalized_density'] + ddus[p]['diversity'] + ddus[p]['uniqueness'])
+        ddus[p]['ddu'] = res / 3.0 if res else 0
     return ddus
 
 

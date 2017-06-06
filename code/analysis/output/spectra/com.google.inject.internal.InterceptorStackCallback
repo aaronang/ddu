@@ -9,14 +9,14 @@
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.WeakKeySetTest#testNoEviction_keyOverlap_2x
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testSpiAccessToInterceptors
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testInterceptionOrder
-[0, 0, 1, 1, 0, 1, 1, 0] com.google.inject.MethodInterceptionTest#testInterceptedMethodThrows
+[0, 0, 1, 1, 0, 1, 0, 1] com.google.inject.MethodInterceptionTest#testInterceptedMethodThrows
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testDeDuplicateInterceptors
-[1, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testGetThis
+[0, 1, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testGetThis
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testNotInterceptedMethodsInInterceptedClassDontAddFrames
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testCallLater
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testInterceptingNonBridgeWorks
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testSharedProxyClasses
-[1, 0, 0, 1, 0, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testDoubleScannerIsIgnored
+[0, 1, 0, 1, 0, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testDoubleScannerIsIgnored
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.ParentInjectorTest#testInterceptorsInherited
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.TypeListenerTest#testAddingInterceptors
 [0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.util.OverrideModuleTest#testOverrideModuleAndPrivateModule
