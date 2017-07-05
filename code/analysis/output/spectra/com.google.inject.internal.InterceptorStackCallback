@@ -1,26 +1,27 @@
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.BindingTest#testToConstructorAndMethodInterceptors
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.BoundProviderTest#testFooProvider
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.IntegrationTest#testIntegration
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.MapBinderTest#testProviderMultimapDependencyInjection
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.ProxyFactoryTest#testSimpleCase
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.ProxyFactoryTest#testWithConstructorArguments
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.ProxyFactoryTest#testMultipleInterceptors
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.ProxyFactoryTest#testInterceptOneMethod
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.internal.WeakKeySetTest#testNoEviction_keyOverlap_2x
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testSpiAccessToInterceptors
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testInterceptionOrder
-[0, 0, 1, 1, 0, 1, 0, 1] com.google.inject.MethodInterceptionTest#testInterceptedMethodThrows
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testDeDuplicateInterceptors
-[0, 1, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testGetThis
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testNotInterceptedMethodsInInterceptedClassDontAddFrames
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testCallLater
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testInterceptingNonBridgeWorks
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.MethodInterceptionTest#testSharedProxyClasses
-[0, 1, 0, 1, 0, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testDoubleScannerIsIgnored
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.ParentInjectorTest#testInterceptorsInherited
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.TypeListenerTest#testAddingInterceptors
-[0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.util.OverrideModuleTest#testOverrideModuleAndPrivateModule
-[0, 0, 0, 1, 0, 1, 0, 0] com.googlecode.guice.BytecodeGenTest#testInterceptedPackageVisibility
-[0, 0, 0, 1, 0, 1, 0, 0] com.googlecode.guice.BytecodeGenTest#testEnhancerNaming
-[0, 0, 0, 1, 0, 1, 0, 0] com.googlecode.guice.BytecodeGenTest#testProxyingPackagePrivateMethods
-[0, 0, 0, 1, 0, 1, 0, 0] com.googlecode.guice.Jsr330Test#testScopeAnnotation
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.BindingTest#testToConstructorAndMethodInterceptors
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.CircularDependencyTest#testDisabledCircularDependency
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.IntegrationTest#testIntegration
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.internal.CycleDetectingLockTest#testCycleReporting
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.internal.ProxyFactoryTest#testSimpleCase
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.internal.ProxyFactoryTest#testWithConstructorArguments
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.internal.ProxyFactoryTest#testMultipleInterceptors
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.internal.ProxyFactoryTest#testInterceptOneMethod
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.internal.WeakKeySetTest#testNoEviction_keyOverlap_2x
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testSpiAccessToInterceptors
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testInterceptionOrder
+[1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1] com.google.inject.MethodInterceptionTest#testInterceptedMethodThrows
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testDeDuplicateInterceptors
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0] com.google.inject.MethodInterceptionTest#testGetThis
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testNotInterceptedMethodsInInterceptedClassDontAddFrames
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testCallLater
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testInterceptingNonBridgeWorks
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.MethodInterceptionTest#testSharedProxyClasses
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0] com.google.inject.ModuleTest#testDiamond
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.ParentInjectorTest#testInterceptorsInherited
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.TypeListenerTest#testAddingInterceptors
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.google.inject.TypeLiteralInjectionTest#testInjectTypeLiteralWithClassTypes
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.googlecode.guice.BytecodeGenTest#testInterceptedPackageVisibility
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.googlecode.guice.BytecodeGenTest#testProxyClassLoading
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.googlecode.guice.BytecodeGenTest#testEnhancerNaming
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.googlecode.guice.BytecodeGenTest#testProxyingPackagePrivateMethods
+[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] com.googlecode.guice.Jsr330Test#testGuicifyWithDependencies

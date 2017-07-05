@@ -31,6 +31,7 @@ def average_effort(fault_set, candidates, num_of_components):
 
 def normalized_average_effort(fault_set, candidates, num_of_components):
     effort = average_effort(fault_set, candidates, num_of_components)
+    print('Non-normalized effort:', effort)
     return effort / num_of_components
 
 
@@ -47,6 +48,21 @@ def normalized_average_effort_flatten(fault_set, candidates, num_of_components, 
     cands = [[k] for k, v in ordered.items()]
     # print('Flattened diagnosis:', [[k, v] for k, v in ordered.items()])
     return normalized_average_effort(fault_set, cands, num_of_components)
+
+
+def average_effort_flatten(fault_set, candidates, num_of_components, probabilities):
+    probs = {}
+    for index, candidate in enumerate(candidates):
+        for component in candidate:
+            if component not in probs:
+                probs[component] = 0
+            probs[component] += probabilities[index]
+
+    ordered = OrderedDict(sorted(probs.items(), key=itemgetter(1), reverse=True))
+
+    cands = [[k] for k, v in ordered.items()]
+    # print('Flattened diagnosis:', [[k, v] for k, v in ordered.items()])
+    return average_effort(fault_set, cands, num_of_components)
 
 
 def compute_effort(fault_set, candidates):

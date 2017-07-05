@@ -29,30 +29,30 @@ for class_name in os.listdir(MATRICES_DIR):
     if not os.path.exists(barinel_out):
         os.makedirs(barinel_out)
 
-    # for filename in os.listdir(class_dir):
-    #     filepath = os.path.join(class_dir, filename)
-    #     print(filepath)
-    #
-    #     with open(filepath, 'r') as f:
-    #         columns = len(f.readline().split(' ')[:-1])
-    #         columns = str(columns)
-    #
-    #     print('Running Staccato')
-    #     spectra = Spectra()
-    #     spectra.read(filepath)
-    #
-    #     mhs = MHS()
-    #     candidates = mhs(spectra).get_candidates()
-    #     utils.write_candidates(STACCATO_OUT, candidates)
-    #
-    #     print('Running Barinel')
-    #     barinel_output = os.path.join(barinel_out, filename)
-    #     barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
-    #                                stdout=open(os.devnull, 'w'),
-    #                                stderr=subprocess.STDOUT)
-    #     barinel.wait()
-    #
-    #     os.remove(STACCATO_OUT)
+    for filename in os.listdir(class_dir):
+        filepath = os.path.join(class_dir, filename)
+        print(filepath)
+
+        with open(filepath, 'r') as f:
+            columns = len(f.readline().split(' ')[:-1])
+            columns = str(columns)
+
+        print('Running Staccato')
+        spectra = Spectra()
+        spectra.read(filepath)
+
+        mhs = MHS()
+        candidates = mhs(spectra).get_candidates()
+        utils.write_candidates(STACCATO_OUT, candidates)
+
+        print('Running Barinel')
+        barinel_output = os.path.join(barinel_out, filename)
+        barinel = subprocess.Popen([BARINEL, columns, filepath, STACCATO_OUT, barinel_output],
+                                   stdout=open(os.devnull, 'w'),
+                                   stderr=subprocess.STDOUT)
+        barinel.wait()
+
+        os.remove(STACCATO_OUT)
 
 
     def _get_fault_set(filename):

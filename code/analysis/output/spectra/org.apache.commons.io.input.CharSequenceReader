@@ -1,7 +1,0 @@
-[0, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.input.CharSequenceReaderTest#testClose
-[0, 0, 1, 0, 1, 1, 0, 1] org.apache.commons.io.input.CharSequenceReaderTest#testMark
-[0, 0, 1, 0, 1, 0, 0, 0] org.apache.commons.io.input.CharSequenceReaderTest#testRead
-[1, 0, 1, 0, 1, 1, 0, 0] org.apache.commons.io.input.CharSequenceReaderTest#testSkip
-[0, 1, 0, 0, 1, 0, 0, 0] org.apache.commons.io.input.CharSequenceReaderTest#testMarkSupported
-[0, 0, 1, 1, 1, 0, 0, 0] org.apache.commons.io.input.CharSequenceReaderTest#testReadCharArrayPortion
-[0, 0, 1, 1, 1, 0, 0, 0] org.apache.commons.io.input.CharSequenceReaderTest#testReadCharArray

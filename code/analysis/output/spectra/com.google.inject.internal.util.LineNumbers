@@ -1,94 +1,94 @@
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.BinderTest#testMissingDependency
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0] com.google.inject.BinderTest#testPartialInjectorGetInstance
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.BindingAnnotationTest#testAnnotationWithValueThatDoesntMatch
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.BindingAnnotationTest#testRequireExactAnnotationsDisablesFallback
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.BindingAnnotationTest#testRequireExactAnnotationsRequireAllOptionals
-[1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0] com.google.inject.BindingTest#testUnannotatedNoArgConstructor
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0] com.google.inject.BindingTest#testToConstructorBindingsFailsOnRawTypes
-[1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0] com.google.inject.BindingTest#testTooManyConstructors
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0] com.google.inject.BindingTest#testMissingAnnotationRelated
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.BoundInstanceInjectionTest#testMalformedProvider
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.BoundInstanceInjectionTest#testMalformedInstance
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0] com.google.inject.CircularDependencyTest#testDisablingCircularDependencies
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.CircularDependencyTest#testDisabledCircularDependency
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.CircularDependencyTest#testDisabledCircularDependenciesWithProviderInstances
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.CircularDependencyTest#testCircularDependenciesDetectedEarlyWhenDependenciesHaveDifferentTypes
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0] com.google.inject.CircularDependencyTest#testDisabledNonConstructorCircularDependencies
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.CircularDependencyTest#testUnresolvableCircularDependency
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.CircularDependencyTest#testUnresolvableCircularDependenciesWithProviderInstances
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.DuplicateBindingsTest#testProviderMethodsFailIfInstancesDiffer
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.DuplicateBindingsTest#testChildInjectorDuplicateParentFail
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0] com.google.inject.DuplicateBindingsTest#testDifferentBindingTypesFail
-[1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0] com.google.inject.ImplicitBindingTest#testCircularJitBindingsLeaveNoResidue
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.internal.OptionalBinderTest#testUsesUserBoundValue
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.internal.OptionalBinderTest#testUsesUserBoundValueNullProvidersMakeAbsent
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.internal.util.LineNumbersTest#testUnavailableByteCodeShowsUnknownSource
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.internal.util.LineNumbersTest#testCanHandleLineNumbersForGuiceGeneratedClasses
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.internal.util.LineNumbersTest#testLineNumbers
-[1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.JitBindingsTest#testChildInjectorInheritsOption
-[1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.JitBindingsTest#testFailsIfInjectingScopedDirectlyWhenItIsntBound
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.JitBindingsTest#testJitInjectionFails
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.JitBindingsTest#testPrivateModulesInheritOptions
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.JitBindingsTest#testPrivateModuleAddsOption
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.JitBindingsTest#testChildInjectorAddsOption
-[1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.JitBindingsTest#testJitProviderInjectionFails
-[1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0] com.google.inject.JitBindingsTest#testJitImplementedByBindingInParentFails
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0] com.google.inject.MembersInjectorTest#testInjectingMembersInjectorWithErrorsInDependencies
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.MembersInjectorTest#testInjectionFailure
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoOptionalWithMapKey
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testMapKeyMissingValueMethod
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testMoreThanOneMapKeyAnnotation
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoMapWithoutMapKey
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testArrayKeys_unwrapValuesTrue
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoSetWithMapKey
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.name.NamedEquivalanceTest#testBindingDifferentTypesWithSameValueIsAnErrorWithProviderMethods
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.name.NamedEquivalanceTest#testBindingDifferentTypesWithSameValueIsAnErrorMixed
-[1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.name.NamedEquivalanceTest#testMissingBindingForJsr330NamedUsesSameTypeInErrorMessage
-[1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.name.NamedEquivalanceTest#testMissingBindingForGuiceNamedUsesSameTypeInErrorMessage
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.NullableInjectionPointTest#testInjectNullIntoNotNullableConstructor
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.NullableInjectionPointTest#testBindNullAsEagerSingleton
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.NullableInjectionPointTest#testBindScopedNull
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.NullableInjectionPointTest#testInjectNullIntoNotNullableMethod
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.NullableInjectionPointTest#testBindNullToProvider
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.NullableInjectionPointTest#testInjectNullIntoNotNullableField
-[1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0] com.google.inject.OptionalBindingTest#testOptionalConstructorBlowsUp
-[1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0] com.google.inject.ParentInjectorTest#testErrorInParentAndChild
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0] com.google.inject.ParentInjectorTest#testScopeBoundInChildInjectorOnly
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.PrivateModuleTest#testMessagesFromPrivateModulesAreNicelyIntegrated
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.PrivateModuleTest#testMisplacedExposedAnnotation
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.ProvisionExceptionsTest#testConstructorCheckedException
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.ProvisionExceptionsTest#testCustomProvidersRuntimeException
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.ProvisionExceptionsTest#testConstructorRuntimeException
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.ProvisionExceptionsTest#testProviderMethodCheckedException
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.ProvisionExceptionsTest#testProviderMethodRuntimeException
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0] com.google.inject.ProvisionExceptionTest#testExceptionsCollapsed
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.ProvisionExceptionTest#testMethodInjectionExceptions
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.ProvisionExceptionTest#testDuplicatesDifferentInstances
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.ProvisionExceptionTest#testMultipleCauses
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.ProvisionExceptionTest#testLinkedBindings
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.ProvisionExceptionTest#testExceptionsCollapsedWithScopes
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.ProvisionExceptionTest#testMultipleDuplicatesDifferentInstaces
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.ProvisionExceptionTest#testMultipleDuplicates
-[1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0] com.google.inject.ProvisionExceptionTest#testBindingAnnotationsOnMethodsAndConstructors
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.ProvisionExceptionTest#testProvisionExceptionsAreWrappedForBindToType
-[1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0] com.google.inject.ProvisionListenerTest#testModuleRequestInjection
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.ProvisionListenerTest#testExceptionInCxtorProvision
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.ProvisionListenerTest#testExceptionInFieldProvision
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0] com.google.inject.ProvisionListenerTest#testInjectorInjectMembers
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.ProvisionListenerTest#testExceptionInProvisionAutomaticallyCalled
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0] com.google.inject.ProvisionListenerTest#testToProviderInstance
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.ProvisionListenerTest#testExceptionInProvisionExplicitlyCalled
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.RequestInjectionTest#testValidationErrorOnInjectedMembers
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0] com.google.inject.RequestInjectionTest#testInjectionErrorOnInjectedMembers
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.RequestInjectionTest#testUserExceptionWhileInjectingInstance
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0] com.google.inject.RequestInjectionTest#testUserExceptionWhileInjectingStatically
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.spi.ModuleAnnotatedMethodScannerTest#testScanning
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.spi.ProviderMethodsTest#testNullability
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.spi.ProviderMethodsTest#testOverrideProviderMethod_overrideHasProvides
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0] com.google.inject.spi.ProviderMethodsTest#testProvidesMethodInheritenceHierarchy
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.spi.ProviderMethodsTest#testNonModuleProviderMethods
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.spi.ProviderMethodsTest#testScopedProviderMethodThrowsException
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.spi.ProviderMethodsTest#testVoidProviderMethods
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0] com.google.inject.spi.ProviderMethodsTest#testMultipleBindingAnnotations
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0] com.google.inject.spi.ToolStageInjectorTest#testToolStageWarnsOfMissingObjectGraph
-[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0] com.google.inject.TypeLiteralInjectionTest#testInjectTypeLiteralWithRawTypes
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.BinderTest#testMissingDependency
+[0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1] com.google.inject.BinderTest#testPartialInjectorGetInstance
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.BindingAnnotationTest#testAnnotationWithValueThatDoesntMatch
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.BindingAnnotationTest#testRequireExactAnnotationsDisablesFallback
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.BindingAnnotationTest#testRequireExactAnnotationsRequireAllOptionals
+[0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0] com.google.inject.BindingTest#testUnannotatedNoArgConstructor
+[1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.BindingTest#testToConstructorBindingsFailsOnRawTypes
+[0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.BindingTest#testTooManyConstructors
+[0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1] com.google.inject.BindingTest#testMissingAnnotationRelated
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.BoundInstanceInjectionTest#testMalformedProvider
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.BoundInstanceInjectionTest#testMalformedInstance
+[0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.CircularDependencyTest#testDisablingCircularDependencies
+[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.CircularDependencyTest#testDisabledCircularDependency
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.CircularDependencyTest#testDisabledCircularDependenciesWithProviderInstances
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.CircularDependencyTest#testCircularDependenciesDetectedEarlyWhenDependenciesHaveDifferentTypes
+[0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.CircularDependencyTest#testDisabledNonConstructorCircularDependencies
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.CircularDependencyTest#testUnresolvableCircularDependency
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.CircularDependencyTest#testUnresolvableCircularDependenciesWithProviderInstances
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0] com.google.inject.DuplicateBindingsTest#testProviderMethodsFailIfInstancesDiffer
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0] com.google.inject.DuplicateBindingsTest#testChildInjectorDuplicateParentFail
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.DuplicateBindingsTest#testDifferentBindingTypesFail
+[0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0] com.google.inject.ImplicitBindingTest#testCircularJitBindingsLeaveNoResidue
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.internal.OptionalBinderTest#testUsesUserBoundValue
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.internal.OptionalBinderTest#testUsesUserBoundValueNullProvidersMakeAbsent
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.internal.util.LineNumbersTest#testUnavailableByteCodeShowsUnknownSource
+[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.internal.util.LineNumbersTest#testCanHandleLineNumbersForGuiceGeneratedClasses
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.internal.util.LineNumbersTest#testLineNumbers
+[0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testChildInjectorInheritsOption
+[0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testFailsIfInjectingScopedDirectlyWhenItIsntBound
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testJitInjectionFails
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testPrivateModulesInheritOptions
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testPrivateModuleAddsOption
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testChildInjectorAddsOption
+[0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0] com.google.inject.JitBindingsTest#testJitProviderInjectionFails
+[0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0] com.google.inject.JitBindingsTest#testJitImplementedByBindingInParentFails
+[0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.MembersInjectorTest#testInjectingMembersInjectorWithErrorsInDependencies
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.MembersInjectorTest#testInjectionFailure
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoOptionalWithMapKey
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testMapKeyMissingValueMethod
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testMoreThanOneMapKeyAnnotation
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoMapWithoutMapKey
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testArrayKeys_unwrapValuesTrue
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.multibindings.ProvidesIntoTest#testProvidesIntoSetWithMapKey
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.name.NamedEquivalanceTest#testBindingDifferentTypesWithSameValueIsAnErrorWithProviderMethods
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0] com.google.inject.name.NamedEquivalanceTest#testBindingDifferentTypesWithSameValueIsAnErrorMixed
+[0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0] com.google.inject.name.NamedEquivalanceTest#testMissingBindingForJsr330NamedUsesSameTypeInErrorMessage
+[0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0] com.google.inject.name.NamedEquivalanceTest#testMissingBindingForGuiceNamedUsesSameTypeInErrorMessage
+[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.NullableInjectionPointTest#testInjectNullIntoNotNullableConstructor
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.NullableInjectionPointTest#testBindNullAsEagerSingleton
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.NullableInjectionPointTest#testBindScopedNull
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.NullableInjectionPointTest#testInjectNullIntoNotNullableMethod
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.NullableInjectionPointTest#testBindNullToProvider
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.NullableInjectionPointTest#testInjectNullIntoNotNullableField
+[0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.OptionalBindingTest#testOptionalConstructorBlowsUp
+[0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.ParentInjectorTest#testErrorInParentAndChild
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0] com.google.inject.ParentInjectorTest#testScopeBoundInChildInjectorOnly
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.PrivateModuleTest#testMessagesFromPrivateModulesAreNicelyIntegrated
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.PrivateModuleTest#testMisplacedExposedAnnotation
+[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionsTest#testConstructorCheckedException
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.ProvisionExceptionsTest#testCustomProvidersRuntimeException
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.ProvisionExceptionsTest#testConstructorRuntimeException
+[1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionsTest#testProviderMethodCheckedException
+[1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionsTest#testProviderMethodRuntimeException
+[0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testExceptionsCollapsed
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.ProvisionExceptionTest#testMethodInjectionExceptions
+[1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testDuplicatesDifferentInstances
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.ProvisionExceptionTest#testMultipleCauses
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testLinkedBindings
+[0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testExceptionsCollapsedWithScopes
+[1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testMultipleDuplicatesDifferentInstaces
+[1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testMultipleDuplicates
+[0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.ProvisionExceptionTest#testBindingAnnotationsOnMethodsAndConstructors
+[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionExceptionTest#testProvisionExceptionsAreWrappedForBindToType
+[0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0] com.google.inject.ProvisionListenerTest#testModuleRequestInjection
+[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionListenerTest#testExceptionInCxtorProvision
+[0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1] com.google.inject.ProvisionListenerTest#testExceptionInFieldProvision
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0] com.google.inject.ProvisionListenerTest#testInjectorInjectMembers
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.ProvisionListenerTest#testExceptionInProvisionAutomaticallyCalled
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0] com.google.inject.ProvisionListenerTest#testToProviderInstance
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1] com.google.inject.ProvisionListenerTest#testExceptionInProvisionExplicitlyCalled
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testValidationErrorOnInjectedMembers
+[0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testInjectionErrorOnInjectedMembers
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testUserExceptionWhileInjectingInstance
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0] com.google.inject.RequestInjectionTest#testUserExceptionWhileInjectingStatically
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ModuleAnnotatedMethodScannerTest#testScanning
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testNullability
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testOverrideProviderMethod_overrideHasProvides
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testProvidesMethodInheritenceHierarchy
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testNonModuleProviderMethods
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testScopedProviderMethodThrowsException
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testVoidProviderMethods
+[1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ProviderMethodsTest#testMultipleBindingAnnotations
+[0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0] com.google.inject.spi.ToolStageInjectorTest#testToolStageWarnsOfMissingObjectGraph
+[0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0] com.google.inject.TypeLiteralInjectionTest#testInjectTypeLiteralWithRawTypes

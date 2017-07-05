@@ -95,16 +95,17 @@ def _assign_class(classes, component):
     return classes
 
 
-def _remove_inner_classes(name):
+def _get_method(name):
     return re.sub(r'\$\w*', '', name)
 
 
-def _get_method(name):
-    return _remove_inner_classes(name)
+def _get_branch(name):
+    return re.sub(r'\$\w*', '', name)
 
 
 def _granularity(name='class'):
     granularities = {
+        'branch': (_get_branch, _get_classes),
         'method': (_get_method, _get_classes),
         'method-package': (_get_method, _get_packages),
         'class': (_get_class, _get_packages)

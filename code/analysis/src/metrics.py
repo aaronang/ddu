@@ -24,7 +24,7 @@ def _density(activity):
         return 0
 
 
-def _normalized_density(activity):
+def normalized_density(activity):
     p = _density(activity)
     return 1 - math.fabs(1 - 2 * p)
 
@@ -36,7 +36,7 @@ def _remove_no_hit(transactions, transaction):
     return transactions
 
 
-def _diversity(activity):
+def diversity(activity):
     transactions = transpose(activity)
     unique_transactions = unique(transactions)
     buckets = list(map(lambda t: transactions.count(t), unique_transactions))
@@ -49,7 +49,7 @@ def _diversity(activity):
         return 0
 
 
-def _uniqueness(activity):
+def uniqueness(activity):
     g = unique(activity)
     try:
         return len(g) / len(activity)
@@ -104,12 +104,12 @@ def compute_metrics(spectra, parents):
         ddus[p]['number_of_components'] = len(components)
         ddus[p]['number_of_tests'] = len(transactions)
         ddus[p]['density'] = _density(components_activity)
-        ddus[p]['normalized_density'] = _normalized_density(
-            components_activity)
-        ddus[p]['diversity'] = _diversity(components_activity)
-        ddus[p]['uniqueness'] = _uniqueness(components_activity)
-        res = (ddus[p]['normalized_density'] + ddus[p]['diversity'] + ddus[p]['uniqueness'])
-        ddus[p]['ddu'] = res / 3.0 if res else 0
+        ddus[p]['normalized_density'] = normalized_density(components_activity)
+        ddus[p]['diversity'] = diversity(components_activity)
+        ddus[p]['uniqueness'] = uniqueness(components_activity)
+        # res = ddus[p]['normalized_density'] + ddus[p]['diversity'] + ddus[p]['uniqueness']
+        # ddus[p]['ddu'] = res / 3.0 if res else 0
+        ddus[p]['ddu'] = ddus[p]['normalized_density'] * ddus[p]['diversity'] * ddus[p]['uniqueness']
     return ddus
 
 

@@ -51,3 +51,12 @@ class ActivityGenerator:
         activity_matrix = [x + [y] for x, y in activity_matrix]
 
         return activity_matrix, faulty_set
+
+    def generate_given_fault(self, faulty_set, goodness=0, errors_only=False):
+        error_vector = self._generate_error_vector(faulty_set, goodness)
+        error_vector = list(map(self._transform_error, error_vector))
+
+        activity_matrix = zip(self.spectra.matrix, error_vector)
+        activity_matrix = [x + [y] for x, y in activity_matrix]
+
+        return activity_matrix

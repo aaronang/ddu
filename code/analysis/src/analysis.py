@@ -28,27 +28,27 @@ def analyze(granularity, output_name=''):
                 for row in reader:
                     data.append(row)
 
-    efforts = {}
-    with open(os.path.join(current_dir, '../output/effort.csv')) as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            efforts.update({row['class']: float(row['average_wasted_effort'])})
-
-    erroneous_matrices = {}
-    with open(os.path.join(current_dir, '../output/effort.csv')) as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            erroneous_matrices.update({row['class']: float(row['erroneous_matrices'])})
-
-    percentages = {}
-    with open(os.path.join(current_dir, '../output/percentages.csv')) as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            percentages.update({row['class']: float(row['percentage'])})
+    # efforts = {}
+    # with open(os.path.join(current_dir, '../output/effort.csv')) as csvfile:
+    #     reader = csv.DictReader(csvfile)
+    #     for row in reader:
+    #         efforts.update({row['class']: float(row['average_wasted_effort'])})
+    #
+    # erroneous_matrices = {}
+    # with open(os.path.join(current_dir, '../output/effort.csv')) as csvfile:
+    #     reader = csv.DictReader(csvfile)
+    #     for row in reader:
+    #         erroneous_matrices.update({row['class']: float(row['erroneous_matrices'])})
+    #
+    # percentages = {}
+    # with open(os.path.join(current_dir, '../output/percentages.csv')) as csvfile:
+    #     reader = csv.DictReader(csvfile)
+    #     for row in reader:
+    #         percentages.update({row['class']: float(row['percentage'])})
 
     # plot_effort_ddu(data, efforts)
     # plot_erroneous_matrices_ddu(data, erroneous_matrices)
-    plot_effort_erroneous_matrices(efforts, erroneous_matrices)
+    # plot_effort_erroneous_matrices(efforts, erroneous_matrices)
     # plot_effort_density(data, efforts)
     # plot_effort_diversity(data, efforts)
     # plot_effort_uniqueness(data, efforts)
@@ -58,7 +58,7 @@ def analyze(granularity, output_name=''):
     # plot_normalized_density(data)
     # plot_diversity(data)
     # plot_uniqueness(data)
-    # plot_ddu(data)
+    # plot_ddu(data, granularity)
     # plot_uniqueness_vs_num_of_components(data)
     # percentage_couple_components_uniqueness(data)
     # plot_uniqueness_and_tests(data)
@@ -312,7 +312,7 @@ def plot_effort_uniqueness(data, efforts):
     plt.show()
 
 
-def plot_ddu(data):
+def plot_ddu(data, granularity):
     ddu = _get_column(data, 'ddu')
     diversity = _get_column(data, 'diversity')
     uniqueness = _get_column(data, 'uniqueness')
@@ -325,16 +325,17 @@ def plot_ddu(data):
 
     bins = [float(x) / 10 for x in range(0, 10)]
     bins.append(1.0)
-    plt.hist(ddu, bins=bins)
+    plt.hist(ddu, bins=bins, alpha=0.7, label=granularity)
     plt.xlabel('DDU')
     plt.ylabel('Frequency')
     plt.title('DDU of classes')
     plt.grid(True)
 
-    plt.hist(zeroes, bins=bins, label='Zeroes')
-    plt.legend(loc='upper right')
+    # plt.hist(zeroes, bins=bins, label='Zeroes')
+    # plt.legend(loc='upper right')
 
-    plt.show()
+    # plt.show()
+
 
 
 def plot_diversity(data):
@@ -419,4 +420,7 @@ def plot_normalized_density(data):
 
 
 if __name__ == "__main__":
+    analyze('branch')
     analyze('method')
+    plt.legend(loc='upper right')
+    plt.show()

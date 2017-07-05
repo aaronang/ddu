@@ -1,24 +1,24 @@
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.BinderTest#testProviderFromBinder
-[1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1] com.google.inject.BinderTest#testToStringOnBinderApi
-[0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.BinderTest#testMissingBindings
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.BinderTest#testNothingIsSerializableInBinderApi
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.BindingTest#testGetAllBindings
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.EagerSingletonTest#testJustInTimeEagerSingletons
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.internal.MultibinderTest#testMultibinderDependsOnInstanceBindingWithInjectionPoints
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.internal.OptionalBinderTest#testTypeNotBoundByDefault
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.KeyTest#testAnonymousClassesDontHoldRefs
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.PrivateModuleTest#testParentBindsSomethingInPrivate
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.PrivateModuleTest#testParentBindingToPrivateJitBinding
-[1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.PrivateModuleTest#testParentBindingToPrivateLinkedJitBinding
-[1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1] com.google.inject.spi.ElementApplyToTest#testGetProvider
-[1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1] com.google.inject.spi.ElementApplyToTest#testElementInitialization
-[0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1] com.google.inject.spi.ElementsTest#testGetProvider
-[1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1] com.google.inject.spi.ElementsTest#testElementInitialization
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1] com.google.inject.spi.ModuleRewriterTest#testGetProviderAvailableAtInjectMembersTime
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1] com.google.inject.TypeListenerTest#testLookupsAtInjectorCreateTime
-[1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1] com.google.inject.util.NoopOverrideTest#testGetProvider
-[1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1] com.google.inject.util.NoopOverrideTest#testElementInitialization
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1] com.google.inject.util.OverrideModuleTest#testOverrideUsingOriginalsGetProvider
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1] com.google.inject.util.OverrideModuleTest#testOverrideDeepExpose
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1] com.google.inject.util.OverrideModuleTest#testOverrideWhatGetProviderProvided
-[1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1] com.google.inject.util.OverrideModuleTest#testGetProviderInModule
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1] com.google.inject.BinderTest#testProviderFromBinder
+[0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1] com.google.inject.BinderTest#testToStringOnBinderApi
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1] com.google.inject.BinderTest#testMissingBindings
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.BinderTest#testNothingIsSerializableInBinderApi
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.BindingTest#testGetAllBindings
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.EagerSingletonTest#testJustInTimeEagerSingletons
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.internal.MultibinderTest#testMultibinderDependsOnInstanceBindingWithInjectionPoints
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.internal.OptionalBinderTest#testTypeNotBoundByDefault
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.KeyTest#testAnonymousClassesDontHoldRefs
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.PrivateModuleTest#testParentBindsSomethingInPrivate
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.PrivateModuleTest#testParentBindingToPrivateJitBinding
+[0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1] com.google.inject.PrivateModuleTest#testParentBindingToPrivateLinkedJitBinding
+[0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1] com.google.inject.spi.ElementApplyToTest#testGetProvider
+[1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1] com.google.inject.spi.ElementApplyToTest#testElementInitialization
+[0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1] com.google.inject.spi.ElementsTest#testGetProvider
+[1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1] com.google.inject.spi.ElementsTest#testElementInitialization
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1] com.google.inject.spi.ModuleRewriterTest#testGetProviderAvailableAtInjectMembersTime
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1] com.google.inject.TypeListenerTest#testLookupsAtInjectorCreateTime
+[0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1] com.google.inject.util.NoopOverrideTest#testGetProvider
+[1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1] com.google.inject.util.NoopOverrideTest#testElementInitialization
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1] com.google.inject.util.OverrideModuleTest#testOverrideUsingOriginalsGetProvider
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1] com.google.inject.util.OverrideModuleTest#testOverrideDeepExpose
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1] com.google.inject.util.OverrideModuleTest#testOverrideWhatGetProviderProvided
+[1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1] com.google.inject.util.OverrideModuleTest#testGetProviderInModule
